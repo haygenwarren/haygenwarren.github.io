@@ -1,0 +1,41 @@
+<div class="page container">
+  <header class="page-header">
+    <h1 class="page-header__title">Experience</h1>
+    <p class="page-header__subtitle">Research, engineering, and professional work.</p>
+  </header>
+
+  <section class="timeline" aria-label="Experience entries">
+    @for (entry of entries(); track entry.id) {
+      <article class="timeline-entry">
+        <div class="timeline-entry__meta">
+          <span class="timeline-entry__dates">
+            {{ entry.startDate }}&ndash;{{ entry.endDate ?? 'Present' }}
+          </span>
+          <span class="timeline-entry__location">{{ entry.location }}</span>
+        </div>
+        <div class="timeline-entry__content">
+          <h2 class="timeline-entry__role">{{ entry.role }}</h2>
+          <h3 class="timeline-entry__org">{{ entry.organization }}</h3>
+          <p class="timeline-entry__description">{{ entry.description }}</p>
+          @if (entry.highlights.length) {
+            <ul class="timeline-entry__highlights">
+              @for (highlight of entry.highlights; track highlight) {
+                <li>{{ highlight }}</li>
+              }
+            </ul>
+          }
+          @if (entry.tags.length) {
+            <ul class="timeline-entry__tags" aria-label="Tags">
+              @for (tag of entry.tags; track tag) {
+                <li class="tag">{{ tag }}</li>
+              }
+            </ul>
+          }
+        </div>
+      </article>
+    }
+    @empty {
+      <p class="placeholder">Loading experience&hellip;</p>
+    }
+  </section>
+</div>

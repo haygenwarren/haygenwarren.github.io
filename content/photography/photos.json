@@ -1,0 +1,26 @@
+{
+  "photos": [
+    {
+      "id": "photo-001",
+      "filename": "placeholder.jpg",
+      "title": "Untitled No. 1",
+      "caption": "Placeholder image — replace with actual photograph.",
+      "camera": "Canon AE-1 Program",
+      "film": "Kodak Portra 400",
+      "location": "Somewhere",
+      "date": "2024-03",
+      "tags": ["35mm", "color"]
+    },
+    {
+      "id": "photo-002",
+      "filename": "placeholder.jpg",
+      "title": "Untitled No. 2",
+      "caption": "Placeholder image — replace with actual photograph.",
+      "camera": "Olympus OM-1",
+      "film": "Ilford HP5 Plus",
+      "location": "Somewhere",
+      "date": "2024-05",
+      "tags": ["35mm", "black and white"]
+    }
+  ]
+}

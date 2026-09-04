@@ -1,0 +1,30 @@
+<div class="page container">
+  <header class="page-header">
+    <h1 class="page-header__title">Photography</h1>
+    <p class="page-header__subtitle">Film photographs.</p>
+  </header>
+
+  <section class="photo-grid" aria-label="Photographs">
+    @for (photo of photos(); track photo.id) {
+      <figure class="photo-card">
+        <div class="photo-card__image-wrap">
+          <img
+            class="photo-card__image"
+            [src]="'assets/photography/' + photo.filename"
+            [alt]="photo.caption || photo.title"
+            loading="lazy"
+          />
+        </div>
+        <figcaption class="photo-card__caption">
+          <span class="photo-card__title">{{ photo.title }}</span>
+          <span class="photo-card__meta">
+            {{ photo.camera }}&ensp;&middot;&ensp;{{ photo.film }}
+          </span>
+        </figcaption>
+      </figure>
+    }
+    @empty {
+      <p class="placeholder">No photographs yet.</p>
+    }
+  </section>
+</div>

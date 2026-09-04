@@ -1,0 +1,34 @@
+{
+  "entries": [
+    {
+      "id": "research-assistant",
+      "organization": "University Physics Department",
+      "role": "Undergraduate Research Assistant",
+      "location": "City, State",
+      "startDate": "Sep 2023",
+      "endDate": null,
+      "description": "Conducting observational astrophysics research under faculty supervision, with a focus on photometric variability of stellar objects.",
+      "highlights": [
+        "Reduced and analyzed multi-band photometric data from ground-based telescope observations",
+        "Developed Python pipelines for automated data reduction and source extraction",
+        "Contributed to ongoing characterization of variable stellar populations"
+      ],
+      "tags": ["astrophysics", "Python", "data reduction", "observational astronomy"]
+    },
+    {
+      "id": "engineering-intern",
+      "organization": "Instrumentation Laboratory",
+      "role": "Engineering Intern",
+      "location": "City, State",
+      "startDate": "May 2023",
+      "endDate": "Aug 2023",
+      "description": "Supported development and testing of optical sensor hardware for scientific instruments.",
+      "highlights": [
+        "Designed and tested analog signal conditioning circuits",
+        "Wrote firmware for embedded sensor readout in C",
+        "Documented test procedures and calibration results"
+      ],
+      "tags": ["instrumentation", "electronics", "embedded systems", "C"]
+    }
+  ]
+}

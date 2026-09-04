@@ -1,0 +1,19 @@
+{
+  "entries": [
+    {
+      "id": "bs-physics",
+      "institution": "University Name",
+      "degree": "Bachelor of Science",
+      "field": "Physics",
+      "location": "City, State",
+      "startDate": "Sep 2022",
+      "endDate": null,
+      "description": "Pursuing a B.S. in Physics with coursework in classical mechanics, electrodynamics, quantum mechanics, statistical mechanics, and observational astronomy.",
+      "highlights": [
+        "GPA: 3.9 / 4.0",
+        "Dean's List, all semesters",
+        "Relevant coursework: Classical Mechanics, Electrodynamics, Quantum Mechanics, Statistical Mechanics, Observational Astronomy, Mathematical Methods in Physics"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<div class="page container">
+  <header class="page-header">
+    <h1 class="page-header__title">Blog</h1>
+    <p class="page-header__subtitle">Writing on science, engineering, and photography.</p>
+  </header>
+
+  <section class="post-list" aria-label="Blog posts">
+    @for (post of posts(); track post.slug) {
+      <article class="post-card">
+        <time class="post-card__date" [attr.datetime]="post.date">{{ post.date }}</time>
+        <h2 class="post-card__title">
+          <a class="post-card__link" [routerLink]="['/blog', post.slug]">
+            {{ post.title }}
+          </a>
+        </h2>
+        <p class="post-card__summary">{{ post.summary }}</p>
+        @if (post.tags.length) {
+          <ul class="post-card__tags" aria-label="Tags">
+            @for (tag of post.tags; track tag) {
+              <li class="tag">{{ tag }}</li>
+            }
+          </ul>
+        }
+      </article>
+    }
+    @empty {
+      <p class="placeholder">No posts yet.</p>
+    }
+  </section>
+</div>

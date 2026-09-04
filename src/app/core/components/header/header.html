@@ -1,0 +1,43 @@
+<header class="site-header" role="banner">
+  <div class="site-header__inner container">
+    <a class="site-header__wordmark" routerLink="/" (click)="closeMenu()">
+      Haygen Warren
+    </a>
+
+    <button
+      class="site-header__menu-toggle"
+      type="button"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="primary-nav"
+      aria-label="Toggle navigation menu"
+      (click)="toggleMenu()"
+    >
+      <span class="site-header__menu-toggle-bar"></span>
+      <span class="site-header__menu-toggle-bar"></span>
+      <span class="site-header__menu-toggle-bar"></span>
+    </button>
+
+    <nav
+      id="primary-nav"
+      class="site-nav"
+      [class.site-nav--open]="menuOpen()"
+      aria-label="Primary navigation"
+    >
+      <ul class="site-nav__list" role="list">
+        @for (item of navItems; track item.path) {
+          <li class="site-nav__item">
+            <a
+              class="site-nav__link"
+              [routerLink]="item.path"
+              routerLinkActive="site-nav__link--active"
+              [routerLinkActiveOptions]="{ exact: item.exact ?? false }"
+              (click)="closeMenu()"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
