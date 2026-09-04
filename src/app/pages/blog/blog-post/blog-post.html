@@ -2,25 +2,25 @@
   @if (notFound()) {
     <div class="not-found">
       <h1>Post not found</h1>
-      <p><a routerLink="/blog">Return to blog index</a></p>
+      <p><a routerLink="/blog">Return to blog</a></p>
     </div>
   }
 
   @if (post(); as p) {
     <article class="blog-post">
       <header class="blog-post__header">
-        <p class="blog-post__back">
-          <a routerLink="/blog">&larr; All posts</a>
-        </p>
+        <a class="blog-post__back" routerLink="/blog" aria-label="Back to blog">&larr;&ensp;Writing</a>
         <h1 class="blog-post__title">{{ p.title }}</h1>
-        <time class="blog-post__date" [attr.datetime]="p.date">{{ p.date }}</time>
-        @if (p.tags.length) {
-          <ul class="blog-post__tags" aria-label="Tags">
-            @for (tag of p.tags; track tag) {
-              <li class="tag">{{ tag }}</li>
-            }
-          </ul>
-        }
+        <div class="blog-post__byline">
+          <time class="blog-post__date" [attr.datetime]="p.date">{{ p.date }}</time>
+          @if (p.tags.length) {
+            <ul class="blog-post__tags" aria-label="Tags">
+              @for (tag of p.tags; track tag) {
+                <li>{{ tag }}</li>
+              }
+            </ul>
+          }
+        </div>
       </header>
 
       <div class="blog-post__body prose" [innerHTML]="p.content"></div>

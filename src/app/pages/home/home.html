@@ -1,9 +1,46 @@
-<section class="home-hero container">
-  <h1 class="home-hero__name">Haygen Warren</h1>
-  <p class="home-hero__tagline">Physics &amp; Astrophysics</p>
-  <p class="home-hero__intro">
-    Physics and astrophysics student, researcher, and film photographer.
-    Interested in observational astronomy, instrumentation, and the intersection
-    of science and craft.
-  </p>
-</section>
+<div class="home">
+  <section class="home-intro container">
+    <div class="home-intro__text">
+      <h1 class="home-intro__name">Haygen Warren</h1>
+      <p class="home-intro__context">Physics &amp; Astrophysics</p>
+      <p class="home-intro__bio">
+        Physics student and researcher with interests in observational astronomy,
+        telescope instrumentation, and scientific computing.
+        Also an engineer, writer, and film photographer.
+      </p>
+    </div>
+  </section>
+
+  <div class="home-rule container">
+    <hr class="home-divider" />
+  </div>
+
+  <section class="home-nav container" aria-label="Site sections">
+    <ul class="home-nav__list" role="list">
+      <li class="home-nav__item">
+        <a class="home-nav__link" routerLink="/experience">
+          <span class="home-nav__link-label">Experience</span>
+          <span class="home-nav__link-desc">Research &amp; engineering positions</span>
+        </a>
+      </li>
+      <li class="home-nav__item">
+        <a class="home-nav__link" routerLink="/education">
+          <span class="home-nav__link-label">Education</span>
+          <span class="home-nav__link-desc">Academic background</span>
+        </a>
+      </li>
+      <li class="home-nav__item">
+        <a class="home-nav__link" routerLink="/photography">
+          <span class="home-nav__link-label">Photography</span>
+          <span class="home-nav__link-desc">Film photographs</span>
+        </a>
+      </li>
+      <li class="home-nav__item">
+        <a class="home-nav__link" routerLink="/blog">
+          <span class="home-nav__link-label">Writing</span>
+          <span class="home-nav__link-desc">Notes on science, craft, and observation</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</div>

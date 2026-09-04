@@ -1,7 +1,8 @@
 <div class="page container">
   <header class="page-header">
+    <span class="page-header__eyebrow">Portfolio</span>
     <h1 class="page-header__title">Education</h1>
-    <p class="page-header__subtitle">Academic background and training.</p>
+    <p class="page-header__description">Academic background and training.</p>
   </header>
 
   <section class="timeline" aria-label="Education entries">
@@ -9,18 +10,18 @@
       <article class="timeline-entry">
         <div class="timeline-entry__meta">
           <span class="timeline-entry__dates">
-            {{ entry.startDate }}&ndash;{{ entry.endDate ?? 'Present' }}
+            {{ entry.startDate }}&thinsp;&ndash;&thinsp;{{ entry.endDate ?? 'Present' }}
           </span>
           <span class="timeline-entry__location">{{ entry.location }}</span>
         </div>
         <div class="timeline-entry__content">
           <h2 class="timeline-entry__role">{{ entry.degree }} in {{ entry.field }}</h2>
-          <h3 class="timeline-entry__org">{{ entry.institution }}</h3>
+          <p class="timeline-entry__org">{{ entry.institution }}</p>
           <p class="timeline-entry__description">{{ entry.description }}</p>
           @if (entry.highlights.length) {
             <ul class="timeline-entry__highlights">
-              @for (highlight of entry.highlights; track highlight) {
-                <li>{{ highlight }}</li>
+              @for (h of entry.highlights; track h) {
+                <li>{{ h }}</li>
               }
             </ul>
           }
@@ -28,7 +29,7 @@
       </article>
     }
     @empty {
-      <p class="placeholder">Loading education&hellip;</p>
+      <p class="placeholder">Loading&hellip;</p>
     }
   </section>
 </div>

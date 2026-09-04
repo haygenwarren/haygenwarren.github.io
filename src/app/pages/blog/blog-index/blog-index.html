@@ -1,7 +1,8 @@
 <div class="page container">
   <header class="page-header">
+    <span class="page-header__eyebrow">Writing</span>
     <h1 class="page-header__title">Blog</h1>
-    <p class="page-header__subtitle">Writing on science, engineering, and photography.</p>
+    <p class="page-header__description">Notes on science, craft, and observation.</p>
   </header>
 
   <section class="post-list" aria-label="Blog posts">
@@ -9,15 +10,13 @@
       <article class="post-card">
         <time class="post-card__date" [attr.datetime]="post.date">{{ post.date }}</time>
         <h2 class="post-card__title">
-          <a class="post-card__link" [routerLink]="['/blog', post.slug]">
-            {{ post.title }}
-          </a>
+          <a class="post-card__link" [routerLink]="['/blog', post.slug]">{{ post.title }}</a>
         </h2>
         <p class="post-card__summary">{{ post.summary }}</p>
         @if (post.tags.length) {
           <ul class="post-card__tags" aria-label="Tags">
             @for (tag of post.tags; track tag) {
-              <li class="tag">{{ tag }}</li>
+              <li>{{ tag }}</li>
             }
           </ul>
         }

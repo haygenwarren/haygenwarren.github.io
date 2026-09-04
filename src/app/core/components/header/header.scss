@@ -1,9 +1,17 @@
+// ─── Site header shell ───────────────────────────────────────────────────────
+
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 200;
   background-color: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
+  // Border is always present but strengthens on scroll for a clean anchor effect
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--duration-base) ease;
+
+  &--scrolled {
+    border-bottom-color: var(--color-border);
+  }
 
   &__inner {
     display: flex;
@@ -12,46 +20,68 @@
     height: var(--nav-height);
   }
 
+  // ── Wordmark ──────────────────────────────────────────────────────────────
+  // Uses the serif — establishes the editorial voice from the first element seen.
   &__wordmark {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    font-family: var(--font-serif);
+    font-size: 1.0625rem;
+    font-weight: 400;
+    letter-spacing: var(--tracking-tight);
     color: var(--color-text);
     text-decoration: none;
+    line-height: 1;
+    white-space: nowrap;
+    flex-shrink: 0;
 
     &:hover {
-      color: var(--color-accent);
+      color: var(--color-text-secondary);
     }
   }
 
-  &__menu-toggle {
+  // ── Mobile toggle ─────────────────────────────────────────────────────────
+  &__toggle {
     display: none;
-    flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
     background: none;
     border: none;
-    padding: var(--space-2);
-    cursor: pointer;
+    padding: 0;
     color: var(--color-text);
+    border-radius: var(--radius-sm);
 
-    @media (max-width: 640px) {
+    &:hover {
+      color: var(--color-text-secondary);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 680px) {
       display: flex;
     }
   }
 
-  &__menu-toggle-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: currentColor;
-    border-radius: 1px;
-    transition: opacity 0.2s;
+  &__toggle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
+// ─── Desktop navigation ──────────────────────────────────────────────────────
+
 .site-nav {
+  @media (max-width: 680px) {
+    display: none;
+  }
+
   &__list {
     display: flex;
+    align-items: center;
     gap: var(--space-6);
     list-style: none;
     margin: 0;
@@ -59,44 +89,85 @@
   }
 
   &__link {
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 400;
     color: var(--color-text-muted);
     text-decoration: none;
     letter-spacing: 0.01em;
-    transition: color 0.15s;
+    padding-block: var(--space-1);
+    // Subtle underline as active indicator — no color shift
+    border-bottom: 1px solid transparent;
+    transition:
+      color var(--duration-fast) ease,
+      border-color var(--duration-fast) ease;
 
-    &:hover,
+    &:hover {
+      color: var(--color-text);
+    }
+
     &--active {
       color: var(--color-text);
+      border-bottom-color: var(--color-text);
+    }
+  }
+}
+
+// ─── Mobile navigation panel ─────────────────────────────────────────────────
+
+.site-mobile-nav {
+  display: none;
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+
+  @media (max-width: 680px) {
+    // Controlled by --open modifier; clip height for smooth open/close
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    visibility: hidden; // prevents keyboard focus on hidden links
+    transition:
+      max-height var(--duration-slow) var(--ease-out),
+      visibility 0s var(--duration-slow);
+
+    &--open {
+      max-height: 24rem;
+      visibility: visible;
+      transition:
+        max-height var(--duration-slow) var(--ease-out),
+        visibility 0s;
     }
   }
 
-  @media (max-width: 640px) {
-    display: none;
-    position: absolute;
-    top: var(--nav-height);
-    left: 0;
-    right: 0;
-    background-color: var(--color-bg);
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: var(--space-3) var(--gutter) var(--space-5);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: var(--text-md);
+    font-weight: 400;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    padding: var(--space-3) 0;
     border-bottom: 1px solid var(--color-border);
-    padding: var(--space-4) 0;
+    transition: color var(--duration-fast) ease;
 
-    &--open {
-      display: block;
+    &:hover {
+      color: var(--color-text);
     }
 
-    &__list {
-      flex-direction: column;
-      gap: 0;
-      padding: 0 var(--container-padding);
+    &--active {
+      color: var(--color-text);
     }
 
-    &__link {
-      display: block;
-      padding: var(--space-3) 0;
-      font-size: 1rem;
-      border-bottom: 1px solid var(--color-border);
+    li:last-child & {
+      border-bottom: none;
     }
   }
 }
