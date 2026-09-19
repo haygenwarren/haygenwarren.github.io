@@ -2,30 +2,37 @@
   // ─── Color ───────────────────────────────────────────────────────────────
 
   // Backgrounds
-  --color-bg:           #f0ebe0;   // Warm parchment
-  --color-surface:      #f7f3eb;   // Light inset surface
-  --color-surface-alt:  #e5dfd3;   // Recessed surface
+  --color-bg:           #0e1b2e;   // Deep navy
+  --color-surface:      #142238;   // Lifted surface
+  --color-surface-alt:  #1a2d44;   // Recessed surface
 
   // Text
-  --color-text:          #22180e;  // Deep warm brown-black
-  --color-text-secondary: #5c4a38; // Mid brown
-  --color-text-muted:    #9a8872;  // Warm muted
+  --color-text:          #e4e0d6;  // Warm cream
+  --color-text-secondary: #a8a49c; // Muted cream
+  --color-text-muted:    #6b6860;  // Subdued
 
   // Borders & dividers
-  --color-border:        #d0c8ba;  // Warm tan rule
-  --color-border-strong: #bcb1a3;  // Emphasized divider
+  --color-border:        #1e3252;  // Dark navy rule
+  --color-border-strong: #2a4268;  // Emphasized divider
 
   // Accent — olive green
-  --color-accent:        #4d5c30;
-  --color-accent-hover:  #3a4523;
+  --color-accent:        #6b7a3e;
+  --color-accent-hover:  #7d8f4a;
 
   // Interactive
-  --color-link:          #1e3a5c;  // Dark navy
-  --color-link-hover:    #4d5c30;  // Olive on hover
-  --color-focus:         #1e3a5c;
+  --color-link:          #8fa84e;  // Bright olive — readable on dark bg
+  --color-link-hover:    #a3bf5e;
+  --color-focus:         #8fa84e;
 
   // State / utility
-  --color-error:         #7a1515;
+  --color-error:         #c0392b;
+
+  // ─── Nav bar ─────────────────────────────────────────────────────────────
+
+  --color-nav-bg:          #4d5c30;              // Solid olive
+  --color-nav-border:      #3d4b24;              // Darker olive for scroll border
+  --color-nav-text:        #e4e0d6;              // Cream
+  --color-nav-text-muted:  rgba(228, 224, 214, 0.6);
 
   // ─── Typography ──────────────────────────────────────────────────────────
 
@@ -79,12 +86,11 @@
 
   // ─── Layout widths ───────────────────────────────────────────────────────
 
-  --width-content:  76rem;    // Maximum page container
-  --width-reading:  70ch;     // Comfortable reading line length
-  --width-narrow:   52ch;     // Short-form / intro copy
-  --width-wide:     92rem;    // Wide media — photography, full-bleed
+  --width-content:  76rem;
+  --width-reading:  70ch;
+  --width-narrow:   52ch;
+  --width-wide:     92rem;
 
-  // Page gutters
   --gutter: clamp(1.25rem, 5vw, 3rem);
 
   // ─── Shell ───────────────────────────────────────────────────────────────
@@ -105,8 +111,8 @@
   --radius-sm:  2px;
   --radius-md:  4px;
 
-  // ─── Deprecated aliases (kept for component backward-compat) ─────────────
-  --color-accent-muted: #dce3d0;   // very light tint of olive
+  // ─── Deprecated aliases ───────────────────────────────────────────────────
+  --color-accent-muted: #2a3a16;
   --container-max:      var(--width-content);
   --container-padding:  var(--gutter);
   --font-family:        var(--font-sans);

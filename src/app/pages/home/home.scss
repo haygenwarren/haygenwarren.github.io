@@ -43,7 +43,7 @@
   }
 
   &__name {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: clamp(var(--text-3xl), 5vw, var(--text-4xl));
     font-weight: 400;
     letter-spacing: var(--tracking-tight);
@@ -71,13 +71,20 @@
   }
 
   &__row-label {
+    display: inline-block;
     font-family: var(--font-sans);
     font-size: var(--text-sm);
     font-weight: 500;
     letter-spacing: var(--tracking-widest);
     text-transform: uppercase;
-    color: var(--color-text-muted);
+    color: var(--color-accent);
+    text-decoration: none;
     margin-bottom: var(--space-3);
+    transition: color var(--duration-fast) ease;
+
+    &:hover {
+      color: var(--color-accent-hover);
+    }
   }
 
   &__rule {
@@ -87,18 +94,12 @@
   }
 
   &__title {
-    display: block;
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: var(--text-xl);
     font-weight: 400;
     color: var(--color-text);
-    text-decoration: none;
     margin-bottom: var(--space-3);
     line-height: var(--leading-snug);
-
-    &:hover {
-      color: var(--color-link);
-    }
   }
 
   &__body {
