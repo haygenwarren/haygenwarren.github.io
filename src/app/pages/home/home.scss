@@ -28,6 +28,8 @@
     height: 160px;
     object-fit: cover;
     display: block;
+    border-radius: 50%;
+    border: 2px solid var(--color-border-strong);
     background-color: var(--color-surface-alt);
 
     @media (max-width: 600px) {
@@ -38,16 +40,6 @@
 
   &__text {
     padding-top: var(--space-1);
-  }
-
-  &__label {
-    font-family: var(--font-sans);
-    font-size: var(--text-xs);
-    font-weight: 500;
-    letter-spacing: var(--tracking-widest);
-    text-transform: uppercase;
-    color: var(--color-accent);
-    margin-bottom: var(--space-3);
   }
 
   &__name {
@@ -72,23 +64,10 @@
 // ─── Highlights ───────────────────────────────────────────────────────────────
 
 .home-highlights {
-  padding-bottom: var(--space-12);
+  padding-bottom: var(--space-32);
 
   &__row {
-    display: grid;
-    grid-template-columns: 10rem 1fr;
-    gap: var(--space-10);
-    padding: var(--space-10) 0;
-    border-top: 1px solid var(--color-border);
-
-    &:last-child {
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    @media (max-width: 560px) {
-      grid-template-columns: 1fr;
-      gap: var(--space-3);
-    }
+    margin-bottom: var(--space-10);
   }
 
   &__row-label {
@@ -98,11 +77,13 @@
     letter-spacing: var(--tracking-widest);
     text-transform: uppercase;
     color: var(--color-text-muted);
-    padding-top: var(--space-1);
+    margin-bottom: var(--space-3);
   }
 
-  &__row-content {
-    // content stacks naturally — no height constraints
+  &__rule {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 0 0 var(--space-6);
   }
 
   &__title {
@@ -131,24 +112,6 @@
 
     &:hover {
       color: var(--color-link);
-    }
-  }
-}
-
-// ─── Writing — supplementary ──────────────────────────────────────────────────
-
-.home-writing {
-  padding-bottom: var(--space-32);
-
-  &__link {
-    font-family: var(--font-sans);
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    text-decoration: none;
-    letter-spacing: var(--tracking-wide);
-
-    &:hover {
-      color: var(--color-text-secondary);
     }
   }
 }
