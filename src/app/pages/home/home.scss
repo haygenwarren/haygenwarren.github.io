@@ -85,6 +85,15 @@
     &:hover {
       color: var(--color-accent-hover);
     }
+
+    &--static {
+      color: var(--color-text-muted);
+      cursor: default;
+
+      &:hover {
+        color: var(--color-text-muted);
+      }
+    }
   }
 
   &__rule {
@@ -95,7 +104,7 @@
 
   &__title {
     font-family: var(--font-sans);
-    font-size: var(--text-xl);
+    font-size: 1.75rem;
     font-weight: 400;
     color: var(--color-text);
     margin-bottom: var(--space-3);
@@ -107,58 +116,5 @@
     font-size: var(--text-base);
     line-height: var(--leading-relaxed);
     color: var(--color-text-secondary);
-  }
-}
-
-// ─── Technical Skills ─────────────────────────────────────────────────────────
-
-.home-skills {
-  padding-bottom: var(--space-32);
-
-  &__heading {
-    font-family: var(--font-sans);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    letter-spacing: var(--tracking-widest);
-    text-transform: uppercase;
-    color: var(--color-accent);
-    margin-bottom: var(--space-3);
-  }
-
-  &__rule {
-    border: none;
-    border-top: 1px solid var(--color-border);
-    margin: 0 0 var(--space-8);
-  }
-
-  &__grid {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-5);
-  }
-
-  &__row {
-    display: grid;
-    grid-template-columns: 12rem 1fr;
-    gap: var(--space-6);
-
-    @media (max-width: 560px) {
-      grid-template-columns: 1fr;
-      gap: var(--space-1);
-    }
-  }
-
-  &__category {
-    font-family: var(--font-sans);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    color: var(--color-text-muted);
-  }
-
-  &__items {
-    font-family: var(--font-sans);
-    font-size: var(--text-base);
-    color: var(--color-text-secondary);
-    line-height: var(--leading-normal);
   }
 }
