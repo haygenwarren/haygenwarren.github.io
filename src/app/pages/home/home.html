@@ -1,71 +1,64 @@
 <div class="home">
 
-  <!-- ─── Hero ─────────────────────────────────────────────────────────── -->
-  <section class="home-hero container">
-    <div class="home-hero__grid">
-
-      <div class="home-hero__text">
-        <p class="home-hero__label">Physics &amp; Astrophysics</p>
-        <h1 class="home-hero__name">Haygen Warren</h1>
-        <p class="home-hero__bio">
-          Physics student and researcher. My work centers on observational astronomy,
-          telescope instrumentation, and scientific computing — building the tools
-          and doing the observations to better understand the variable night sky.
+  <!-- ─── Intro ─────────────────────────────────────────────────────────── -->
+  <section class="home-intro container">
+    <div class="home-intro__inner">
+      <div class="home-intro__photo-wrap">
+        <img
+          class="home-intro__photo"
+          src="assets/headshot.jpg"
+          alt="Haygen Warren"
+        />
+      </div>
+      <div class="home-intro__text">
+        <p class="home-intro__label">Physics &amp; Astrophysics</p>
+        <h1 class="home-intro__name">Haygen Warren</h1>
+        <p class="home-intro__bio">
+          Physics student and researcher focused on observational astronomy,
+          telescope instrumentation, and scientific computing.
           Also an engineer and film photographer.
         </p>
-        <p class="home-hero__current">
-          <span class="home-hero__current-label">Currently</span>
-          Undergraduate Research Assistant · Astrophysics
-        </p>
       </div>
-
-      @if (featuredPhoto()) {
-        <div class="home-hero__photo">
-          <img
-            class="home-hero__photo-img"
-            [src]="'assets/photography/' + featuredPhoto()!.filename"
-            [alt]="featuredPhoto()!.title"
-          />
-          <p class="home-hero__photo-meta">
-            {{ featuredPhoto()!.film }}&nbsp;&nbsp;·&nbsp;&nbsp;{{ featuredPhoto()!.camera }}
-          </p>
-        </div>
-      }
-
     </div>
   </section>
 
-  <div class="home-divider container"><hr /></div>
+  <div class="home-rule container"><hr /></div>
 
-  <!-- ─── Section nav ───────────────────────────────────────────────────── -->
-  <section class="home-sections container" aria-label="Site sections">
-    <ul class="home-sections__list" role="list">
+  <!-- ─── Highlights ────────────────────────────────────────────────────── -->
+  <section class="home-highlights container" aria-label="Highlights">
+    <div class="home-highlights__grid">
 
-      <li class="home-sections__item">
-        <a class="home-sections__link" routerLink="/experience">
-          <span class="home-sections__title">Research &amp; Work</span>
-          <span class="home-sections__desc">Observational astrophysics, instrumentation, and scientific computing</span>
-          <span class="home-sections__arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
+      <div class="home-highlights__col">
+        <p class="home-highlights__label">Research &amp; Work</p>
+        <p class="home-highlights__title">Undergraduate Research Assistant</p>
+        <p class="home-highlights__body">
+          Observational astrophysics — photometric data reduction,
+          Python pipelines, and telescope instrumentation.
+        </p>
+        <a class="home-highlights__link" routerLink="/experience">Experience →</a>
+      </div>
 
-      <li class="home-sections__item">
-        <a class="home-sections__link" routerLink="/photography">
-          <span class="home-sections__title">Photography</span>
-          <span class="home-sections__desc">35mm film on Canon AE-1 and Olympus OM-1</span>
-          <span class="home-sections__arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
+      <div class="home-highlights__col home-highlights__col--bordered">
+        <p class="home-highlights__label">Education</p>
+        <p class="home-highlights__title">B.S. Physics &amp; Astrophysics</p>
+        <p class="home-highlights__body">
+          Coursework in classical mechanics, electrodynamics,
+          quantum theory, and observational methods.
+        </p>
+        <a class="home-highlights__link" routerLink="/education">Education →</a>
+      </div>
 
-      <li class="home-sections__item">
-        <a class="home-sections__link" routerLink="/education">
-          <span class="home-sections__title">Education</span>
-          <span class="home-sections__desc">Academic background in physics and astrophysics</span>
-          <span class="home-sections__arrow" aria-hidden="true">→</span>
-        </a>
-      </li>
+      <div class="home-highlights__col home-highlights__col--bordered">
+        <p class="home-highlights__label">Photography</p>
+        <p class="home-highlights__title">35mm Film</p>
+        <p class="home-highlights__body">
+          Shot on Canon AE-1 and Olympus OM-1.
+          Kodak Portra, Ilford HP5, and whatever else is in the camera bag.
+        </p>
+        <a class="home-highlights__link" routerLink="/photography">Photography →</a>
+      </div>
 
-    </ul>
+    </div>
   </section>
 
   <!-- ─── Writing — supplementary ──────────────────────────────────────── -->
