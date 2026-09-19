@@ -8,6 +8,8 @@ export interface EducationEntry {
   endDate: string | null;
   description: string;
   highlights: string[];
+  courses?: string[];
+  honors?: string[];
 }
 
 export interface EducationData {

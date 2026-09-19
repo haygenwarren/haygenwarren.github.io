@@ -7,7 +7,7 @@
       "location": "City, State",
       "startDate": "Sep 2023",
       "endDate": null,
-      "description": "Conducting observational astrophysics research under faculty supervision, with a focus on photometric variability of stellar objects.",
+      "description": "Conducting observational astrophysics research under faculty supervision, with a focus on photometric variability of stellar objects. Developed Python pipelines for automated data reduction and source extraction from ground-based telescope observations.",
       "highlights": [
         "Reduced and analyzed multi-band photometric data from ground-based telescope observations",
         "Developed Python pipelines for automated data reduction and source extraction",
@@ -22,13 +22,24 @@
       "location": "City, State",
       "startDate": "May 2023",
       "endDate": "Aug 2023",
-      "description": "Supported development and testing of optical sensor hardware for scientific instruments.",
+      "description": "Supported development and testing of optical sensor hardware for scientific instruments. Designed analog signal conditioning circuits and wrote firmware for embedded sensor readout in C.",
       "highlights": [
         "Designed and tested analog signal conditioning circuits",
         "Wrote firmware for embedded sensor readout in C",
         "Documented test procedures and calibration results"
       ],
       "tags": ["instrumentation", "electronics", "embedded systems", "C"]
+    },
+    {
+      "id": "placeholder-position",
+      "organization": "Organization Name",
+      "role": "Role Title",
+      "location": "City, State",
+      "startDate": "Sep 2022",
+      "endDate": "May 2023",
+      "description": "Placeholder description for a third position. Replace with a two-sentence summary of responsibilities and key contributions.",
+      "highlights": [],
+      "tags": []
     }
   ]
 }

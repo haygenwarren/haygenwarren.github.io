@@ -4,15 +4,46 @@
       "id": "bs-physics",
       "institution": "University Name",
       "degree": "Bachelor of Science",
-      "field": "Physics",
+      "field": "Physics & Astrophysics",
       "location": "City, State",
       "startDate": "Sep 2022",
       "endDate": null,
-      "description": "Pursuing a B.S. in Physics with coursework in classical mechanics, electrodynamics, quantum mechanics, statistical mechanics, and observational astronomy.",
+      "description": "Pursuing a B.S. in Physics & Astrophysics with coursework spanning classical mechanics, electrodynamics, quantum mechanics, statistical mechanics, and observational astronomy.",
       "highlights": [
         "GPA: 3.9 / 4.0",
         "Dean's List, all semesters",
         "Relevant coursework: Classical Mechanics, Electrodynamics, Quantum Mechanics, Statistical Mechanics, Observational Astronomy, Mathematical Methods in Physics"
+      ],
+      "courses": [
+        "Classical Mechanics",
+        "Electrodynamics",
+        "Quantum Mechanics",
+        "Statistical Mechanics",
+        "Observational Astronomy",
+        "Mathematical Methods in Physics"
+      ],
+      "honors": [
+        "GPA: 3.9 / 4.0",
+        "Dean's List, all semesters"
+      ]
+    },
+    {
+      "id": "placeholder-edu",
+      "institution": "Institution Name",
+      "degree": "Degree Name",
+      "field": "Field of Study",
+      "location": "City, State",
+      "startDate": "Sep 2020",
+      "endDate": "May 2022",
+      "description": "Placeholder description for a second educational entry. Replace with relevant details.",
+      "highlights": [],
+      "courses": [
+        "Course One",
+        "Course Two",
+        "Course Three"
+      ],
+      "honors": [
+        "Award or Honor"
       ]
     }
   ]

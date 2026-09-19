@@ -4,11 +4,7 @@
   <section class="home-intro container">
     <div class="home-intro__inner">
       <div class="home-intro__photo-wrap">
-        <img
-          class="home-intro__photo"
-          src="assets/headshot.jpg"
-          alt="Haygen Warren"
-        />
+        <img class="home-intro__photo" src="assets/headshot.jpg" alt="Haygen Warren" />
       </div>
       <div class="home-intro__text">
         <h1 class="home-intro__name">Haygen Warren</h1>
@@ -21,62 +17,99 @@
     </div>
   </section>
 
-  <!-- ─── Highlights + Skills ───────────────────────────────────────────── -->
-  <section class="home-highlights container" aria-label="Highlights">
+  <!-- ─── Research & Work ───────────────────────────────────────────────── -->
+  <section class="home-section container">
+    <a class="home-section__label" routerLink="/experience">Research &amp; Work</a>
+    <hr class="home-section__rule" />
 
-    <div class="home-highlights__row">
-      <a class="home-highlights__row-label" routerLink="/experience">Research &amp; Work</a>
-      <hr class="home-highlights__rule" />
-      <p class="home-highlights__title">Undergraduate Research Assistant</p>
-      <p class="home-highlights__body">
-        Observational astrophysics — photometric data reduction,
-        Python pipelines, and telescope instrumentation.
-      </p>
-    </div>
+    @for (entry of experience(); track entry.id; let last = $last) {
+      <div class="home-entry">
+        <div class="home-entry__header">
+          <div class="home-entry__meta">
+            <p class="home-entry__org">{{ entry.organization }}</p>
+            <p class="home-entry__role">{{ entry.role }}</p>
+          </div>
+          <p class="home-entry__dates">{{ formatDates(entry.startDate, entry.endDate) }}</p>
+        </div>
+        <p class="home-entry__desc">{{ entry.description }}</p>
+      </div>
+      @if (!last) { <hr class="home-section__divider" /> }
+    }
+  </section>
 
-    <div class="home-highlights__row">
-      <a class="home-highlights__row-label" routerLink="/education">Education</a>
-      <hr class="home-highlights__rule" />
-      <p class="home-highlights__title">B.S. Physics &amp; Astrophysics</p>
-      <p class="home-highlights__body">
-        Coursework in classical mechanics, electrodynamics,
-        quantum theory, and observational methods.
-      </p>
-    </div>
+  <!-- ─── Education ─────────────────────────────────────────────────────── -->
+  <section class="home-section container">
+    <a class="home-section__label" routerLink="/education">Education</a>
+    <hr class="home-section__rule" />
 
-    <div class="home-highlights__row">
-      <a class="home-highlights__row-label" routerLink="/photography">Photography</a>
-      <hr class="home-highlights__rule" />
-      <p class="home-highlights__title">35mm Film</p>
-      <p class="home-highlights__body">
-        Shot on Canon AE-1 and Olympus OM-1.
-        Kodak Portra, Ilford HP5, and whatever else is in the camera bag.
-      </p>
-    </div>
+    @for (entry of education(); track entry.id; let last = $last) {
+      <div class="home-entry">
+        <div class="home-entry__header">
+          <div class="home-entry__meta">
+            <p class="home-entry__org">{{ entry.institution }}</p>
+            <p class="home-entry__role">{{ entry.degree }}, {{ entry.field }}</p>
+          </div>
+          <p class="home-entry__dates">{{ formatDates(entry.startDate, entry.endDate) }}</p>
+        </div>
+        @if (entry.courses?.length) {
+          <div class="home-entry__detail">
+            <span class="home-entry__detail-label">Relevant Courses</span>
+            <span class="home-entry__detail-value">{{ entry.courses!.join(' · ') }}</span>
+          </div>
+        }
+        @if (entry.honors?.length) {
+          <div class="home-entry__detail">
+            <span class="home-entry__detail-label">Awards &amp; Honors</span>
+            <span class="home-entry__detail-value">{{ entry.honors!.join(' · ') }}</span>
+          </div>
+        }
+      </div>
+      @if (!last) { <hr class="home-section__divider" /> }
+    }
+  </section>
 
-    <div class="home-highlights__row">
-      <p class="home-highlights__row-label home-highlights__row-label--static">Programming</p>
-      <hr class="home-highlights__rule" />
-      <p class="home-highlights__title">Python · C · Bash</p>
-    </div>
+  <!-- ─── Photography ───────────────────────────────────────────────────── -->
+  <section class="home-section container">
+    <a class="home-section__label" routerLink="/photography">Photography</a>
+    <hr class="home-section__rule" />
 
-    <div class="home-highlights__row">
-      <p class="home-highlights__row-label home-highlights__row-label--static">Scientific Computing</p>
-      <hr class="home-highlights__rule" />
-      <p class="home-highlights__title">NumPy · Astropy · Matplotlib · SciPy</p>
-    </div>
+    @if (currentPhoto()) {
+      <div class="home-carousel">
+        <div class="home-carousel__frame">
+          <button class="home-carousel__btn home-carousel__btn--prev" (click)="prevPhoto()" aria-label="Previous photo">&#8249;</button>
+          <img
+            class="home-carousel__img"
+            [src]="'assets/photography/' + currentPhoto()!.filename"
+            [alt]="currentPhoto()!.title"
+          />
+          <button class="home-carousel__btn home-carousel__btn--next" (click)="nextPhoto()" aria-label="Next photo">&#8250;</button>
+        </div>
+        <div class="home-carousel__meta">
+          <div class="home-carousel__meta-left">
+            <span>{{ currentPhoto()!.film }}</span>
+            <span>{{ currentPhoto()!.camera }}</span>
+          </div>
+          <div class="home-carousel__meta-right">
+            <span>{{ currentPhoto()!.location }}</span>
+            <span>{{ photoYear(currentPhoto()!.date) }}</span>
+          </div>
+        </div>
+      </div>
+    }
+  </section>
 
-    <div class="home-highlights__row">
-      <p class="home-highlights__row-label home-highlights__row-label--static">Instrumentation</p>
-      <hr class="home-highlights__rule" />
-      <p class="home-highlights__title">Analog signal conditioning · Embedded systems · Sensor calibration</p>
-    </div>
+  <!-- ─── Technical Skills ─────────────────────────────────────────────── -->
+  <section class="home-section container">
+    <p class="home-section__label home-section__label--static">Technical Skills</p>
+    <hr class="home-section__rule" />
 
-    <div class="home-highlights__row">
-      <p class="home-highlights__row-label home-highlights__row-label--static">Tools</p>
-      <hr class="home-highlights__rule" />
-      <p class="home-highlights__title">Git · Linux · LaTeX</p>
-    </div>
+    <div class="home-skill"><p class="home-skill__category">Programming</p><p class="home-skill__items">Python · C · Bash</p></div>
+    <hr class="home-section__divider" />
+    <div class="home-skill"><p class="home-skill__category">Scientific Computing</p><p class="home-skill__items">NumPy · Astropy · Matplotlib · SciPy</p></div>
+    <hr class="home-section__divider" />
+    <div class="home-skill"><p class="home-skill__category">Instrumentation</p><p class="home-skill__items">Analog signal conditioning · Embedded systems · Sensor calibration</p></div>
+    <hr class="home-section__divider" />
+    <div class="home-skill"><p class="home-skill__category">Tools</p><p class="home-skill__items">Git · Linux · LaTeX</p></div>
 
   </section>
 
