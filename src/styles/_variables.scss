@@ -2,35 +2,35 @@
   // ─── Color ───────────────────────────────────────────────────────────────
 
   // Backgrounds
-  --color-bg:           #f9f8f6;   // Warm off-white — lets photography breathe
-  --color-surface:      #ffffff;   // White for inset / contrast surfaces
-  --color-surface-alt:  #f3f2f0;   // Slightly recessed surface
+  --color-bg:           #f0ebe0;   // Warm parchment
+  --color-surface:      #f7f3eb;   // Light inset surface
+  --color-surface-alt:  #e5dfd3;   // Recessed surface
 
   // Text
-  --color-text:          #1c1917;  // Near-black, warm undertone
-  --color-text-secondary: #57534e; // Supporting body copy
-  --color-text-muted:    #a8a29e;  // Captions, dates, metadata
+  --color-text:          #22180e;  // Deep warm brown-black
+  --color-text-secondary: #5c4a38; // Mid brown
+  --color-text-muted:    #9a8872;  // Warm muted
 
   // Borders & dividers
-  --color-border:        #e7e5e4;  // Standard rule / field border
-  --color-border-strong: #d6d3d1;  // Emphasized divider
+  --color-border:        #d0c8ba;  // Warm tan rule
+  --color-border-strong: #bcb1a3;  // Emphasized divider
 
-  // Accent — restrained dark navy, not startup blue
-  --color-accent:        #1e3a5c;
-  --color-accent-hover:  #152c47;
+  // Accent — olive green
+  --color-accent:        #4d5c30;
+  --color-accent-hover:  #3a4523;
 
   // Interactive
-  --color-link:          #1e3a5c;
-  --color-link-hover:    #152c47;
-  --color-focus:         #1e3a5c;  // Focus ring
+  --color-link:          #1e3a5c;  // Dark navy
+  --color-link-hover:    #4d5c30;  // Olive on hover
+  --color-focus:         #1e3a5c;
 
   // State / utility
-  --color-error:         #991b1b;
+  --color-error:         #7a1515;
 
   // ─── Typography ──────────────────────────────────────────────────────────
 
   // Families
-  --font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
   --font-sans:  'DM Sans', system-ui, -apple-system, sans-serif;
   --font-mono:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 
@@ -106,7 +106,7 @@
   --radius-md:  4px;
 
   // ─── Deprecated aliases (kept for component backward-compat) ─────────────
-  --color-accent-muted: #e8edf3;   // very light tint of accent
+  --color-accent-muted: #dce3d0;   // very light tint of olive
   --container-max:      var(--width-content);
   --container-padding:  var(--gutter);
   --font-family:        var(--font-sans);
