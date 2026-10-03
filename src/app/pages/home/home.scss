@@ -87,13 +87,20 @@
     }
 
     &--static {
-      color: var(--color-text-muted);
       cursor: default;
 
       &:hover {
-        color: var(--color-text-muted);
+        color: var(--color-accent);
       }
     }
+  }
+
+  // Label row with trailing controls (photography)
+  &__heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-4);
   }
 
   &__rule {
@@ -195,49 +202,76 @@
 }
 
 // ─── Photography carousel ─────────────────────────────────────────────────────
+// A full-bleed strip that breaks out of the page container. Scroll-snap keeps
+// photos aligned, so the arrows, touch, and trackpad all move one photo at a time.
 
 .home-carousel {
-  display: inline-block;
+  --per-view: 4;
+  --gap: var(--space-4);
 
-  &__frame {
-    position: relative;
-    display: block;
-    max-width: 560px;
+  display: flex;
+  gap: var(--gap);
+  list-style: none;
+  padding-inline: var(--gutter);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 1600px) { --per-view: 5; }
+  @media (max-width: 1023px) { --per-view: 3; }
+  @media (max-width: 719px)  { --per-view: 2; --gap: var(--space-3); }
+  @media (max-width: 479px)  { --per-view: 1; }
+
+  &__slide {
+    flex: 0 0 calc((100% - (var(--per-view) - 1) * var(--gap)) / var(--per-view));
+    min-width: 0;
+    scroll-snap-align: start;
   }
 
   &__img {
     display: block;
     width: 100%;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
     background-color: var(--color-surface-alt);
   }
 
+  &__controls {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+  }
+
   &__btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.4);
-    color: rgba(255, 255, 255, 0.9);
-    border: none;
-    padding: var(--space-3) var(--space-4);
-    font-size: var(--text-2xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0 0 0.15em;
+    background: none;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    color: var(--color-accent);
+    font-size: var(--text-xl);
     line-height: 1;
-    cursor: pointer;
-    transition: background var(--duration-fast) ease;
 
     &:hover {
-      background: rgba(0, 0, 0, 0.65);
+      border-color: var(--color-accent);
+      color: var(--color-accent-hover);
     }
-
-    &--prev { left: 0; }
-    &--next { right: 0; }
   }
 
   &__meta {
     display: flex;
     justify-content: space-between;
-    max-width: 560px;
+    gap: var(--space-3);
     margin-top: var(--space-3);
     font-family: var(--font-sans);
     font-size: var(--text-xs);

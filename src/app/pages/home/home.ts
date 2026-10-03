@@ -1,4 +1,13 @@
-import { Component, inject, signal, computed, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  afterRenderEffect,
+  inject,
+  signal,
+  viewChild,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ExperienceService } from '../../core/services/experience.service';
 import { EducationService } from '../../core/services/education.service';
@@ -21,12 +30,17 @@ export class HomeComponent implements OnInit {
   experience = signal<ExperienceEntry[]>([]);
   education = signal<EducationEntry[]>([]);
   photos = signal<Photo[]>([]);
-  carouselIndex = signal(0);
 
-  currentPhoto = computed(() => {
-    const photos = this.photos();
-    return photos.length > 0 ? photos[this.carouselIndex()] : null;
-  });
+  private track = viewChild<ElementRef<HTMLElement>>('track');
+  canScroll = signal(false);
+
+  constructor() {
+    // Re-measure once the photo strip has rendered
+    afterRenderEffect(() => {
+      this.photos();
+      this.updateCanScroll();
+    });
+  }
 
   ngOnInit() {
     this.experienceService.getExperience().subscribe(data => this.experience.set(data.entries));
@@ -34,14 +48,36 @@ export class HomeComponent implements OnInit {
     this.photographyService.getPhotos().subscribe(data => this.photos.set(data.photos));
   }
 
+  @HostListener('window:resize')
+  updateCanScroll(): void {
+    const el = this.track()?.nativeElement;
+    this.canScroll.set(!!el && el.scrollWidth > el.clientWidth + 1);
+  }
+
   prevPhoto(): void {
-    const len = this.photos().length;
-    if (len > 0) this.carouselIndex.update(i => (i - 1 + len) % len);
+    this.stepCarousel(-1);
   }
 
   nextPhoto(): void {
-    const len = this.photos().length;
-    if (len > 0) this.carouselIndex.update(i => (i + 1) % len);
+    this.stepCarousel(1);
+  }
+
+  // Moves the strip by exactly one photo, wrapping around at either end
+  private stepCarousel(direction: 1 | -1): void {
+    const el = this.track()?.nativeElement;
+    if (!el || el.children.length < 2) return;
+
+    const [first, second] = Array.from(el.children) as HTMLElement[];
+    const step = second.offsetLeft - first.offsetLeft;
+    const max = el.scrollWidth - el.clientWidth;
+
+    if (direction === 1 && el.scrollLeft >= max - 1) {
+      el.scrollTo({ left: 0 });
+    } else if (direction === -1 && el.scrollLeft <= 1) {
+      el.scrollTo({ left: max });
+    } else {
+      el.scrollBy({ left: direction * step });
+    }
   }
 
   formatDates(start: string, end: string | null): string {

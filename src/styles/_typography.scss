@@ -1,5 +1,5 @@
 // ─── Heading scale ──────────────────────────────────────────────────────────
-// Headings use EB Garamond (serif) — established in _base.scss heading reset.
+// Headings use DM Sans — established in _base.scss heading reset.
 
 h1 { font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl)); }
 h2 { font-size: clamp(var(--text-xl),  3vw, var(--text-2xl)); }
@@ -27,7 +27,7 @@ h4 { font-size: var(--text-base); font-weight: 500; letter-spacing: 0; }
 
 // ─── Prose — long-form reading content ──────────────────────────────────────
 .prose {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(var(--text-base), 1.5vw, var(--text-md));
   line-height: var(--leading-relaxed);
   max-width: var(--width-reading);

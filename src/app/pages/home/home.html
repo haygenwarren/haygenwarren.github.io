@@ -69,32 +69,44 @@
   </section>
 
   <!-- ─── Photography ───────────────────────────────────────────────────── -->
-  <section class="home-section container">
-    <a class="home-section__label" routerLink="/photography">Photography</a>
-    <hr class="home-section__rule" />
-
-    @if (currentPhoto()) {
-      <div class="home-carousel">
-        <div class="home-carousel__frame">
-          <button class="home-carousel__btn home-carousel__btn--prev" (click)="prevPhoto()" aria-label="Previous photo">&#8249;</button>
-          <img
-            class="home-carousel__img"
-            [src]="'assets/photography/' + currentPhoto()!.filename"
-            [alt]="currentPhoto()!.title"
-          />
-          <button class="home-carousel__btn home-carousel__btn--next" (click)="nextPhoto()" aria-label="Next photo">&#8250;</button>
-        </div>
-        <div class="home-carousel__meta">
-          <div class="home-carousel__meta-left">
-            <span>{{ currentPhoto()!.film }}</span>
-            <span>{{ currentPhoto()!.camera }}</span>
+  <section class="home-section">
+    <div class="container">
+      <div class="home-section__heading">
+        <a class="home-section__label" routerLink="/photography">Photography</a>
+        @if (canScroll()) {
+          <div class="home-carousel__controls">
+            <button class="home-carousel__btn" type="button" (click)="prevPhoto()" aria-label="Previous photo">&#8249;</button>
+            <button class="home-carousel__btn" type="button" (click)="nextPhoto()" aria-label="Next photo">&#8250;</button>
           </div>
-          <div class="home-carousel__meta-right">
-            <span>{{ currentPhoto()!.location }}</span>
-            <span>{{ photoYear(currentPhoto()!.date) }}</span>
-          </div>
-        </div>
+        }
       </div>
+      <hr class="home-section__rule" />
+    </div>
+
+    @if (photos().length) {
+      <ul class="home-carousel" #track role="list" aria-label="Photographs">
+        @for (photo of photos(); track photo.id) {
+          <li class="home-carousel__slide">
+            <img
+              class="home-carousel__img"
+              [src]="'assets/photography/' + photo.filename"
+              [alt]="photo.title"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="home-carousel__meta">
+              <div class="home-carousel__meta-left">
+                <span>{{ photo.film }}</span>
+                <span>{{ photo.camera }}</span>
+              </div>
+              <div class="home-carousel__meta-right">
+                <span>{{ photo.location }}</span>
+                <span>{{ photoYear(photo.date) }}</span>
+              </div>
+            </div>
+          </li>
+        }
+      </ul>
     }
   </section>
 

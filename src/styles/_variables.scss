@@ -1,43 +1,86 @@
+// ─── Color: navy theme (default) ─────────────────────────────────────────────
+// The light theme below overrides these when <html data-theme="light">.
+
 :root {
-  // ─── Color ───────────────────────────────────────────────────────────────
+  color-scheme: dark;
 
   // Backgrounds
-  --color-bg:           #0e1b2e;   // Deep navy
-  --color-surface:      #142238;   // Lifted surface
-  --color-surface-alt:  #1a2d44;   // Recessed surface
+  --color-bg:           #0b1930;   // Navy
+  --color-surface:      #112240;   // Lifted surface
+  --color-surface-alt:  #16294d;   // Recessed surface
 
   // Text
-  --color-text:          #e4e0d6;  // Warm cream
-  --color-text-secondary: #a8a49c; // Muted cream
-  --color-text-muted:    #6b6860;  // Subdued
+  --color-text:          #f5f8fc;  // White
+  --color-text-secondary: #b8c6da; // Soft blue-grey
+  --color-text-muted:    #7f92ad;  // Subdued
 
   // Borders & dividers
-  --color-border:        #1e3252;  // Dark navy rule
-  --color-border-strong: #2a4268;  // Emphasized divider
+  --color-border:        #1c3157;  // Navy rule
+  --color-border-strong: #2c4674;  // Emphasized divider
 
-  // Accent — olive green
-  --color-accent:        #6b7a3e;
-  --color-accent-hover:  #7d8f4a;
+  // Accent — light blue
+  --color-accent:        #7cc0f2;
+  --color-accent-hover:  #a9d7f8;
 
   // Interactive
-  --color-link:          #8fa84e;  // Bright olive — readable on dark bg
-  --color-link-hover:    #a3bf5e;
-  --color-focus:         #8fa84e;
+  --color-link:          #7cc0f2;
+  --color-link-hover:    #a9d7f8;
+  --color-focus:         #7cc0f2;
+
+  // State / utility
+  --color-error:         #e5695b;
+  --color-selection:     #24508a;
+
+  // Nav bar
+  --color-nav-bg:          #122849;              // Lifted navy
+  --color-nav-border:      #2c4674;
+  --color-nav-text:        #f5f8fc;
+  --color-nav-text-muted:  rgba(245, 248, 252, 0.65);
+}
+
+// ─── Color: light theme ──────────────────────────────────────────────────────
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  // Backgrounds
+  --color-bg:           #ffffff;
+  --color-surface:      #f4f8fc;
+  --color-surface-alt:  #e8f0f9;
+
+  // Text
+  --color-text:          #0b1930;  // Navy
+  --color-text-secondary: #3d4f6b;
+  --color-text-muted:    #64748f;
+
+  // Borders & dividers
+  --color-border:        #dbe5f1;
+  --color-border-strong: #b9cbe2;
+
+  // Accent — blue, darkened from the navy theme's light blue to read on white
+  --color-accent:        #1b6cb0;
+  --color-accent-hover:  #0f4f8a;
+
+  // Interactive
+  --color-link:          #1b6cb0;
+  --color-link-hover:    #0f4f8a;
+  --color-focus:         #1b6cb0;
 
   // State / utility
   --color-error:         #c0392b;
+  --color-selection:     #cfe4f8;
 
-  // ─── Nav bar ─────────────────────────────────────────────────────────────
+  // Nav bar — stays navy in both themes
+  --color-nav-bg:          #0b1930;
+  --color-nav-border:      #1c3157;
+  --color-nav-text:        #f5f8fc;
+  --color-nav-text-muted:  rgba(245, 248, 252, 0.65);
+}
 
-  --color-nav-bg:          #4d5c30;              // Solid olive
-  --color-nav-border:      #3d4b24;              // Darker olive for scroll border
-  --color-nav-text:        #e4e0d6;              // Cream
-  --color-nav-text-muted:  rgba(228, 224, 214, 0.6);
-
+:root {
   // ─── Typography ──────────────────────────────────────────────────────────
 
   // Families
-  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
   --font-sans:  'DM Sans', system-ui, -apple-system, sans-serif;
   --font-mono:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 
@@ -112,7 +155,6 @@
   --radius-md:  4px;
 
   // ─── Deprecated aliases ───────────────────────────────────────────────────
-  --color-accent-muted: #2a3a16;
   --container-max:      var(--width-content);
   --container-padding:  var(--gutter);
   --font-family:        var(--font-sans);

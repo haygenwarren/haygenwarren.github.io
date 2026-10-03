@@ -47,7 +47,7 @@
   }
 
   &__title {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
     font-weight: 500;
     letter-spacing: var(--tracking-tight);
@@ -129,7 +129,7 @@
   }
 
   &__role {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: var(--text-xl);
     font-weight: 500;
     letter-spacing: var(--tracking-tight);
@@ -231,7 +231,7 @@
   }
 
   &__title {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: var(--text-xl);
     font-weight: 500;
     letter-spacing: var(--tracking-tight);

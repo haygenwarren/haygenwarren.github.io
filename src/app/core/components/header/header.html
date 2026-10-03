@@ -14,52 +14,73 @@
       Haygen Warren
     </a>
 
-    <!-- Desktop navigation -->
-    <nav
-      id="primary-nav"
-      class="site-nav"
-      aria-label="Primary navigation"
-    >
-      <ul class="site-nav__list" role="list">
-        @for (item of navItems; track item.path) {
-          <li class="site-nav__item">
-            <a
-              class="site-nav__link"
-              [routerLink]="item.path"
-              routerLinkActive="site-nav__link--active"
-              [routerLinkActiveOptions]="{ exact: item.exact ?? false }"
-            >
-              {{ item.label }}
-            </a>
-          </li>
-        }
-      </ul>
-    </nav>
+    <div class="site-header__actions">
+      <!-- Desktop navigation -->
+      <nav
+        id="primary-nav"
+        class="site-nav"
+        aria-label="Primary navigation"
+      >
+        <ul class="site-nav__list" role="list">
+          @for (item of navItems; track item.path) {
+            <li class="site-nav__item">
+              <a
+                class="site-nav__link"
+                [routerLink]="item.path"
+                routerLinkActive="site-nav__link--active"
+                [routerLinkActiveOptions]="{ exact: item.exact ?? false }"
+              >
+                {{ item.label }}
+              </a>
+            </li>
+          }
+        </ul>
+      </nav>
 
-    <!-- Mobile menu toggle -->
-    <button
-      class="site-header__toggle"
-      type="button"
-      [attr.aria-expanded]="menuOpen()"
-      aria-controls="mobile-nav"
-      aria-label="{{ menuOpen() ? 'Close navigation menu' : 'Open navigation menu' }}"
-      (click)="toggleMenu()"
-    >
-      <span class="site-header__toggle-icon" aria-hidden="true">
-        @if (menuOpen()) {
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-            <line x1="2" y1="2" x2="16" y2="16"/>
-            <line x1="16" y1="2" x2="2" y2="16"/>
+      <!-- Theme toggle -->
+      <button
+        class="site-header__theme"
+        type="button"
+        [attr.aria-label]="theme() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'"
+        (click)="toggleTheme()"
+      >
+        @if (theme() === 'dark') {
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
           </svg>
         } @else {
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-            <line x1="2" y1="5" x2="16" y2="5"/>
-            <line x1="2" y1="9" x2="16" y2="9"/>
-            <line x1="2" y1="13" x2="16" y2="13"/>
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
         }
-      </span>
-    </button>
+      </button>
+
+      <!-- Mobile menu toggle -->
+      <button
+        class="site-header__toggle"
+        type="button"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="mobile-nav"
+        aria-label="{{ menuOpen() ? 'Close navigation menu' : 'Open navigation menu' }}"
+        (click)="toggleMenu()"
+      >
+        <span class="site-header__toggle-icon" aria-hidden="true">
+          @if (menuOpen()) {
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <line x1="2" y1="2" x2="16" y2="16"/>
+              <line x1="16" y1="2" x2="2" y2="16"/>
+            </svg>
+          } @else {
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <line x1="2" y1="5" x2="16" y2="5"/>
+              <line x1="2" y1="9" x2="16" y2="9"/>
+              <line x1="2" y1="13" x2="16" y2="13"/>
+            </svg>
+          }
+        </span>
+      </button>
+    </div>
 
   </div>
 

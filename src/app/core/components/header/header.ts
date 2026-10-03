@@ -1,5 +1,6 @@
-import { Component, HostListener, signal } from '@angular/core';
+import { Component, HostListener, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ThemeService } from '../../services/theme.service';
 
 interface NavItem {
   path: string;
@@ -14,8 +15,11 @@ interface NavItem {
   styleUrl: './header.scss',
 })
 export class HeaderComponent {
+  private themeService = inject(ThemeService);
+
   menuOpen = signal(false);
   scrolled = signal(false);
+  theme = this.themeService.theme;
 
   navItems: NavItem[] = [
     { path: '/',            label: 'Home',        exact: true },
@@ -37,5 +41,9 @@ export class HeaderComponent {
 
   closeMenu(): void {
     this.menuOpen.set(false);
+  }
+
+  toggleTheme(): void {
+    this.themeService.toggle();
   }
 }

@@ -21,7 +21,7 @@
 
   // ── Wordmark ──────────────────────────────────────────────────────────────
   &__wordmark {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 1.0625rem;
     font-weight: 400;
     letter-spacing: var(--tracking-tight);
@@ -36,9 +36,20 @@
     }
   }
 
-  // ── Mobile toggle ─────────────────────────────────────────────────────────
+  // ── Right-hand group: nav, theme toggle, mobile toggle ────────────────────
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+
+    @media (max-width: 680px) {
+      gap: var(--space-1);
+    }
+  }
+
+  // ── Icon buttons ──────────────────────────────────────────────────────────
+  &__theme,
   &__toggle {
-    display: none;
     align-items: center;
     justify-content: center;
     width: 2.25rem;
@@ -46,16 +57,30 @@
     background: none;
     border: none;
     padding: 0;
-    color: var(--color-nav-text);
     border-radius: var(--radius-sm);
+
+    &:focus-visible {
+      outline: 2px solid var(--color-nav-text);
+      outline-offset: 2px;
+    }
+  }
+
+  &__theme {
+    display: flex;
+    color: var(--color-nav-text-muted);
+
+    &:hover {
+      color: var(--color-nav-text);
+    }
+  }
+
+  // ── Mobile toggle ─────────────────────────────────────────────────────────
+  &__toggle {
+    display: none;
+    color: var(--color-nav-text);
 
     &:hover {
       color: var(--color-nav-text-muted);
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--color-focus);
-      outline-offset: 2px;
     }
 
     @media (max-width: 680px) {
