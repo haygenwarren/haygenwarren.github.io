@@ -1,46 +1,48 @@
-// ─── Color: navy theme (default) ─────────────────────────────────────────────
-// The two brand blues trade places between themes: navy page with a light blue
-// nav bar by default, light blue page with a navy nav bar when
+// ─── Color: olive theme (default) ────────────────────────────────────────────
+// The two brand colors trade places between themes: olive page with a sand
+// nav bar by default, sand page with an olive nav bar when
 // <html data-theme="light">.
 
 :root {
-  --blue-navy:  #0b1930;
-  --blue-light: #7cc0f2;
+  --olive: #465027;
+  --sand:  #e4d6b4;
+  --cream: #f7f2e4;
+  --ink:   #262a12;   // Near-black olive for text on sand
 
   color-scheme: dark;
 
   // Backgrounds
-  --color-bg:           var(--blue-navy);
-  --color-surface:      #112240;   // Lifted surface
-  --color-surface-alt:  #16294d;   // Recessed surface
+  --color-bg:           var(--olive);
+  --color-surface:      #515a32;   // Lifted surface
+  --color-surface-alt:  #5b633e;   // Recessed surface
 
   // Text
-  --color-text:          #f5f8fc;  // White
-  --color-text-secondary: #b8c6da; // Soft blue-grey
-  --color-text-muted:    #7f92ad;  // Subdued
+  --color-text:          var(--cream);
+  --color-text-secondary: #dbd8c6;
+  --color-text-muted:    #c0c0aa;
 
   // Borders & dividers
-  --color-border:        #1c3157;  // Navy rule
-  --color-border-strong: #2c4674;  // Emphasized divider
+  --color-border:        #5f6741;
+  --color-border-strong: #787d5c;
 
-  // Accent — light blue
-  --color-accent:        var(--blue-light);
-  --color-accent-hover:  #a9d7f8;
+  // Accent — sand
+  --color-accent:        var(--sand);
+  --color-accent-hover:  #efe6d2;
 
   // Interactive
-  --color-link:          var(--blue-light);
-  --color-link-hover:    #a9d7f8;
-  --color-focus:         var(--blue-light);
+  --color-link:          var(--sand);
+  --color-link-hover:    #efe6d2;
+  --color-focus:         var(--sand);
 
   // State / utility
-  --color-error:         #e5695b;
-  --color-selection:     #24508a;
+  --color-error:         #f5b8a6;
+  --color-selection:     #757851;
 
-  // Nav bar — matches the section header labels, with navy text
-  --color-nav-bg:          var(--blue-light);
-  --color-nav-border:      #5aa6de;
-  --color-nav-text:        var(--blue-navy);
-  --color-nav-text-muted:  rgba(11, 25, 48, 0.75);
+  // Nav bar — sand, matching the section header labels, with dark text
+  --color-nav-bg:          var(--sand);
+  --color-nav-border:      #beb494;
+  --color-nav-text:        var(--ink);
+  --color-nav-text-muted:  #58583d;
 }
 
 // ─── Color: light theme ──────────────────────────────────────────────────────
@@ -49,37 +51,37 @@
   color-scheme: light;
 
   // Backgrounds
-  --color-bg:           var(--blue-light);
-  --color-surface:      #93ccf5;   // Lifted surface
-  --color-surface-alt:  #68b0e6;   // Recessed surface
+  --color-bg:           var(--sand);
+  --color-surface:      #ede4ce;   // Lifted surface
+  --color-surface-alt:  #d1c5a4;   // Recessed surface
 
   // Text
-  --color-text:          var(--blue-navy);
-  --color-text-secondary: #1c3050;
-  --color-text-muted:    #2b4566;
+  --color-text:          var(--ink);
+  --color-text-secondary: #42432a;
+  --color-text-muted:    #5f5e43;
 
   // Borders & dividers
-  --color-border:        #5aa6de;
-  --color-border-strong: #3d8ac6;
+  --color-border:        #c2b797;
+  --color-border-strong: #a39c7d;
 
-  // Accent — deep blue, to read on the light blue page
-  --color-accent:        #0b3d70;
-  --color-accent-hover:  #062a50;
+  // Accent — olive
+  --color-accent:        var(--olive);
+  --color-accent-hover:  var(--ink);
 
   // Interactive
-  --color-link:          #0b3d70;
-  --color-link-hover:    #062a50;
-  --color-focus:         #0b3d70;
+  --color-link:          var(--olive);
+  --color-link-hover:    var(--ink);
+  --color-focus:         var(--olive);
 
   // State / utility
-  --color-error:         #8f1d15;
-  --color-selection:     #c4e3fa;
+  --color-error:         #8f2a1a;
+  --color-selection:     #b8b08d;
 
-  // Nav bar — navy with white text
-  --color-nav-bg:          var(--blue-navy);
-  --color-nav-border:      #1c3157;
-  --color-nav-text:        #f5f8fc;
-  --color-nav-text-muted:  rgba(245, 248, 252, 0.65);
+  // Nav bar — olive with cream text
+  --color-nav-bg:          var(--olive);
+  --color-nav-border:      #343c1d;
+  --color-nav-text:        var(--cream);
+  --color-nav-text-muted:  #c8c7b2;
 }
 
 :root {
