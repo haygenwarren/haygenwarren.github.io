@@ -1,11 +1,16 @@
 // ─── Color: navy theme (default) ─────────────────────────────────────────────
-// The light theme below overrides these when <html data-theme="light">.
+// The two brand blues trade places between themes: navy page with a light blue
+// nav bar by default, light blue page with a navy nav bar when
+// <html data-theme="light">.
 
 :root {
+  --blue-navy:  #0b1930;
+  --blue-light: #7cc0f2;
+
   color-scheme: dark;
 
   // Backgrounds
-  --color-bg:           #0b1930;   // Navy
+  --color-bg:           var(--blue-navy);
   --color-surface:      #112240;   // Lifted surface
   --color-surface-alt:  #16294d;   // Recessed surface
 
@@ -19,23 +24,23 @@
   --color-border-strong: #2c4674;  // Emphasized divider
 
   // Accent — light blue
-  --color-accent:        #7cc0f2;
+  --color-accent:        var(--blue-light);
   --color-accent-hover:  #a9d7f8;
 
   // Interactive
-  --color-link:          #7cc0f2;
+  --color-link:          var(--blue-light);
   --color-link-hover:    #a9d7f8;
-  --color-focus:         #7cc0f2;
+  --color-focus:         var(--blue-light);
 
   // State / utility
   --color-error:         #e5695b;
   --color-selection:     #24508a;
 
-  // Nav bar
-  --color-nav-bg:          #122849;              // Lifted navy
-  --color-nav-border:      #2c4674;
-  --color-nav-text:        #f5f8fc;
-  --color-nav-text-muted:  rgba(245, 248, 252, 0.65);
+  // Nav bar — matches the section header labels, with navy text
+  --color-nav-bg:          var(--blue-light);
+  --color-nav-border:      #5aa6de;
+  --color-nav-text:        var(--blue-navy);
+  --color-nav-text-muted:  rgba(11, 25, 48, 0.75);
 }
 
 // ─── Color: light theme ──────────────────────────────────────────────────────
@@ -44,34 +49,34 @@
   color-scheme: light;
 
   // Backgrounds
-  --color-bg:           #ffffff;
-  --color-surface:      #f4f8fc;
-  --color-surface-alt:  #e8f0f9;
+  --color-bg:           var(--blue-light);
+  --color-surface:      #93ccf5;   // Lifted surface
+  --color-surface-alt:  #68b0e6;   // Recessed surface
 
   // Text
-  --color-text:          #0b1930;  // Navy
-  --color-text-secondary: #3d4f6b;
-  --color-text-muted:    #64748f;
+  --color-text:          var(--blue-navy);
+  --color-text-secondary: #1c3050;
+  --color-text-muted:    #2b4566;
 
   // Borders & dividers
-  --color-border:        #dbe5f1;
-  --color-border-strong: #b9cbe2;
+  --color-border:        #5aa6de;
+  --color-border-strong: #3d8ac6;
 
-  // Accent — blue, darkened from the navy theme's light blue to read on white
-  --color-accent:        #1b6cb0;
-  --color-accent-hover:  #0f4f8a;
+  // Accent — deep blue, to read on the light blue page
+  --color-accent:        #0b3d70;
+  --color-accent-hover:  #062a50;
 
   // Interactive
-  --color-link:          #1b6cb0;
-  --color-link-hover:    #0f4f8a;
-  --color-focus:         #1b6cb0;
+  --color-link:          #0b3d70;
+  --color-link-hover:    #062a50;
+  --color-focus:         #0b3d70;
 
   // State / utility
-  --color-error:         #c0392b;
-  --color-selection:     #cfe4f8;
+  --color-error:         #8f1d15;
+  --color-selection:     #c4e3fa;
 
-  // Nav bar — stays navy in both themes
-  --color-nav-bg:          #0b1930;
+  // Nav bar — navy with white text
+  --color-nav-bg:          var(--blue-navy);
   --color-nav-border:      #1c3157;
   --color-nav-text:        #f5f8fc;
   --color-nav-text-muted:  rgba(245, 248, 252, 0.65);
