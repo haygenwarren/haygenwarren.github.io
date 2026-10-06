@@ -12,13 +12,9 @@
         <a class="blog-post__back" routerLink="/blog" aria-label="Back to blog">&larr;&ensp;Writing</a>
         <h1 class="blog-post__title">{{ p.title }}</h1>
         <div class="blog-post__byline">
-          <time class="blog-post__date" [attr.datetime]="p.date">{{ p.date }}</time>
+          <time class="blog-post__date" [attr.datetime]="p.date">{{ p.date | date: 'MMM d, y' }}</time>
           @if (p.tags.length) {
-            <ul class="blog-post__tags" aria-label="Tags">
-              @for (tag of p.tags; track tag) {
-                <li>{{ tag }}</li>
-              }
-            </ul>
+            <span class="blog-post__tags">{{ p.tags.join(' · ') }}</span>
           }
         </div>
       </header>

@@ -8,31 +8,33 @@
   <section class="timeline" aria-label="Experience entries">
     @for (entry of entries(); track entry.id) {
       <article class="timeline-entry">
-        <div class="timeline-entry__meta">
-          <span class="timeline-entry__dates">
-            {{ entry.startDate }}&thinsp;&ndash;&thinsp;{{ entry.endDate ?? 'Present' }}
-          </span>
-          <span class="timeline-entry__location">{{ entry.location }}</span>
-        </div>
-        <div class="timeline-entry__content">
-          <h2 class="timeline-entry__role">{{ entry.role }}</h2>
-          <p class="timeline-entry__org">{{ entry.organization }}</p>
-          <p class="timeline-entry__description">{{ entry.description }}</p>
-          @if (entry.highlights.length) {
-            <ul class="timeline-entry__highlights">
+        <header class="timeline-entry__header">
+          <div class="timeline-entry__heading">
+            <h2 class="timeline-entry__org">{{ entry.organization }}</h2>
+            <p class="timeline-entry__role">{{ entry.role }}</p>
+          </div>
+          <div class="timeline-entry__meta">
+            <span class="timeline-entry__dates">{{ entry.startDate }} – {{ entry.endDate ?? 'Present' }}</span>
+            <span class="timeline-entry__location">{{ entry.location }}</span>
+          </div>
+        </header>
+        <p class="timeline-entry__description">{{ entry.description }}</p>
+        @if (entry.highlights.length) {
+          <div class="timeline-entry__detail">
+            <span class="timeline-entry__detail-label">Highlights</span>
+            <ul class="timeline-entry__detail-value timeline-entry__highlights">
               @for (h of entry.highlights; track h) {
                 <li>{{ h }}</li>
               }
             </ul>
-          }
-          @if (entry.tags.length) {
-            <ul class="timeline-entry__tags" aria-label="Tags">
-              @for (tag of entry.tags; track tag) {
-                <li>{{ tag }}</li>
-              }
-            </ul>
-          }
-        </div>
+          </div>
+        }
+        @if (entry.tags.length) {
+          <div class="timeline-entry__detail">
+            <span class="timeline-entry__detail-label">Tags</span>
+            <span class="timeline-entry__detail-value">{{ entry.tags.join(' · ') }}</span>
+          </div>
+        }
       </article>
     }
     @empty {

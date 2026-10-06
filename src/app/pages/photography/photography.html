@@ -19,9 +19,16 @@
         </div>
         <figcaption class="photo-item__caption">
           <span class="photo-item__title">{{ photo.title }}</span>
-          <span class="photo-item__meta">
-            {{ photo.camera }}&ensp;&middot;&ensp;{{ photo.film }}
-          </span>
+          <div class="photo-item__meta">
+            <div class="photo-item__meta-left">
+              <span>{{ photo.film }}</span>
+              <span>{{ photo.camera }}</span>
+            </div>
+            <div class="photo-item__meta-right">
+              <span>{{ photo.location }}</span>
+              <span>{{ photoYear(photo.date) }}</span>
+            </div>
+          </div>
         </figcaption>
       </figure>
     }

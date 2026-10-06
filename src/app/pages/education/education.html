@@ -8,24 +8,40 @@
   <section class="timeline" aria-label="Education entries">
     @for (entry of entries(); track entry.id) {
       <article class="timeline-entry">
-        <div class="timeline-entry__meta">
-          <span class="timeline-entry__dates">
-            {{ entry.startDate }}&thinsp;&ndash;&thinsp;{{ entry.endDate ?? 'Present' }}
-          </span>
-          <span class="timeline-entry__location">{{ entry.location }}</span>
-        </div>
-        <div class="timeline-entry__content">
-          <h2 class="timeline-entry__role">{{ entry.degree }} in {{ entry.field }}</h2>
-          <p class="timeline-entry__org">{{ entry.institution }}</p>
-          <p class="timeline-entry__description">{{ entry.description }}</p>
-          @if (entry.highlights.length) {
-            <ul class="timeline-entry__highlights">
+        <header class="timeline-entry__header">
+          <div class="timeline-entry__heading">
+            <h2 class="timeline-entry__org">{{ entry.institution }}</h2>
+            <p class="timeline-entry__role">{{ entry.degree }}, {{ entry.field }}</p>
+          </div>
+          <div class="timeline-entry__meta">
+            <span class="timeline-entry__dates">{{ entry.startDate }} – {{ entry.endDate ?? 'Present' }}</span>
+            <span class="timeline-entry__location">{{ entry.location }}</span>
+          </div>
+        </header>
+        <p class="timeline-entry__description">{{ entry.description }}</p>
+        @if (entry.courses?.length) {
+          <div class="timeline-entry__detail">
+            <span class="timeline-entry__detail-label">Relevant Courses</span>
+            <span class="timeline-entry__detail-value">{{ entry.courses!.join(' · ') }}</span>
+          </div>
+        }
+        @if (entry.honors?.length) {
+          <div class="timeline-entry__detail">
+            <span class="timeline-entry__detail-label">Awards &amp; Honors</span>
+            <span class="timeline-entry__detail-value">{{ entry.honors!.join(' · ') }}</span>
+          </div>
+        }
+        <!-- Highlights repeat courses and honors, so only show them on their own -->
+        @if (!entry.courses?.length && !entry.honors?.length && entry.highlights.length) {
+          <div class="timeline-entry__detail">
+            <span class="timeline-entry__detail-label">Highlights</span>
+            <ul class="timeline-entry__detail-value timeline-entry__highlights">
               @for (h of entry.highlights; track h) {
                 <li>{{ h }}</li>
               }
             </ul>
-          }
-        </div>
+          </div>
+        }
       </article>
     }
     @empty {

@@ -16,4 +16,8 @@ export class PhotographyComponent implements OnInit {
       this.photos.set(data.photos);
     });
   }
+
+  photoYear(date: string): string {
+    return date.split('-')[0];
+  }
 }

@@ -1,11 +1,12 @@
 import { Component, inject, signal, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { BlogService } from '../../../core/services/blog.service';
 import { BlogPost } from '../../../core/models/blog-post.model';
 
 @Component({
   selector: 'app-blog-post',
-  imports: [RouterLink],
+  imports: [RouterLink, DatePipe],
   templateUrl: './blog-post.html',
   styleUrl: './blog-post.scss',
 })

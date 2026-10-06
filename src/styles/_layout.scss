@@ -27,21 +27,22 @@
 }
 
 // ─── Page header ─────────────────────────────────────────────────────────────
-// Section at the top of a content page introducing the page
+// Section at the top of a content page introducing the page. The eyebrow
+// matches the Home section labels; the title matches the Home name.
 
 .page-header {
   padding-top: var(--space-12);
   padding-bottom: var(--space-10);
   border-bottom: 1px solid var(--color-border);
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-8);
 
   &__eyebrow {
     font-family: var(--font-sans);
-    font-size: var(--text-xs);
+    font-size: var(--text-sm);
     font-weight: 500;
     letter-spacing: var(--tracking-widest);
     text-transform: uppercase;
-    color: var(--color-text-muted);
+    color: var(--color-accent);
     margin-bottom: var(--space-4);
     display: block;
   }
@@ -49,16 +50,16 @@
   &__title {
     font-family: var(--font-sans);
     font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: var(--tracking-tight);
-    line-height: var(--leading-tight);
+    line-height: var(--leading-snug);
     color: var(--color-text);
     margin-bottom: var(--space-4);
   }
 
   &__description {
     font-family: var(--font-sans);
-    font-size: var(--text-md);
+    font-size: var(--text-lg);
     color: var(--color-text-secondary);
     max-width: var(--width-narrow);
     line-height: var(--leading-relaxed);
@@ -75,6 +76,8 @@
 }
 
 // ─── Timeline layout (experience + education) ────────────────────────────────
+// Mirrors the Home entry rows: organization and role on the left, dates on
+// the right, then description and labelled detail rows.
 
 .timeline {
   display: flex;
@@ -83,12 +86,9 @@
 }
 
 .timeline-entry {
-  display: grid;
-  grid-template-columns: 13rem 1fr;
-  gap: 0 var(--space-8);
-  padding-bottom: var(--space-12);
+  padding-bottom: var(--space-8);
   border-bottom: 1px solid var(--color-border);
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-8);
 
   &:last-child {
     border-bottom: none;
@@ -96,62 +96,92 @@
     padding-bottom: 0;
   }
 
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-    gap: var(--space-3);
-  }
-
-  // ── Left meta column ──
-  &__meta {
+  &__header {
     display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-    padding-top: 0.15em; // optical alignment with heading
-  }
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-6);
+    margin-bottom: var(--space-4);
 
-  &__dates {
-    font-family: var(--font-sans);
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    font-variant-numeric: tabular-nums;
-  }
-
-  &__location {
-    font-family: var(--font-sans);
-    font-size: var(--text-xs);
-    color: var(--color-text-muted);
-    letter-spacing: 0.01em;
-  }
-
-  // ── Right content column ──
-  &__content {
-    // nothing — children manage their own layout
-  }
-
-  &__role {
-    font-family: var(--font-sans);
-    font-size: var(--text-xl);
-    font-weight: 500;
-    letter-spacing: var(--tracking-tight);
-    color: var(--color-text);
-    margin-bottom: var(--space-1);
+    @media (max-width: 560px) {
+      flex-direction: column;
+      gap: var(--space-1);
+    }
   }
 
   &__org {
     font-family: var(--font-sans);
-    font-size: var(--text-base);
+    font-size: var(--text-title);
     font-weight: 400;
+    letter-spacing: var(--tracking-normal);
+    line-height: var(--leading-snug);
+    color: var(--color-text);
+    margin-bottom: var(--space-1);
+  }
+
+  &__role {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
     color: var(--color-text-secondary);
-    margin-bottom: var(--space-5);
+  }
+
+  // ── Right meta column ──
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-1);
+    flex-shrink: 0;
+    padding-top: var(--space-2);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+
+    @media (max-width: 560px) {
+      align-items: flex-start;
+      padding-top: 0;
+    }
   }
 
   &__description {
     font-family: var(--font-sans);
     font-size: var(--text-base);
     line-height: var(--leading-relaxed);
-    color: var(--color-text);
-    margin-bottom: var(--space-4);
-    max-width: 60ch;
+    color: var(--color-text-secondary);
+    max-width: 72ch;
+    margin-bottom: var(--space-2);
+  }
+
+  &__detail {
+    display: flex;
+    gap: var(--space-6);
+    margin-top: var(--space-4);
+
+    @media (max-width: 560px) {
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+  }
+
+  &__detail-label {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 9rem;
+    padding-top: 0.2em;
+  }
+
+  &__detail-value {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
   }
 
   &__highlights {
@@ -159,14 +189,9 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
-    margin-bottom: var(--space-5);
+    gap: var(--space-1);
 
     li {
-      font-family: var(--font-sans);
-      font-size: var(--text-sm);
-      color: var(--color-text-secondary);
-      line-height: var(--leading-relaxed);
       padding-left: var(--space-4);
       position: relative;
 
@@ -178,34 +203,10 @@
       }
     }
   }
-
-  &__tags {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-family: var(--font-sans);
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-
-    li {
-      &::after {
-        content: '·';
-        margin: 0 0.5em;
-        color: var(--color-border-strong);
-      }
-
-      &:last-child::after {
-        content: none;
-      }
-    }
-  }
 }
 
 // ─── Post list layout (blog index) ──────────────────────────────────────────
+// Same row rhythm as the timeline: title left, date right, summary below.
 
 .post-list {
   display: flex;
@@ -213,30 +214,35 @@
 }
 
 .post-card {
-  padding-bottom: var(--space-10);
+  padding-bottom: var(--space-8);
   border-bottom: 1px solid var(--color-border);
-  margin-bottom: var(--space-10);
+  margin-bottom: var(--space-8);
 
   &:last-child {
     border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
-  &__date {
-    display: block;
-    font-family: var(--font-sans);
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-3);
-    font-variant-numeric: tabular-nums;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-6);
+    margin-bottom: var(--space-4);
+
+    @media (max-width: 560px) {
+      flex-direction: column;
+      gap: var(--space-1);
+    }
   }
 
   &__title {
     font-family: var(--font-sans);
-    font-size: var(--text-xl);
-    font-weight: 500;
-    letter-spacing: var(--tracking-tight);
+    font-size: var(--text-title);
+    font-weight: 400;
+    letter-spacing: var(--tracking-normal);
     line-height: var(--leading-snug);
-    margin-bottom: var(--space-3);
   }
 
   &__link {
@@ -244,7 +250,20 @@
     text-decoration: none;
 
     &:hover {
-      color: var(--color-link);
+      color: var(--color-accent);
+    }
+  }
+
+  &__date {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-top: var(--space-2);
+
+    @media (max-width: 560px) {
+      padding-top: 0;
     }
   }
 
@@ -253,12 +272,14 @@
     font-size: var(--text-base);
     color: var(--color-text-secondary);
     line-height: var(--leading-relaxed);
-    max-width: 58ch;
+    max-width: 72ch;
     margin-bottom: var(--space-4);
   }
 
   &__tags {
-    @extend .timeline-entry__tags;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
   }
 }
 

@@ -8,17 +8,15 @@
   <section class="post-list" aria-label="Blog posts">
     @for (post of posts(); track post.slug) {
       <article class="post-card">
-        <time class="post-card__date" [attr.datetime]="post.date">{{ post.date }}</time>
-        <h2 class="post-card__title">
-          <a class="post-card__link" [routerLink]="['/blog', post.slug]">{{ post.title }}</a>
-        </h2>
+        <header class="post-card__header">
+          <h2 class="post-card__title">
+            <a class="post-card__link" [routerLink]="['/blog', post.slug]">{{ post.title }}</a>
+          </h2>
+          <time class="post-card__date" [attr.datetime]="post.date">{{ post.date | date: 'MMM d, y' }}</time>
+        </header>
         <p class="post-card__summary">{{ post.summary }}</p>
         @if (post.tags.length) {
-          <ul class="post-card__tags" aria-label="Tags">
-            @for (tag of post.tags; track tag) {
-              <li>{{ tag }}</li>
-            }
-          </ul>
+          <p class="post-card__tags">{{ post.tags.join(' · ') }}</p>
         }
       </article>
     }
