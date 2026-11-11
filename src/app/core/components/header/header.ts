@@ -21,6 +21,7 @@ export class HeaderComponent {
     { path: '/', label: 'Home', exact: true },
     { path: '/research', label: 'Research' },
     { path: '/experience', label: 'Work' },
+    { path: '/writing', label: 'Writing' },
     { path: '/education', label: 'Education' },
     { path: '/photography', label: 'Photography' },
     { path: '/blog', label: 'Blog' },

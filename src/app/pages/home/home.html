@@ -19,31 +19,40 @@
   </header>
   <section class="universe" aria-labelledby="home-title">
     <div class="universe-intro">
-      <span class="small-label">A small corner of the universe</span>
-      <p>Physics, photographs &amp; everything in between.</p>
+      <span class="small-label">Welcome to my corner of the universe</span>
     </div>
     <app-orbital-navigation [paused]="paused()" />
   </section>
   <footer class="home-footer">
-    <nav class="personal-links" aria-label="About and social profiles">
-      <a class="about-link" routerLink="/about"
-        >A little about me <span aria-hidden="true">↗</span></a
-      >
-      <span class="link-divider" aria-hidden="true"></span>
-      @for (link of socialLinks; track link.label) {
-        <a [href]="link.href" target="_blank" rel="noopener noreferrer"
-          >{{ link.label }}<span class="sr-only"> (opens in a new tab)</span></a
-        >
-      }
-      <button type="button" (click)="resume.open()">Résumé / CV</button>
-      <a href="mailto:haygenwarren@gmail.com">Email <span aria-hidden="true">↗</span></a>
-    </nav>
+    <a class="about-link" routerLink="/about"
+      >A little about me <span aria-hidden="true">↗</span></a
+    >
     <div class="home-colophon">
-      <span>Always looking a little closer.</span>
-      <button type="button" (click)="arrival.playNext()" [disabled]="arrival.reducedMotion()">
+      <nav class="personal-links" aria-label="Social profiles and résumé">
+        @for (link of socialLinks; track link.label) {
+          <a [href]="link.href" target="_blank" rel="noopener noreferrer"
+            >{{ link.label }}<span class="sr-only"> (opens in a new tab)</span></a
+          >
+        }
+        <button type="button" (click)="resume.open()">Résumé / CV</button>
+        <a href="mailto:haygenwarren@gmail.com">Email <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button
+        class="replay"
+        type="button"
+        (click)="arrival.playNext()"
+        [disabled]="arrival.reducedMotion()"
+      >
         <span aria-hidden="true">↻</span> Replay arrival
       </button>
     </div>
   </footer>
-  <app-resume-request #resume />
+  <app-contact-request
+    #resume
+    heading="Looking for my résumé or CV?"
+    description="Leave your email and a short note about what you have in mind. I'd be happy to hear from you."
+    subject="Résumé / CV request"
+    placeholder="Hi Haygen, I'd love to learn more about…"
+    closeLabel="Close résumé request"
+  />
 </div>

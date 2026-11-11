@@ -1,33 +1,45 @@
 import { DestroyRef, Injectable, inject, signal } from '@angular/core';
 
 export type ArrivalKind = 'telescope' | 'camera' | 'rocket' | 'merger';
-export const ARRIVALS: { kind: ArrivalKind; title: string; caption: string; duration: number }[] = [
+export interface Arrival {
+  kind: ArrivalKind;
+  title: string;
+  caption: string;
+  /** Length of the sequence in milliseconds. */
+  duration: number;
+  /** Progress (0–1) at which the overlay's top bar fades, as the page appears. */
+  uiFade: number;
+}
+export const ARRIVALS: Arrival[] = [
   {
     kind: 'telescope',
     title: 'A signal from somewhere',
     caption: 'Finding a little corner of the universe.',
-    duration: 6800,
+    duration: 7500,
+    uiFade: 0.88,
   },
   {
     kind: 'camera',
     title: 'A different way of seeing',
     caption: 'One frame. A whole little world.',
-    duration: 12000,
+    duration: 12500,
+    uiFade: 0.87,
   },
   {
     kind: 'rocket',
     title: 'A small departure',
     caption: 'There is always somewhere else to go.',
     duration: 10000,
+    uiFade: 0.84,
   },
   {
     kind: 'merger',
     title: 'An unlikely meeting',
     caption: 'Some things are drawn to each other.',
-    duration: 8500,
+    duration: 7600,
+    uiFade: 0.72,
   },
 ];
-export type Arrival = (typeof ARRIVALS)[number];
 
 @Injectable({ providedIn: 'root' })
 export class ArrivalService {

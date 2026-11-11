@@ -1,6 +1,6 @@
 import { Component, computed, input } from '@angular/core';
 
-export type PixelIconName = 'telescope' | 'camera' | 'book' | 'work' | 'pen' | 'home';
+export type PixelIconName = 'telescope' | 'camera' | 'book' | 'work' | 'pen' | 'home' | 'news';
 const PATTERNS: Record<PixelIconName, string[]> = {
   telescope: [
     '000000001100',
@@ -70,6 +70,21 @@ const PATTERNS: Record<PixelIconName, string[]> = {
     '001110000000',
     '001100000000',
     '011000000000',
+    '000000000000',
+  ],
+  // A folded newspaper: headline, photo block and columns, with a back page.
+  news: [
+    '000000000000',
+    '011111111000',
+    '010000001000',
+    '010111101110',
+    '010000001010',
+    '010110101010',
+    '010110101010',
+    '010000001010',
+    '010111101010',
+    '010000001010',
+    '011111111110',
     '000000000000',
   ],
   home: [

@@ -2,12 +2,14 @@
   position: fixed;
   inset: 0;
   z-index: 1000;
+  overflow: hidden;
   color: #d7deec;
   canvas {
+    // The renderer sizes the canvas to a whole number of art pixels, so it
+    // can overhang the viewport by less than one pixel.
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
     image-rendering: pixelated;
   }
 }

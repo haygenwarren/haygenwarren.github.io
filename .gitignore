@@ -45,3 +45,7 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Full-resolution photo scans (some exceed GitHub's 100 MB file limit).
+# `npm run photos` turns them into the web copies in public/assets/photography/.
+/photography_portfolio_images

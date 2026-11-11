@@ -1,15 +1,8 @@
-<nav
-  #orbit
-  class="orbit"
-  aria-label="Explore my portfolio"
-  (pointerenter)="interacting.set(true)"
-  (pointerleave)="interacting.set(false)"
-  (focusin)="focused.set(true)"
-  (focusout)="leaveFocus($event)"
->
-  <div class="orbit-drift" [class.drift-paused]="interacting() || focused() || still()">
+<nav #orbit class="orbit" aria-label="Explore my portfolio">
+  <div class="orbit-stage">
     <svg class="orbit-lines" viewBox="0 0 800 540" preserveAspectRatio="none" aria-hidden="true">
-      <ellipse cx="400" cy="270" rx="288" ry="194.4" />
+      <!-- Radii match ORBIT_X / ORBIT_Y in orbital-navigation.ts. -->
+      <ellipse cx="400" cy="270" rx="304" ry="216" />
       <ellipse class="inner-orbit" cx="400" cy="270" rx="185" ry="125" />
       <path d="M390 270h20M400 260v20" />
     </svg>
@@ -17,18 +10,20 @@
       <div class="portrait-frame">
         <span class="portrait-spark spark-one" aria-hidden="true"></span>
         <span class="portrait-spark spark-two" aria-hidden="true"></span>
-        <img
-          src="assets/headshot.jpg"
-          alt="Haygen Warren"
-          width="144"
-          height="144"
-          fetchpriority="high"
-        />
+        <div class="portrait-crop">
+          <img
+            src="assets/headshot.jpg"
+            alt="Haygen Warren"
+            width="600"
+            height="800"
+            fetchpriority="high"
+          />
+        </div>
       </div>
       <h1 tabindex="-1" id="home-title">
         Haygen Warren<span class="name-dot" aria-hidden="true">.</span>
       </h1>
-      <p>Researcher. Maker. Observer.</p>
+      <p>Student. Photographer. Writer.</p>
     </div>
     @for (destination of destinations; track destination.path; let i = $index) {
       <a
@@ -39,9 +34,10 @@
         [style.top.%]="initialY(i)"
         [style.--planet-color]="destination.color"
         [attr.aria-current]="destination.path === '/' ? 'page' : null"
-        (mouseenter)="hovered.set(destination)"
-        (mouseleave)="hovered.set(null)"
-        (focus)="hovered.set(destination)"
+        (pointerenter)="hold(destination)"
+        (pointerleave)="release()"
+        (focus)="hold(destination, true)"
+        (blur)="release(true)"
       >
         <span class="satellite-bubble"><app-pixel-icon [name]="destination.icon" /></span>
         <span class="satellite-label"

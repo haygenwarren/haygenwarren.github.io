@@ -40,6 +40,11 @@ writeJson('education.json', education);
 const photos = readJson(path.join(CONTENT_DIR, 'photography', 'photos.json'));
 writeJson('photos.json', photos);
 
+// Writing — published articles, newest first
+const writing = readJson(path.join(CONTENT_DIR, 'writing', 'articles.json'));
+writing.articles.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+writeJson('writing.json', writing);
+
 // Blog posts — parse Markdown with front matter and render to HTML
 const postsDir = path.join(CONTENT_DIR, 'posts');
 const mdFiles = fs

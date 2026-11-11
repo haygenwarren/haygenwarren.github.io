@@ -3,11 +3,11 @@ import { RouterLink } from '@angular/router';
 import { ArrivalService } from '../../core/services/arrival.service';
 import { DeepFieldComponent } from '../../shared/components/deep-field/deep-field';
 import { OrbitalNavigationComponent } from '../../shared/components/orbital-navigation/orbital-navigation';
-import { ResumeRequestComponent } from '../../shared/components/resume-request/resume-request';
+import { ContactRequestComponent } from '../../shared/components/contact-request/contact-request';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, DeepFieldComponent, OrbitalNavigationComponent, ResumeRequestComponent],
+  imports: [RouterLink, DeepFieldComponent, OrbitalNavigationComponent, ContactRequestComponent],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

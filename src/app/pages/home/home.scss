@@ -15,8 +15,7 @@
     z-index: -2;
     animation: field-drift 50s ease-in-out infinite alternate;
   }
-  &.is-still app-deep-field,
-  &.is-still .orbit-drift {
+  &.is-still app-deep-field {
     animation-play-state: paused;
   }
 }
@@ -70,15 +69,11 @@
   width: 100%;
   max-width: 1100px;
   margin: auto;
-  padding: 1rem 1rem 1.5rem;
+  padding: 0.5rem 1rem 1rem;
 }
 .universe-intro {
   text-align: center;
-  p {
-    color: #aab6cd;
-    font-size: 0.9rem;
-    margin-top: 0.65rem;
-  }
+  margin-bottom: 1rem;
 }
 .small-label {
   color: #c4cde0;
@@ -89,15 +84,36 @@
 .home-footer {
   position: relative;
   width: 100%;
-  padding: 1.25rem clamp(1.25rem, 4vw, 3.5rem) 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem clamp(1.25rem, 4vw, 3.5rem) 1.2rem;
+}
+.about-link {
+  color: #d6deef;
+  font-size: 0.78rem;
+  text-decoration: none;
+  &:hover {
+    color: #f1f5fd;
+  }
+}
+// Bottom row: social profiles and résumé on the left, replay on the right.
+.home-colophon {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem 2rem;
+  border-top: 1px solid #8fa1c21a;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
 }
 .personal-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  column-gap: 1.6rem;
-  row-gap: 0.75rem;
+  column-gap: 1.4rem;
+  row-gap: 0.6rem;
   font-size: 0.73rem;
   a,
   button {
@@ -107,9 +123,6 @@
       color: #e9effc;
     }
   }
-  .about-link {
-    color: #d6deef;
-  }
   button {
     border: 0;
     background: none;
@@ -117,34 +130,19 @@
     font: inherit;
   }
 }
-.link-divider {
-  width: 1px;
-  height: 15px;
-  background: #334057;
-}
-.home-colophon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  border-top: 1px solid #8fa1c21a;
-  margin-top: 1.8rem;
-  padding-top: 1rem;
-  color: #7f8ba5;
+.replay {
+  flex-shrink: 0;
+  padding: 0.3rem 0;
+  border: 0;
+  background: none;
+  color: #a0adc7;
   font: 0.62rem var(--font-mono);
-  button {
-    padding: 0.3rem 0;
-    border: 0;
-    background: none;
-    color: #a0adc7;
-    font: inherit;
-    &:hover {
-      color: #e1e8f7;
-    }
-    &:disabled {
-      opacity: 0.45;
-      cursor: default;
-    }
+  &:hover {
+    color: #e1e8f7;
+  }
+  &:disabled {
+    opacity: 0.45;
+    cursor: default;
   }
 }
 @keyframes field-drift {
@@ -175,9 +173,6 @@
   .universe {
     padding: 1rem 0.5rem;
   }
-  .universe-intro p {
-    font-size: 0.78rem;
-  }
   .small-label {
     font-size: 0.57rem;
     letter-spacing: 0.13em;
@@ -186,19 +181,15 @@
     column-gap: 1.15rem;
     font-size: 0.7rem;
   }
-  .link-divider {
-    display: none;
-  }
-  .personal-links .about-link {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
   .home-footer {
     padding-top: 1.5rem;
   }
   .home-colophon {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+  .replay {
     font-size: 0.55rem;
-    margin-top: 1.5rem;
   }
 }

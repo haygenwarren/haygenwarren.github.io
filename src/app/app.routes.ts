@@ -16,6 +16,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/experience/experience').then((m) => m.ExperienceComponent),
   },
   {
+    path: 'writing',
+    loadComponent: () => import('./pages/writing/writing').then((m) => m.WritingComponent),
+  },
+  {
     path: 'education',
     loadComponent: () => import('./pages/education/education').then((m) => m.EducationComponent),
   },

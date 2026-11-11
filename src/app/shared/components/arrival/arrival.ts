@@ -9,7 +9,8 @@ import {
   viewChild,
 } from '@angular/core';
 import { ARRIVALS, ArrivalService } from '../../../core/services/arrival.service';
-import { ArrivalRenderer, clamp } from './arrival-renderer';
+import { ArrivalRenderer } from './arrival-renderer';
+import { clamp } from './pixel-painter';
 
 @Component({ selector: 'app-arrival', templateUrl: './arrival.html', styleUrl: './arrival.scss' })
 export class ArrivalComponent {
@@ -48,8 +49,8 @@ export class ArrivalComponent {
         const tick = (now: number) => {
           if (!start) start = now;
           const progress = clamp((now - start) / scene.duration);
-          renderer.draw(scene.kind, progress);
-          this.leaving.set(scene.kind === 'telescope' ? progress > 0.92 : progress > 0.85);
+          renderer.draw(scene, progress);
+          this.leaving.set(progress > scene.uiFade);
           if (progress < 1) frame = requestAnimationFrame(tick);
           else this.arrival.dismiss();
         };

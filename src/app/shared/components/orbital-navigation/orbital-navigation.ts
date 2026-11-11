@@ -14,6 +14,13 @@ import { RouterLink } from '@angular/router';
 import { ArrivalService } from '../../../core/services/arrival.service';
 import { PixelIconComponent, PixelIconName } from '../pixel-icon/pixel-icon';
 
+/** Orbit radii as fractions of the orbit box (kept in sync with the SVG). The
+ * vertical radius leaves room above and below the portrait for satellites. */
+const ORBIT_X = 0.38;
+const ORBIT_Y = 0.4;
+/** Milliseconds for one full revolution of the satellites. */
+const ORBIT_PERIOD = 120_000;
+
 interface Destination {
   label: string;
   path: string;
@@ -72,6 +79,13 @@ export class OrbitalNavigationComponent {
       note: 'Engineering projects and spaceflight journalism.',
     },
     {
+      label: 'Writing',
+      path: '/writing',
+      icon: 'news',
+      color: '#9dd3cf',
+      note: 'Spaceflight reporting for NASASpaceflight.com.',
+    },
+    {
       label: 'Blog',
       path: '/blog',
       icon: 'pen',
@@ -97,8 +111,8 @@ export class OrbitalNavigationComponent {
         elements.forEach((element, i) => {
           const start = this.angle(i),
             angle = start + this.rotation;
-          const x = (Math.cos(angle) - Math.cos(start)) * width * 0.36;
-          const y = (Math.sin(angle) - Math.sin(start)) * height * 0.36;
+          const x = (Math.cos(angle) - Math.cos(start)) * width * ORBIT_X;
+          const y = (Math.sin(angle) - Math.sin(start)) * height * ORBIT_Y;
           element.style.transform = `translate(-50%, -50%) translate3d(${x}px, ${y}px, 0)`;
         });
       const observer = new ResizeObserver(() => {
@@ -114,7 +128,7 @@ export class OrbitalNavigationComponent {
         this.zone.runOutsideAngular(() => {
           const tick = (now: number) => {
             if (previous && !document.hidden)
-              this.rotation += (Math.min(now - previous, 60) / 180000) * Math.PI * 2;
+              this.rotation += (Math.min(now - previous, 60) / ORBIT_PERIOD) * Math.PI * 2;
             previous = now;
             position();
             frame = requestAnimationFrame(tick);
@@ -127,19 +141,24 @@ export class OrbitalNavigationComponent {
       });
     });
   }
+  /** Evenly spaced starting angles, with the second destination at the top. */
   private angle(index: number): number {
-    return ((-150 + index * 60) * Math.PI) / 180;
+    return -Math.PI / 2 + ((index - 1) * Math.PI * 2) / this.destinations.length;
   }
   initialX(index: number): number {
-    return 50 + Math.cos(this.angle(index)) * 36;
+    return 50 + Math.cos(this.angle(index)) * ORBIT_X * 100;
   }
   initialY(index: number): number {
-    return 50 + Math.sin(this.angle(index)) * 36;
+    return 50 + Math.sin(this.angle(index)) * ORBIT_Y * 100;
   }
-  leaveFocus(event: FocusEvent): void {
-    if (!this.orbit().nativeElement.contains(event.relatedTarget as Node | null)) {
-      this.focused.set(false);
-      this.hovered.set(null);
-    }
+  /** Hold the orbit still only while a destination is pointed at or
+   * keyboard-focused, so it is easy to click; the rest of the time it moves. */
+  hold(destination: Destination, byFocus = false): void {
+    this.hovered.set(destination);
+    (byFocus ? this.focused : this.interacting).set(true);
+  }
+  release(byFocus = false): void {
+    (byFocus ? this.focused : this.interacting).set(false);
+    if (!this.focused() && !this.interacting()) this.hovered.set(null);
   }
 }

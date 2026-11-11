@@ -2,18 +2,19 @@
   display: block;
 }
 .orbit {
+  // The portrait grows with the orbit, leaving clearance for the satellites
+  // that pass above and below it (vertical radius = 0.4 × height).
+  --orbit-h: clamp(420px, 60svh, 510px);
+  --portrait-size: calc(var(--orbit-h) * 0.78 - 190px);
   position: relative;
   width: min(100%, 700px);
-  height: clamp(420px, 58svh, 490px);
+  height: var(--orbit-h);
   margin: 0 auto;
 }
-.orbit-drift {
+// The portrait stays put; only the satellites move (see orbital-navigation.ts).
+.orbit-stage {
   position: absolute;
   inset: 0;
-  animation: cluster-drift 20s ease-in-out infinite alternate;
-  &.drift-paused {
-    animation-play-state: paused;
-  }
 }
 .orbit-lines {
   position: absolute;
@@ -54,23 +55,33 @@
 }
 .portrait-frame {
   position: relative;
-  width: clamp(100px, 12vw, 132px);
+  width: var(--portrait-size);
   aspect-ratio: 1;
   margin: auto;
-  padding: 7px;
+  padding: 6px;
   border-radius: 50%;
-  border: 1px solid #63718a55;
+  border: 1px solid #63718a66;
   box-shadow:
-    0 0 0 7px #8b9bb70a,
-    0 0 75px #8b83ae0d;
+    0 0 0 6px #8b9bb70c,
+    0 0 75px #8b83ae14;
   background: #101525;
+}
+.portrait-crop {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #8b9bb755;
+  border-radius: 50%;
   img {
+    display: block;
     width: 100%;
     height: 100%;
-    border: 1px solid #8b9bb744;
-    border-radius: 50%;
+    // The headshot is a standing, full-length photo; frame the face and
+    // shoulders. The arrival's camera capture reads these same values.
     object-fit: cover;
-    object-position: center;
+    object-position: 62% 32%;
+    transform-origin: 62% 32%;
+    scale: 1.5;
   }
 }
 .portrait-spark {
@@ -163,23 +174,17 @@
   color: #c8b5d8;
 }
 
-@keyframes cluster-drift {
-  from {
-    transform: translate(-5px, -4px);
-  }
-  to {
-    transform: translate(6px, 5px);
-  }
-}
 @media (min-width: 1600px) {
   .orbit {
+    --orbit-h: 530px;
     width: 760px;
-    height: 510px;
   }
 }
 @media (max-width: 600px) {
   .orbit {
-    height: 420px;
+    // Narrow screens are limited by the side satellites, not the height.
+    --orbit-h: 470px;
+    --portrait-size: 136px;
   }
   .portrait-hub {
     width: 180px;
@@ -212,8 +217,8 @@
   }
 }
 @media (max-width: 360px) {
-  .portrait-frame {
-    width: 88px;
+  .orbit {
+    --portrait-size: 112px;
   }
   .portrait-hub {
     width: 155px;

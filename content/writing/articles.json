@@ -1,0 +1,1516 @@
+{
+  "articles": [
+    {
+      "id": "juno-io-subsurface-temps",
+      "title": "Juno reveals surprising subsurface tempertures at Io, remarkably smooth surface",
+      "url": "https://www.nasaspaceflight.com/2026/07/juno-io-subsurface-temps/",
+      "date": "2026-07-26",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Following two flybys of Jupiter’s innermost Galilean moon Io, teams using data from NASA’s Juno spacecraft have revealed the first measurements of the temperature below Io’s surface."
+    },
+    {
+      "id": "roman-prelaunch-update",
+      "title": "NASA’s Roman telescope into prelaunch servicing following arrival in Florida",
+      "url": "https://www.nasaspaceflight.com/2026/07/roman-prelaunch-update/",
+      "date": "2026-07-12",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "NASA’s next space telescope, the Nancy Grace Roman Space Telescope, arrived at Kennedy Space Center in late June ahead of its scheduled launch on Aug. 30 atop a SpaceX Falcon Heavy from Launch Complex 39A."
+    },
+    {
+      "id": "swift-boost-mission-launch",
+      "title": "Pegasus XL set to air launch Swift Boost Mission to save NASA space telescope",
+      "url": "https://www.nasaspaceflight.com/2026/06/swift-boost-mission-launch/",
+      "date": "2026-06-29",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "In its first mission since 2021, a Northrop Grumman Pegasus XL rocket is scheduled to…"
+    },
+    {
+      "id": "starfall-demo",
+      "title": "SpaceX tests upcoming Starfall reentry vehicle with demonstration mission on Tuesday",
+      "url": "https://www.nasaspaceflight.com/2026/06/starfall-demo/",
+      "date": "2026-06-22",
+      "publication": "NASASpaceflight.com",
+      "topic": "SpaceX",
+      "summary": "Early Tuesday morning, SpaceX launched a demonstration mission for its Starfall reentry vehicle. Falcon 9…"
+    },
+    {
+      "id": "launch-preview-061626",
+      "title": "Launch Preview: 10 launches scheduled from sites across the world",
+      "url": "https://www.nasaspaceflight.com/2026/06/launch-preview-061626/",
+      "date": "2026-06-17",
+      "publication": "NASASpaceflight.com",
+      "topic": "Launch Preview",
+      "summary": "A very busy launch manifest is expected in the upcoming week, with 10 launches scheduled…"
+    },
+    {
+      "id": "maven-end-of-mission",
+      "title": "NASA concludes MAVEN mission at Mars, uses data to discover new atmospheric phenomenon",
+      "url": "https://www.nasaspaceflight.com/2026/06/maven-end-of-mission/",
+      "date": "2026-06-07",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "Following a six-month battle to regain communication with its Mars Atmosphere and Volatile Evolution (MAVEN)…"
+    },
+    {
+      "id": "launch-preview-060126",
+      "title": "Launch Preview: SpaceX and Chinese rockets to launch internet satellites to LEO",
+      "url": "https://www.nasaspaceflight.com/2026/06/launch-preview-060126/",
+      "date": "2026-06-01",
+      "publication": "NASASpaceflight.com",
+      "topic": "Launch Preview",
+      "summary": "SpaceX and Chinese launches dominate this week’s launch manifest, which features six missions from five launch sites worldwide."
+    },
+    {
+      "id": "rocket-lab-q1-2026",
+      "title": "Rocket Lab signs new launch contracts and acquires robotics company during Q1 2026",
+      "url": "https://www.nasaspaceflight.com/2026/05/rocket-lab-q1-2026/",
+      "date": "2026-05-14",
+      "publication": "NASASpaceflight.com",
+      "topic": "Commercial",
+      "summary": "Rocket Lab opened 2026 by breaking every record it set in 2025. The company signed…"
+    },
+    {
+      "id": "launch-preview-051126",
+      "title": "Launch Preview: SpaceX and Chinese missions fill busy launch manifest",
+      "url": "https://www.nasaspaceflight.com/2026/05/launch-preview-051126/",
+      "date": "2026-05-11",
+      "publication": "NASASpaceflight.com",
+      "topic": "Launch Preview",
+      "summary": "The week of May 11 brings nine launches across the United States and China, spanning government and commercial operators on both sides of the Pacific."
+    },
+    {
+      "id": "russia-maiden-soyuz-5-launch",
+      "title": "Russia debuts new rocket with maiden Soyuz-5 launch",
+      "url": "https://www.nasaspaceflight.com/2026/04/russia-maiden-soyuz-5-launch/",
+      "date": "2026-04-30",
+      "publication": "NASASpaceflight.com",
+      "topic": "Russia",
+      "summary": "Russia’s brand new Soyuz-5 rocket made its first flight on Saturday, lifting off from the…"
+    },
+    {
+      "id": "ng-3-launch",
+      "title": "New Glenn launches on third mission, successfully reuses booster for the first time",
+      "url": "https://www.nasaspaceflight.com/2026/04/ng-3-launch/",
+      "date": "2026-04-18",
+      "publication": "NASASpaceflight.com",
+      "topic": "Blue Origin",
+      "summary": "Just over five months after the launch of its second mission, Blue Origin’s partially reusable…"
+    },
+    {
+      "id": "artemis-ii-return",
+      "title": "Artemis II returns to Earth after historic 10-day mission around the Moon",
+      "url": "https://www.nasaspaceflight.com/2026/04/artemis-ii-return/",
+      "date": "2026-04-10",
+      "publication": "NASASpaceflight.com",
+      "topic": "Artemis",
+      "summary": "After 10 days, over 800,000 km traveled, and a historic flyby of the Moon, Artemis…"
+    },
+    {
+      "id": "artemis-ii-launch",
+      "title": "Artemis II returns humanity to the Moon with launch on Wednesday evening",
+      "url": "https://www.nasaspaceflight.com/2026/03/artemis-ii-launch/",
+      "date": "2026-03-31",
+      "publication": "NASASpaceflight.com",
+      "topic": "Artemis",
+      "summary": "At 23:35 UTC on Dec."
+    },
+    {
+      "id": "launch-preview-032326",
+      "title": "Launch Preview: Russia to debut Soyuz-5; Falcon 9 and Atlas V to launch internet satellites",
+      "url": "https://www.nasaspaceflight.com/2026/03/launch-preview-032326/",
+      "date": "2026-03-23",
+      "publication": "NASASpaceflight.com",
+      "topic": "Launch Preview",
+      "summary": "The United States, Russia, China, New Zealand, and Norway are all set to host launches…"
+    },
+    {
+      "id": "launch-preview-031626",
+      "title": "Launch Preview: Falcon 9, Spectrum, Electron to launch during busy week of launches",
+      "url": "https://www.nasaspaceflight.com/2026/03/launch-preview-031626/",
+      "date": "2026-03-16",
+      "publication": "NASASpaceflight.com",
+      "topic": "Launch Preview",
+      "summary": "Another busy launch manifest is scheduled for this week, with nine launches expected from various…"
+    },
+    {
+      "id": "launch-preview-022326",
+      "title": "Launch Preview: Falcon 9 to launch five Starlink missions, Firefly to launch Alpha",
+      "url": "https://www.nasaspaceflight.com/2026/02/launch-preview-022326/",
+      "date": "2026-02-23",
+      "publication": "NASASpaceflight.com",
+      "topic": "Launch Preview",
+      "summary": "Seven missions are on this week’s launch manifest, with SpaceX’s Falcon 9 dominating the schedule. Falcon 9 is expected to launch five Starlink missions from SpaceX’s launch sites in Florida and California."
+    },
+    {
+      "id": "juno-europa-ice-sheet",
+      "title": "Juno data provides insight into thickness of Europa’s surface ice sheet",
+      "url": "https://www.nasaspaceflight.com/2026/02/juno-europa-ice-sheet/",
+      "date": "2026-02-22",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using recent data from NASA’s Juno orbiter, scientists have uncovered new details on the thickness…"
+    },
+    {
+      "id": "crew-12-launch",
+      "title": "Crew-12 arrives at the ISS",
+      "url": "https://www.nasaspaceflight.com/2026/02/crew-12-launch/",
+      "date": "2026-02-12",
+      "publication": "NASASpaceflight.com",
+      "topic": "ISS",
+      "summary": "SpaceX and NASA launched the 12th operational crew rotation mission to the International Space Station…"
+    },
+    {
+      "id": "latitude-efis-interview",
+      "title": "French startup Latitude targets 2026 for first launch while following market-driven approach",
+      "url": "https://www.nasaspaceflight.com/2026/01/latitude-efis-interview/",
+      "date": "2026-01-21",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "French small-launch startup Latitude is pushing toward a maiden flight of its Zephyr rocket within…"
+    },
+    {
+      "id": "crew-11-return",
+      "title": "Crew-11 lands after medical situation forces early return",
+      "url": "https://www.nasaspaceflight.com/2026/01/crew-11-return/",
+      "date": "2026-01-14",
+      "publication": "NASASpaceflight.com",
+      "topic": "ISS",
+      "summary": "The Crew-11 mission has left the International Space Station and have arrived back on Earth."
+    },
+    {
+      "id": "launch-preview-011226",
+      "title": "Launch Preview: Launches from China, U.S., and Norway scheduled for upcoming week",
+      "url": "https://www.nasaspaceflight.com/2026/01/launch-preview-011226/",
+      "date": "2026-01-12",
+      "publication": "NASASpaceflight.com",
+      "topic": "Launch Preview",
+      "summary": "Eight orbital launch attempts are scheduled for this week, with SpaceX and Chinese launches comprising…"
+    },
+    {
+      "id": "launch-roundup-123025",
+      "title": "Launch Previews: Worldwide launch manifest quiet as 2026 begins",
+      "url": "https://www.nasaspaceflight.com/2025/12/launch-roundup-123025/",
+      "date": "2025-12-30",
+      "publication": "NASASpaceflight.com",
+      "topic": "SpaceX",
+      "summary": "As 2025 turns to 2026, the worldwide launch manifest is quieting down, with only four launches scheduled for the upcoming week."
+    },
+    {
+      "id": "spherex-first-map",
+      "title": "SPHEREx produces first all-sky map, highlights entire universe in infrared light",
+      "url": "https://www.nasaspaceflight.com/2025/12/spherex-first-map/",
+      "date": "2025-12-28",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "After launching in March and collecting near-infrared data throughout 2025, NASA’s SPHEREx observatory has completed…"
+    },
+    {
+      "id": "launch-roundup-122225",
+      "title": "Launch Previews: International launches fill manifest during last full week of 2025",
+      "url": "https://www.nasaspaceflight.com/2025/12/launch-roundup-122225/",
+      "date": "2025-12-22",
+      "publication": "NASASpaceflight.com",
+      "topic": "SpaceX",
+      "summary": "The last full week of 2025 will be a busy one, with nine launches scheduled…"
+    },
+    {
+      "id": "maven-perseverance-update",
+      "title": "NASA loses contact with MAVEN, Perseverance continues roving around Jezero",
+      "url": "https://www.nasaspaceflight.com/2025/12/maven-perseverance-update/",
+      "date": "2025-12-21",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "In early December, NASA lost contact with its MAVEN spacecraft, which has been orbiting Mars since 2014. MAVEN was supposed to reestablish communications with NASA’s Deep Space Network on Dec."
+    },
+    {
+      "id": "roman-construction-complete",
+      "title": "Roman telescope construction complete, moving into final testing ahead of 2027 launch",
+      "url": "https://www.nasaspaceflight.com/2025/12/roman-construction-complete/",
+      "date": "2025-12-14",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "At the end of November, NASA’s next great telescope — the Nancy Grace Roman Space…"
+    },
+    {
+      "id": "site-31-accident",
+      "title": "Russia left without access to ISS following structure collapse at Baikonur launch site",
+      "url": "https://www.nasaspaceflight.com/2025/11/site-31-accident/",
+      "date": "2025-11-30",
+      "publication": "NASASpaceflight.com",
+      "topic": "Russia",
+      "summary": "On Nov. 27, after the launch of the Soyuz 2.1a rocket with the Soyuz MS-28…"
+    },
+    {
+      "id": "soyuz-ms-28-launch",
+      "title": "Soyuz MS-28 launches three new crew members to ISS",
+      "url": "https://www.nasaspaceflight.com/2025/11/soyuz-ms-28-launch/",
+      "date": "2025-11-26",
+      "publication": "NASASpaceflight.com",
+      "topic": "ISS",
+      "summary": "The next crewed mission to the International Space Station has launched from Kazakhstan. The Soyuz…"
+    },
+    {
+      "id": "webb-canucs-lrd-z8-6",
+      "title": "Webb discovers rapidly growing black hole in the very early universe",
+      "url": "https://www.nasaspaceflight.com/2025/11/webb-canucs-lrd-z8-6/",
+      "date": "2025-11-23",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using the joint NASA/European Space Agency/Canadian Space Agency James Webb Space Telescope, a group of…"
+    },
+    {
+      "id": "space-weather-effects",
+      "title": "How space weather events impact launches, orbiting spacecraft, and our future in space",
+      "url": "https://www.nasaspaceflight.com/2025/11/space-weather-effects/",
+      "date": "2025-11-14",
+      "publication": "NASASpaceflight.com",
+      "topic": "Blue Origin",
+      "summary": "When Blue Origin scrubbed the launch of its NG-2 mission on its New Glenn rocket…"
+    },
+    {
+      "id": "ng-2-escapade-launch",
+      "title": "Following scrub, Blue Origin set for launch of ESCAPADE on second New Glenn mission",
+      "url": "https://www.nasaspaceflight.com/2025/11/ng-2-escapade-launch/",
+      "date": "2025-11-08",
+      "publication": "NASASpaceflight.com",
+      "topic": "Blue Origin",
+      "summary": "Following a successful first flight in January, Blue Origin is set to launch its heavy-lift New Glenn rocket from Florida once again, this time with a payload to be launched to Mars."
+    },
+    {
+      "id": "launch-roundup-102725",
+      "title": "Launch Roundup: China to launch crew to Tiangong, India to launch new naval satellite",
+      "url": "https://www.nasaspaceflight.com/2025/10/launch-roundup-102725/",
+      "date": "2025-10-27",
+      "publication": "NASASpaceflight.com",
+      "topic": "Launch Roundup",
+      "summary": "Six missions comprise the worldwide launch manifest this week, including a crewed launch from China…"
+    },
+    {
+      "id": "cassini-new-molecules-enceladus",
+      "title": "Scientists use Cassini data to discover new molecules in Enceladus water jets",
+      "url": "https://www.nasaspaceflight.com/2025/10/cassini-new-molecules-enceladus/",
+      "date": "2025-10-11",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Located around Saturn is the icy moon Enceladus — one of the most interesting and potentially habitable moons in the solar system."
+    },
+    {
+      "id": "hubble-white-dwarf-pluto",
+      "title": "Hubble observes dead star devouring Pluto-like object",
+      "url": "https://www.nasaspaceflight.com/2025/09/hubble-white-dwarf-pluto/",
+      "date": "2025-09-28",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "With help from NASA’s Hubble Space Telescope in low-Earth orbit, scientists recently observed a Pluto-like…"
+    },
+    {
+      "id": "imap-launch",
+      "title": "NASA, SpaceX launch IMAP and rideshare payloads to study space weather at L1",
+      "url": "https://www.nasaspaceflight.com/2025/09/imap-launch/",
+      "date": "2025-09-23",
+      "publication": "NASASpaceflight.com",
+      "topic": "SpaceX",
+      "summary": "NASA and SpaceX successfully launched the agency’s Interstellar Mapping and Acceleration Probe (IMAP) from Florida…"
+    },
+    {
+      "id": "launch-roundup-091525",
+      "title": "Launch Roundup: Starlink, NRO, and New Shepard missions",
+      "url": "https://www.nasaspaceflight.com/2025/09/launch-roundup-091525/",
+      "date": "2025-09-15",
+      "publication": "NASASpaceflight.com",
+      "topic": "Launch Roundup",
+      "summary": "Another busy week of launches has arrived, with SpaceX dominating the launch manifest with four…"
+    },
+    {
+      "id": "dawn-ceres-chemical-source",
+      "title": "Data from NASA’s Dawn reveals chemical energy source on Ceres",
+      "url": "https://www.nasaspaceflight.com/2025/09/dawn-ceres-chemical-source/",
+      "date": "2025-09-07",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using data from NASA’s now-retired Dawn spacecraft, scientists have found that Ceres, a dwarf planet…"
+    },
+    {
+      "id": "moonquakes-a17-lro",
+      "title": "Scientists investigate moonquakes using Apollo 17 samples, LRO observations",
+      "url": "https://www.nasaspaceflight.com/2025/08/moonquakes-a17-lro/",
+      "date": "2025-08-31",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "While Earth and Mars are known for their intense surface quakes, other terrestrial bodies in…"
+    },
+    {
+      "id": "crew-11-launch",
+      "title": "NASA, SpaceX launch Crew-11 mission to the ISS",
+      "url": "https://www.nasaspaceflight.com/2025/07/crew-11-launch/",
+      "date": "2025-07-31",
+      "publication": "NASASpaceflight.com",
+      "topic": "SpaceX",
+      "summary": "NASA and SpaceX have launched the 11th operational crew rotation mission to the International Space…"
+    },
+    {
+      "id": "spaceport-upgrades-2025",
+      "title": "Cape Canaveral infrastructure and support sees upgrades as launch cadence rapidly increases",
+      "url": "https://www.nasaspaceflight.com/2025/07/spaceport-upgrades-2025/",
+      "date": "2025-07-25",
+      "publication": "NASASpaceflight.com",
+      "topic": "Commercial",
+      "summary": "The world’s busiest spaceport continues to break yearly launch records as more commercial space launch…"
+    },
+    {
+      "id": "cheops-hip-67522",
+      "title": "CHEOPS discovers exoplanet triggering explosive flares on host star",
+      "url": "https://www.nasaspaceflight.com/2025/07/cheops-hip-67522/",
+      "date": "2025-07-20",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using the European Space Agency’s Characterizing Exoplanets Satellite (CHEOPS) telescope, a team of astronomers has…"
+    },
+    {
+      "id": "himawari-venus",
+      "title": "Himawari meteorological satellites measure temperature changes on Venus",
+      "url": "https://www.nasaspaceflight.com/2025/07/himawari-venus/",
+      "date": "2025-07-06",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "On Oct. 7, 2014, and Nov. 2, 2016, the Japanese Himawari 8 and Himawari 9 Earth observation satellites were launched, respectively."
+    },
+    {
+      "id": "solar-orbiter-south-pole",
+      "title": "Solar Orbiter makes first ever observations of Sun’s south pole, reveals messy magnetic field",
+      "url": "https://www.nasaspaceflight.com/2025/06/solar-orbiter-south-pole/",
+      "date": "2025-06-15",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Following a flyby of Venus in February that successfully increased its orbital inclination around the…"
+    },
+    {
+      "id": "dragonfly-titan-science",
+      "title": "How Dragonfly will support the search for life on an uninhabitable world",
+      "url": "https://www.nasaspaceflight.com/2025/06/dragonfly-titan-science/",
+      "date": "2025-06-01",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "In July 2028, NASA’s next New Frontiers program mission, Dragonfly, will launch to Saturn atop a SpaceX Falcon Heavy."
+    },
+    {
+      "id": "webb-keck-titan",
+      "title": "Webb, Keck observe Titan; find clouds and carbon molecule in northern hemisphere",
+      "url": "https://www.nasaspaceflight.com/2025/05/webb-keck-titan/",
+      "date": "2025-05-18",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "By combining data from the Keck II telescope and the joint NASA/European Space Agency/Canadian Space…"
+    },
+    {
+      "id": "juno-io-jupiter-cyclones",
+      "title": "Juno reveals Io’s inner structure and volcanic activity; investigates north pole cyclones",
+      "url": "https://www.nasaspaceflight.com/2025/04/juno-io-jupiter-cyclones/",
+      "date": "2025-04-30",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "New data from NASA’s Juno mission, which has been orbiting Jupiter since 2016, has provided scientists with insight into the extreme winds and cyclones present within the gas giant’s atmosphere."
+    },
+    {
+      "id": "curiosity-carbonate-atmosphere",
+      "title": "Curiosity discovers carbonate mineral, provides insight into disappearance of ancient atmosphere",
+      "url": "https://www.nasaspaceflight.com/2025/04/curiosity-carbonate-atmosphere/",
+      "date": "2025-04-24",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "NASA’s Curiosity rover, which has been driving around the surface of Mars for over 12…"
+    },
+    {
+      "id": "fram2-launch",
+      "title": "SpaceX launches Fram2 crewed mission to historic polar orbit",
+      "url": "https://www.nasaspaceflight.com/2025/03/fram2-launch/",
+      "date": "2025-03-31",
+      "publication": "NASASpaceflight.com",
+      "topic": "SpaceX",
+      "summary": "SpaceX launched its next private human spaceflight mission, Fram2, from Florida on Monday evening."
+    },
+    {
+      "id": "crew-10-launch",
+      "title": "SpaceX launches NASA’s Crew-10 mission to the ISS",
+      "url": "https://www.nasaspaceflight.com/2025/03/crew-10-launch/",
+      "date": "2025-03-12",
+      "publication": "NASASpaceflight.com",
+      "topic": "SpaceX",
+      "summary": "NASA and SpaceX successfully launched the next ISS crew-rotation mission, Crew-10. The 10th operational crewed…"
+    },
+    {
+      "id": "spherex-punch-launch",
+      "title": "NASA, SpaceX launch SPHEREx observatory and PUNCH heliophysics mission from California",
+      "url": "https://www.nasaspaceflight.com/2025/03/spherex-punch-launch/",
+      "date": "2025-03-08",
+      "publication": "NASASpaceflight.com",
+      "topic": "SpaceX",
+      "summary": "SpaceX and NASA successfully launched the agency’s newest space telescope and solar research mission Tuesday…"
+    },
+    {
+      "id": "vlt-tylos-atmosphere",
+      "title": "ESO’s VLT reveals inner wind layers of distant exoplanet",
+      "url": "https://www.nasaspaceflight.com/2025/02/vlt-tylos-atmosphere/",
+      "date": "2025-02-23",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using data from the four telescopic units of the European Southern Observatory’s (ESO) Very Large Telescope (VLT), a team of scientists has successfully peered into the atmosphere of an exoplanet for the first time."
+    },
+    {
+      "id": "webb-hh30-cass-a",
+      "title": "Webb investigates protoplanetary disk in extreme detail, observes glowing interstellar material",
+      "url": "https://www.nasaspaceflight.com/2025/02/webb-hh30-cass-a/",
+      "date": "2025-02-09",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "The joint NASA, European Space Agency (ESA), and Canadian Space Agency (CSA) James Webb Space Telescope, located at the Sun-Earth Lagrange Point 2, recently utilized its extraordinary suite of infrared instruments to…"
+    },
+    {
+      "id": "xmm-newton-white-dwarf-black-hole",
+      "title": "XMM-Newton observes black hole that exhibits strange oscillations",
+      "url": "https://www.nasaspaceflight.com/2025/01/xmm-newton-white-dwarf-black-hole/",
+      "date": "2025-01-21",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "The European Space Agency’s (ESA) XMM-Newton X-ray space telescope recently discovered rapidly fluctuating X-ray signals…"
+    },
+    {
+      "id": "mro-insight-2024",
+      "title": "MRO observes dormant InSight lander; collects data on Martian dust movements",
+      "url": "https://www.nasaspaceflight.com/2025/01/mro-insight-2024/",
+      "date": "2025-01-05",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "NASA’s Mars Reconnaissance Orbiter (MRO) recently imaged NASA’s Interior Exploration using Seismic Investigations, Geodesy, and Heat Transport (InSight) lander, which has been dormant on the Martian surface for two…"
+    },
+    {
+      "id": "2024-science-roundup",
+      "title": "Space science in 2024: Moon missions, Martian milestones, astrophysics discoveries, and more",
+      "url": "https://www.nasaspaceflight.com/2024/12/2024-science-roundup/",
+      "date": "2024-12-31",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "2024 was another busy year for space science, with many new missions, successes, and discoveries…"
+    },
+    {
+      "id": "launch-roundup-121624",
+      "title": "Launch Roundup: SpaceX plans for five customer missions; Rocket Lab launch mission for Synspective",
+      "url": "https://www.nasaspaceflight.com/2024/12/launch-roundup-121624/",
+      "date": "2024-12-16",
+      "publication": "NASASpaceflight.com",
+      "topic": "Launch Roundup",
+      "summary": "The orbital launch manifest for the week of Dec. 16 through Dec. 22 has been…"
+    },
+    {
+      "id": "bepicolombo-fifth-mercury-flyby",
+      "title": "BepiColombo’s fifth flyby of Mercury reveals planet’s surface in mid-infrared light",
+      "url": "https://www.nasaspaceflight.com/2024/12/bepicolombo-fifth-mercury-flyby/",
+      "date": "2024-12-15",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "The European Space Agency’s BepiColombo spacecraft recently performed its fifth flyby of Mercury on Dec.…"
+    },
+    {
+      "id": "europa-clipper-update",
+      "title": "Over a month into mission, Europa Clipper continues deploying instruments",
+      "url": "https://www.nasaspaceflight.com/2024/12/europa-clipper-update/",
+      "date": "2024-12-01",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "On Oct. 14, NASA’s groundbreaking Europa Clipper mission launched from Launch Complex 39A at the Kennedy Space Center in Florida atop a SpaceX Falcon Heavy rocket."
+    },
+    {
+      "id": "phobos-deimos-origins-models",
+      "title": "New study provides explanation behind origins of Martian moons Phobos and Deimos",
+      "url": "https://www.nasaspaceflight.com/2024/11/phobos-deimos-origins-models/",
+      "date": "2024-11-24",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using supercomputer simulations, a team of NASA scientists recently modeled the destruction of an asteroid around Mars to investigate the possible origins of Mars’ two, mysterious moons — Phobos and Deimos."
+    },
+    {
+      "id": "starships-sound-study1",
+      "title": "New study reveals Starship’s true sound levels; shows differences between SLS and Falcon 9",
+      "url": "https://www.nasaspaceflight.com/2024/11/starships-sound-study1/",
+      "date": "2024-11-17",
+      "publication": "NASASpaceflight.com",
+      "topic": "SpaceX",
+      "summary": "When SpaceX launched Starship and Super Heavy for its first flight test in April 2023,…"
+    },
+    {
+      "id": "perseverance-climbing-challenges",
+      "title": "Perseverance faces challenges climbing to crater rim as sample tube supply dwindles",
+      "url": "https://www.nasaspaceflight.com/2024/11/perseverance-climbing-challenges/",
+      "date": "2024-11-10",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "In August, NASA’s Perseverance Mars rover began its fifth science campaign — the rover’s most ambitious…"
+    },
+    {
+      "id": "martian-subsurface-pools",
+      "title": "New study reveals potential existence of life in subsurface water pools on Mars",
+      "url": "https://www.nasaspaceflight.com/2024/10/martian-subsurface-pools/",
+      "date": "2024-10-27",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Mars has long been theorized to be a place where ancient microbial life once existed,…"
+    },
+    {
+      "id": "europa-clipper-launch",
+      "title": "NASA, SpaceX launch historic Europa Clipper mission to Jupiter",
+      "url": "https://www.nasaspaceflight.com/2024/10/europa-clipper-launch/",
+      "date": "2024-10-14",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "NASA and SpaceX have launched NASA’s Europa Clipper mission to Jupiter’s icy moon Europa atop…"
+    },
+    {
+      "id": "bepicolombo-magnetosphere",
+      "title": "Scientists use data from BepiColombo flyby to discover features within Mercury’s magnetosphere",
+      "url": "https://www.nasaspaceflight.com/2024/10/bepicolombo-magnetosphere/",
+      "date": "2024-10-06",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "In June 2023, the joint European Space Agency (ESA) and Japanese Aerospace Exploration Agency (JAXA)…"
+    },
+    {
+      "id": "xrism-n132d-ngc4151",
+      "title": "One year into mission, XRISM reveals movements of cosmic material around supernova remnant and black hole",
+      "url": "https://www.nasaspaceflight.com/2024/09/xrism-n132d-ngc4151/",
+      "date": "2024-09-29",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "In September 2023, the joint Japan Aerospace Exploration Agency (JAXA), European Space Agency (ESA), and…"
+    },
+    {
+      "id": "perseverance-fifth-campaign",
+      "title": "Perseverance faces steepest climb yet, begins fifth science campaign",
+      "url": "https://www.nasaspaceflight.com/2024/08/perseverance-fifth-campaign/",
+      "date": "2024-08-25",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "NASA’s Perseverance Mars rover arrived at the red planet in February 2021."
+    },
+    {
+      "id": "dart-impact-data",
+      "title": "Using data from DART’s impact, scientists investigate characteristics of Dimorphos and Didymos",
+      "url": "https://www.nasaspaceflight.com/2024/08/dart-impact-data/",
+      "date": "2024-08-04",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "In September 2022, NASA’s Double Asteroid Redirection Test (DART) mission successfully slammed into the side…"
+    },
+    {
+      "id": "curiosity-gediz-vallis",
+      "title": "Curiosity discovers pure sulfur rocks, continues to explore Mount Sharp on Mars",
+      "url": "https://www.nasaspaceflight.com/2024/07/curiosity-gediz-vallis/",
+      "date": "2024-07-21",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "On May 30, NASA’s Curiosity Mars rover, currently exploring Gale Crater on the red planet,…"
+    },
+    {
+      "id": "omega-centauri",
+      "title": "Astronomers use Hubble to discover rare intermediate-mass black hole in Omega Centauri",
+      "url": "https://www.nasaspaceflight.com/2024/07/omega-centauri/",
+      "date": "2024-07-14",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using the joint NASA and European Space Agency (ESA) Hubble Space Telescope in low-Earth orbit,…"
+    },
+    {
+      "id": "webb-jupiter",
+      "title": "Webb finds never-before-seen structures above Jupiter’s Great Red Spot",
+      "url": "https://www.nasaspaceflight.com/2024/06/webb-jupiter/",
+      "date": "2024-06-29",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using the joint NASA, European Space Agency (ESA), and Canadian Space Agency (CSA) James Webb…"
+    },
+    {
+      "id": "minds-isochal147",
+      "title": "Webb identifies surprising carbon-rich ingredients around young star",
+      "url": "https://www.nasaspaceflight.com/2024/06/minds-isochal147/",
+      "date": "2024-06-17",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using the joint NASA, European Space Agency (ESA), and Canadian Space Agency (CSA) James Webb…"
+    },
+    {
+      "id": "magellan-volcanoes",
+      "title": "Magellan data unveils ongoing volcanic activity on the surface of Venus",
+      "url": "https://www.nasaspaceflight.com/2024/06/magellan-volcanoes/",
+      "date": "2024-06-02",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "In May 1989, NASA launched its Magellan mission to Venus with the goal of mapping…"
+    },
+    {
+      "id": "black-hole-eating-habits",
+      "title": "Spitzer gives scientists insights into black hole eating habits",
+      "url": "https://www.nasaspaceflight.com/2024/05/black-hole-eating-habits/",
+      "date": "2024-05-26",
+      "publication": "NASASpaceflight.com",
+      "topic": "Spaceflight",
+      "summary": "Using data from NASA’s retired Spitzer Space Telescope, scientists have gained new insights into the…"
+    },
+    {
+      "id": "juno-042124",
+      "title": "Juno observes lava lake on Io, provides insight into Jupiter’s water abundance",
+      "url": "https://www.nasaspaceflight.com/2024/04/juno-042124/",
+      "date": "2024-04-21",
+      "publication": "NASASpaceflight.com",
+      "topic": "Spaceflight",
+      "summary": "In December 2023 and February 2024, NASA’s Juno spacecraft, currently in orbit around and investigating…"
+    },
+    {
+      "id": "ec-jpl-interview",
+      "title": "As Europa Clipper nears October launch date, scientists anticipate groundbreaking results",
+      "url": "https://www.nasaspaceflight.com/2024/04/ec-jpl-interview/",
+      "date": "2024-04-16",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Later this year, a SpaceX Falcon Heavy rocket will launch from Launch Complex 39A at the Kennedy Space Center with one of the most highly-anticipated and monumental planetary science missions of the decade — Europa…"
+    },
+    {
+      "id": "april8-eclipse-corona",
+      "title": "Ahead of total solar eclipse, scientists use spacecraft data to predict the Sun’s corona",
+      "url": "https://www.nasaspaceflight.com/2024/04/april8-eclipse-corona/",
+      "date": "2024-04-06",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "On April 8, a total solar eclipse will sweep across the continental United States —…"
+    },
+    {
+      "id": "dart-study",
+      "title": "New study finds that DART changed both orbit and shape of Dimorphos asteroid",
+      "url": "https://www.nasaspaceflight.com/2024/03/dart-study/",
+      "date": "2024-03-24",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "On Sept. 26, 2022, NASA’s Double Asteroid Redirection Test (DART) spacecraft slammed into the side…"
+    },
+    {
+      "id": "sunspots-radio-bursts",
+      "title": "Scientists discover first long-lasting radio bursts above sunspots",
+      "url": "https://www.nasaspaceflight.com/2024/03/sunspots-radio-bursts/",
+      "date": "2024-03-17",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "A team of NASA-funded scientists recently discovered long-lasting radio signals above sunspots — regions of…"
+    },
+    {
+      "id": "webb-uncover",
+      "title": "Using Hubble and Webb, scientists investigate galaxies responsible for the reionization of the universe",
+      "url": "https://www.nasaspaceflight.com/2024/03/webb-uncover/",
+      "date": "2024-03-05",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Utilizing the infrared-sensitive instruments of the joint NASA, European Space Agency, and Canadian Space Agency James Webb Space Telescope, as well as observations from the Hubble Space Telescope, scientists…"
+    },
+    {
+      "id": "nustar-nicer-radio-burst",
+      "title": "NuSTAR and NICER observe same radio burst, provide hints into nature of phenomenon",
+      "url": "https://www.nasaspaceflight.com/2024/02/nustar-nicer-radio-burst/",
+      "date": "2024-02-20",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "For decades, astronomers have been puzzled by the detection of random, mysterious radio bursts that…"
+    },
+    {
+      "id": "markarian-817",
+      "title": "XMM-Newton observes black hole winds, provides insight into galaxy and black hole interactions",
+      "url": "https://www.nasaspaceflight.com/2024/02/markarian-817/",
+      "date": "2024-02-04",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Black holes are among the most intriguing and mysterious objects in the universe. They can…"
+    },
+    {
+      "id": "four-of-a-kind",
+      "title": "Rocket Lab kicks off 2024 with “Four of a Kind” satellite mission",
+      "url": "https://www.nasaspaceflight.com/2024/01/four-of-a-kind/",
+      "date": "2024-01-30",
+      "publication": "NASASpaceflight.com",
+      "topic": "Commercial",
+      "summary": "Rocket Lab launched its first launch of 2024, with the Electron launch vehicle lofting four…"
+    },
+    {
+      "id": "ixpe-ss433",
+      "title": "IXPE investigates microquasar jets, finds unexpected magnetic field structure",
+      "url": "https://www.nasaspaceflight.com/2024/01/ixpe-ss433/",
+      "date": "2024-01-24",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Creating some of the most powerful gravitational forces and fields in the universe, black holes…"
+    },
+    {
+      "id": "webb-w1935",
+      "title": "Webb discovers potential aurorae on brown dwarf",
+      "url": "https://www.nasaspaceflight.com/2024/01/webb-w1935/",
+      "date": "2024-01-15",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Silently floating through the universe are cosmic objects that are both too large to be planets and too small to be stars."
+    },
+    {
+      "id": "mars2020-1000-sols",
+      "title": "1,000 sols into their mission, Perseverance and Ingenuity continue to investigate Jezero Crater",
+      "url": "https://www.nasaspaceflight.com/2023/12/mars2020-1000-sols/",
+      "date": "2023-12-21",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "After celebrating their 1,000th sol, or Martian day, on Mars, NASA’s Perseverance rover and Ingenuity…"
+    },
+    {
+      "id": "webb-xue1",
+      "title": "Webb discovers that rocky planets can form in more extreme environments",
+      "url": "https://www.nasaspaceflight.com/2023/12/webb-xue1/",
+      "date": "2023-12-02",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using the joint NASA, European Space Agency, and Canadian Space Agency James Webb Space Telescope,…"
+    },
+    {
+      "id": "shrinking-subneptunes",
+      "title": "Data from Kepler reveals reason behind shrinking exoplanets",
+      "url": "https://www.nasaspaceflight.com/2023/11/shrinking-subneptunes/",
+      "date": "2023-11-26",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Located throughout the universe, there are billions — possibly even trillions — of exoplanets orbiting…"
+    },
+    {
+      "id": "webb-szcha",
+      "title": "Webb detects neon in young star system, provides insight into planet formation",
+      "url": "https://www.nasaspaceflight.com/2023/11/webb-szcha/",
+      "date": "2023-11-19",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "In 2008, observations from NASA’s now-retired Spitzer infrared space telescope hinted at the presence of…"
+    },
+    {
+      "id": "juno-ganymede",
+      "title": "Juno discovers salts and organic compounds on Ganymede’s surface",
+      "url": "https://www.nasaspaceflight.com/2023/11/juno-ganymede/",
+      "date": "2023-11-04",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "After a flyby of Jupiter’s largest moon, Ganymede, in 2021, Juno and a team of…"
+    },
+    {
+      "id": "jovian-jetstream",
+      "title": "Using Webb, scientists measure high-speed jet stream in Jupiter’s atmosphere",
+      "url": "https://www.nasaspaceflight.com/2023/10/jovian-jetstream/",
+      "date": "2023-10-29",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Scientists recently discovered a high-speed jet stream at Jupiter’s equator using the joint NASA/European Space…"
+    },
+    {
+      "id": "s1222a-origins",
+      "title": "Through international collaboration, scientists find cause of InSight’s most powerful Marsquake",
+      "url": "https://www.nasaspaceflight.com/2023/10/s1222a-origins/",
+      "date": "2023-10-22",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "An international team of scientists has found the cause of the largest Martian seismic event,…"
+    },
+    {
+      "id": "psyche-launch",
+      "title": "NASA, SpaceX launch Psyche mission to metallic asteroid",
+      "url": "https://www.nasaspaceflight.com/2023/10/psyche-launch/",
+      "date": "2023-10-12",
+      "publication": "NASASpaceflight.com",
+      "topic": "SpaceX",
+      "summary": "NASA and SpaceX teams launched the agency’s Psyche mission to metallic asteroid 16 Psyche from…"
+    },
+    {
+      "id": "psyche-sofia",
+      "title": "SOFIA provides insights into the metallic characteristics of asteroid Psyche",
+      "url": "https://www.nasaspaceflight.com/2023/10/psyche-sofia/",
+      "date": "2023-10-08",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "On Oct. 12, 2023, NASA’s Psyche mission and spacecraft will launch out into the asteroid…"
+    },
+    {
+      "id": "saturn-rings",
+      "title": "New research provides explanation for the origin of Saturn’s rings and icy moons",
+      "url": "https://www.nasaspaceflight.com/2023/10/saturn-rings/",
+      "date": "2023-10-01",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Recent research conducted by NASA and its partners using supercomputer simulations is shedding light on…"
+    },
+    {
+      "id": "osirisrex-landing",
+      "title": "Historic OSIRIS-REx asteroid samples successfully return to Earth",
+      "url": "https://www.nasaspaceflight.com/2023/09/osirisrex-landing/",
+      "date": "2023-09-24",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "In the morning hours of Sept. 24, a small capsule containing surface samples from asteroid…"
+    },
+    {
+      "id": "blue-update-091923",
+      "title": "Blue Origin preparing for New Glenn testing at LC-36 ahead of maiden flight",
+      "url": "https://www.nasaspaceflight.com/2023/09/blue-update-091923/",
+      "date": "2023-09-19",
+      "publication": "NASASpaceflight.com",
+      "topic": "Blue Origin",
+      "summary": "Over the past few months, Blue Origin has continued making progress towards the maiden launch…"
+    },
+    {
+      "id": "webb-k218b",
+      "title": "Using Webb, scientists discover carbon dioxide and methane in habitable-zone exoplanet",
+      "url": "https://www.nasaspaceflight.com/2023/09/webb-k218b/",
+      "date": "2023-09-17",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using the joint NASA/European Space Agency/Canadian Space Agency James Webb Space Telescope, scientists have discovered…"
+    },
+    {
+      "id": "swift-j0230",
+      "title": "Using new data analysis tool on Swift, scientists discover black hole snacking on a star",
+      "url": "https://www.nasaspaceflight.com/2023/09/swift-j0230/",
+      "date": "2023-09-09",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Scientists, using NASA’s Neil Gehrels Swift Observatory, have discovered a black hole that is continuously…"
+    },
+    {
+      "id": "solar-orbiter-picoflare",
+      "title": "Solar Orbiter discovers plasma jets that could fuel the production of solar wind",
+      "url": "https://www.nasaspaceflight.com/2023/09/solar-orbiter-picoflare/",
+      "date": "2023-09-04",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Recently, the joint European Space Agency (ESA)/NASA Solar Orbiter spacecraft discovered an array of tiny…"
+    },
+    {
+      "id": "insight-rise",
+      "title": "Using data from InSight, scientists discover that Mars is rotating faster",
+      "url": "https://www.nasaspaceflight.com/2023/08/insight-rise/",
+      "date": "2023-08-19",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "In December 2022, NASA lost contact with its Interior Exploration using Seismic Investigations, Geodesy and Heat Transport (InSight) Mars lander, which had been operating on the Martian surface for just over four years."
+    },
+    {
+      "id": "msl-11-years",
+      "title": "After 11 years on Mars, Curiosity continues to climb the slopes of Mount Sharp",
+      "url": "https://www.nasaspaceflight.com/2023/08/msl-11-years/",
+      "date": "2023-08-05",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "On Aug. 6, 2012, NASA’s Mars Science Laboratory mission, comprised of the new Curiosity rover, officially began when Curiosity was successfully lowered onto the Martian surface via a first-of-its-kind skycrane."
+    },
+    {
+      "id": "pds70-water",
+      "title": "Scientists, using Webb, discover water vapor within a planet-forming disk",
+      "url": "https://www.nasaspaceflight.com/2023/07/pds70-water/",
+      "date": "2023-07-30",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using the joint NASA/European Space Agency/Canadian Space Agency James Webb Space Telescope, a team of…"
+    },
+    {
+      "id": "jwst-1year",
+      "title": "One year into science operations, Webb continues to rewrite the textbooks of science",
+      "url": "https://www.nasaspaceflight.com/2023/07/jwst-1year/",
+      "date": "2023-07-12",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "On July 12, 2022, five groups of scientists gathered in different agencies across the world…"
+    },
+    {
+      "id": "webb-ceers1019",
+      "title": "Using Webb, scientists discover the most distant active supermassive black hole",
+      "url": "https://www.nasaspaceflight.com/2023/07/webb-ceers1019/",
+      "date": "2023-07-08",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Utilizing the infrared-sensitive instruments of the joint NASA/European Space Agency (ESA)/Canadian Space Agency (CSA) James…"
+    },
+    {
+      "id": "webb-ch3-d203-506",
+      "title": "With Webb, scientists make first detection of carbon molecule in protoplanetary disk",
+      "url": "https://www.nasaspaceflight.com/2023/06/webb-ch3-d203-506/",
+      "date": "2023-06-28",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "With new data collected by the joint NASA/European Space Agency/Canadian Space Agency James Webb Space…"
+    },
+    {
+      "id": "enceladus-phosphorus",
+      "title": "Cassini data reveals the presence of phosphorus in Enceladus’ ocean plumes",
+      "url": "https://www.nasaspaceflight.com/2023/06/enceladus-phosphorus/",
+      "date": "2023-06-19",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "A team of scientists, using archival data from NASA’s now-retired Cassini mission, has discovered the…"
+    },
+    {
+      "id": "grb-221009a-nustar",
+      "title": "With NuSTAR, scientists reveal new characteristics of the brightest gamma-ray burst ever detected",
+      "url": "https://www.nasaspaceflight.com/2023/06/grb-221009a-nustar/",
+      "date": "2023-06-13",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "On Oct. 9, 2022, NASA’s Fermi Gamma-ray Space Telescope, Neil Gehrels Swift Observatory, and Wind…"
+    },
+    {
+      "id": "webb-jades-and-ngc5068",
+      "title": "Webb unveils the secrets of the early universe via deep field, peers into stellar nurseries",
+      "url": "https://www.nasaspaceflight.com/2023/06/webb-jades-and-ngc5068/",
+      "date": "2023-06-06",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "With help from the joint NASA/European Space Agency/Canadian Space Agency James Webb Space Telescope (JWST),…"
+    },
+    {
+      "id": "volcano-covered-exoplanet",
+      "title": "Using data from Spitzer and TESS, scientists discover exoplanet littered with volcanoes",
+      "url": "https://www.nasaspaceflight.com/2023/05/volcano-covered-exoplanet/",
+      "date": "2023-05-31",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using data collected by NASA’s retired Spitzer Space Telescope and NASA’s Transiting Exoplanet Survey Satellite (TESS), a team of scientists has discovered an exoplanet that could potentially be covered with volcanoes."
+    },
+    {
+      "id": "webb-images-fomalhaut-disks",
+      "title": "Webb directly images young star’s asteroid belt; discovers two additional dusty disks",
+      "url": "https://www.nasaspaceflight.com/2023/05/webb-images-fomalhaut-disks/",
+      "date": "2023-05-12",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using the joint NASA/ESA/CSA James Webb Space Telescope, a group of astronomers has directly imaged three dusty disks — the outermost being an asteroid belt — surrounding a young star."
+    },
+    {
+      "id": "star-destroys-planet",
+      "title": "With help from NEOWISE, astronomers observe giant star destroying planet for the first time",
+      "url": "https://www.nasaspaceflight.com/2023/05/star-destroys-planet/",
+      "date": "2023-05-06",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using the California Institute of Technology’s (Caltech) Zwicky Transient Facility (ZTF) and NASA’s Near-Earth Object…"
+    },
+    {
+      "id": "runaway-black-hole",
+      "title": "Using Hubble, researchers accidentally discover ejected black hole forcing star creation",
+      "url": "https://www.nasaspaceflight.com/2023/04/runaway-black-hole/",
+      "date": "2023-04-24",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Throughout the universe, supermassive black holes can typically be found at the center of massive…"
+    },
+    {
+      "id": "jwst-clouds-temp-exoplanets",
+      "title": "Using JWST, scientists observe silicate clouds and measure the temperature of exoplanets",
+      "url": "https://www.nasaspaceflight.com/2023/04/jwst-clouds-temp-exoplanets/",
+      "date": "2023-04-03",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "With help from the joint NASA/ESA/CSA James Webb Space Telescope, two teams of scientists have made groundbreaking, first-of-their-kind discoveries on two exoplanets."
+    },
+    {
+      "id": "juice-project-manager",
+      "title": "As launch approaches, JUICE project manager discusses trajectories and science",
+      "url": "https://www.nasaspaceflight.com/2023/03/juice-project-manager/",
+      "date": "2023-03-20",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "The European Space Agency’s (ESA) Jupiter Icy Moons Explorer (JUICE) spacecraft recently arrived in French…"
+    },
+    {
+      "id": "juice-csg-arrival",
+      "title": "JUICE arrives in French Guiana for launch, project manager outlines next steps",
+      "url": "https://www.nasaspaceflight.com/2023/03/juice-csg-arrival/",
+      "date": "2023-03-13",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "Set for launch from the Centre Spatial Guyanais (CSG) in Kourou, French Guiana, on April…"
+    },
+    {
+      "id": "white-dwarf-mass-measurement",
+      "title": "Using Hubble, researchers measure the mass of a single white dwarf for the first time",
+      "url": "https://www.nasaspaceflight.com/2023/02/white-dwarf-mass-measurement/",
+      "date": "2023-02-06",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "Of the trillions of stars scattered throughout the universe, one of the most common are the white dwarfs, which are the dormant, burned out, and leftover cores of low/medium mass stars."
+    },
+    {
+      "id": "jwst-science-aas",
+      "title": "Webb peers at young star’s dusty disk, discovers an exoplanet, and uncovers star formation",
+      "url": "https://www.nasaspaceflight.com/2023/01/jwst-science-aas/",
+      "date": "2023-01-16",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "At the 241st meeting of the American Astronomical Society (AAS) on Jan. 11, three teams…"
+    },
+    {
+      "id": "nustar-black-hole",
+      "title": "Astronomers witness unprecedented corona formation, evolution around black hole",
+      "url": "https://www.nasaspaceflight.com/2023/01/nustar-black-hole/",
+      "date": "2023-01-05",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "With help from NASA’s Nuclear Spectroscopic Telescopic Array (NuSTAR) X-ray telescope, a group of researchers recently bore unusually close witness to the formation and evolution of an unexpected corona around a…"
+    },
+    {
+      "id": "kepler-138-water-worlds",
+      "title": "With Hubble and Spitzer, researchers discover water-filled exoplanets",
+      "url": "https://www.nasaspaceflight.com/2022/12/kepler-138-water-worlds/",
+      "date": "2022-12-19",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "Using data from NASA’s Hubble Space Telescope and retired Spitzer Space Telescope, a group of…"
+    },
+    {
+      "id": "tess-safe-mode-incident",
+      "title": "TESS returns from safe mode, the case of the missing exoplanet atmosphere",
+      "url": "https://www.nasaspaceflight.com/2022/10/tess-safe-mode-incident/",
+      "date": "2022-10-18",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "Following an incident that triggered the telescope to enter safe mode, NASA’s Transiting Exoplanet Survey Satellite (TESS) has resumed normal science operations in its highly elliptical Earth orbit."
+    },
+    {
+      "id": "magellanic-clouds-corona",
+      "title": "Researchers discover galactic shield of gas surrounding the Magellanic Cloud galaxies",
+      "url": "https://www.nasaspaceflight.com/2022/10/magellanic-clouds-corona/",
+      "date": "2022-10-09",
+      "publication": "NASASpaceflight.com",
+      "topic": "Spaceflight",
+      "summary": "The largest satellite galaxies of the Milky Way — the Large and Small Magellanic Clouds…"
+    },
+    {
+      "id": "dart-impact",
+      "title": "Brace for impact: DART successfully slams into asteroid",
+      "url": "https://www.nasaspaceflight.com/2022/09/dart-impact/",
+      "date": "2022-09-26",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "NASA and Johns Hopkins teams have successfully tested the world’s first dedicated planetary defense mission:…"
+    },
+    {
+      "id": "ngc-346-spiral",
+      "title": "Hubble and VLT discover spiraling structure of young stars, hints at star formation in early universe",
+      "url": "https://www.nasaspaceflight.com/2022/09/ngc-346-spiral/",
+      "date": "2022-09-18",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "In a recently released study, data from the joint NASA/European Space Agency (ESA) Hubble Space Telescope and the European Space Observatory’s (ESO) ground-based Very Large Telescope (VLT) has been used to discover…"
+    },
+    {
+      "id": "iss-update-august-22",
+      "title": "Research, spacewalks, and maintenance: Expedition 67’s final month aboard the ISS",
+      "url": "https://www.nasaspaceflight.com/2022/09/iss-update-august-22/",
+      "date": "2022-09-05",
+      "publication": "NASASpaceflight.com",
+      "topic": "ISS",
+      "summary": "The seven members of the Expedition 67 crew aboard the International Space Station (ISS) had…"
+    },
+    {
+      "id": "gaia-reveals-sun-evolution",
+      "title": "Data from ESA’s Gaia mission reveals our Sun’s future and past",
+      "url": "https://www.nasaspaceflight.com/2022/08/gaia-reveals-sun-evolution/",
+      "date": "2022-08-20",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "On June 13, the third major data release from the European Space Agency’s (ESA) Gaia…"
+    },
+    {
+      "id": "lro-surface-pit-temperatures",
+      "title": "Lunar Reconnaissance Orbiter discovers thermally stable areas in surface pits suitable for future lunar bases",
+      "url": "https://www.nasaspaceflight.com/2022/08/lro-surface-pit-temperatures/",
+      "date": "2022-08-11",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "Using data from NASA’s Lunar Reconnaissance Orbiter (LRO), a group of NASA-funded researchers has discovered…"
+    },
+    {
+      "id": "nasa-esa-msr-architecture",
+      "title": "NASA, ESA unveil advanced architecture for Mars Sample Return",
+      "url": "https://www.nasaspaceflight.com/2022/07/nasa-esa-msr-architecture/",
+      "date": "2022-07-30",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "On July 27, NASA and the European Space Agency (ESA) unveiled new advanced mission architecture for the upcoming Mars Sample Return mission."
+    },
+    {
+      "id": "osiris-rex-bennu-aging",
+      "title": "Data from OSIRIS-REx reveals loose surface of asteroid Bennu and “early aging” of asteroids",
+      "url": "https://www.nasaspaceflight.com/2022/07/osiris-rex-bennu-aging/",
+      "date": "2022-07-26",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "Recently analyzed data from an asteroid surface-sample collection performed by NASA’s OSIRIS-REx mission has revealed…"
+    },
+    {
+      "id": "spitzer-brown-dwarfs-silicate-clouds",
+      "title": "As Webb begins observing exoplanets, scientists use Spitzer data & brown dwarfs to reveal how silicate clouds form",
+      "url": "https://www.nasaspaceflight.com/2022/07/spitzer-brown-dwarfs-silicate-clouds/",
+      "date": "2022-07-18",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "In a new study from a group of researchers in Canada, data from NASA’s now-retired…"
+    },
+    {
+      "id": "webb-first-images",
+      "title": "NASA, ESA, CSA release historic first images from the James Webb Space Telescope",
+      "url": "https://www.nasaspaceflight.com/2022/07/webb-first-images/",
+      "date": "2022-07-13",
+      "publication": "NASASpaceflight.com",
+      "topic": "Northrop Grumman",
+      "summary": "NASA, the European Space Agency (ESA), and the Canadian Space Agency (CSA) have released the…"
+    },
+    {
+      "id": "june-on-the-iss",
+      "title": "Space botany, cargo arrivals, and autonomous robots: a busy June on the ISS",
+      "url": "https://www.nasaspaceflight.com/2022/07/june-on-the-iss/",
+      "date": "2022-07-04",
+      "publication": "NASASpaceflight.com",
+      "topic": "ISS",
+      "summary": "June 2022 was yet another busy month on the International Space Station (ISS), filled with…"
+    },
+    {
+      "id": "insight-curiosity-june-2022",
+      "title": "InSight teams push for more science in lander’s final months, Curiosity continues trek around Gale Crater",
+      "url": "https://www.nasaspaceflight.com/2022/06/insight-curiosity-june-2022/",
+      "date": "2022-06-25",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "In May 2022, members of NASA’s InSight Mars lander team announced that power levels on the lander were diminishing and that they expected the lander to become inoperative by December 2022."
+    },
+    {
+      "id": "hubble-dead-star-destroying-system",
+      "title": "Researchers use Hubble to observe dead star destroying planetary system",
+      "url": "https://www.nasaspaceflight.com/2022/06/hubble-dead-star-destroying-system/",
+      "date": "2022-06-19",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "A team of researchers using archival data from the Hubble Space Telescope, a joint venture between…"
+    },
+    {
+      "id": "europa-clippers-update",
+      "title": "Europa Clipper’s main body complete, teams continue work toward 2024 launch",
+      "url": "https://www.nasaspaceflight.com/2022/06/europa-clippers-update/",
+      "date": "2022-06-11",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "In early June, the main body of NASA’s upcoming Europa Clipper spacecraft completed construction and…"
+    },
+    {
+      "id": "james-webb-first-research-targets",
+      "title": "James Webb targets detailed as commissioning nears completion",
+      "url": "https://www.nasaspaceflight.com/2022/05/james-webb-first-research-targets/",
+      "date": "2022-05-30",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "Over the past five months, the James Webb Space Telescope and the joint NASA, European Space Agency, and Canadian Space Agency teams behind the project have been working towards the completion of the observatory’s…"
+    },
+    {
+      "id": "mars-2020-odyssey-frost",
+      "title": "Mars 2020 continues science in Jezero, Mars Odyssey solves Martian frost mystery",
+      "url": "https://www.nasaspaceflight.com/2022/05/mars-2020-odyssey-frost/",
+      "date": "2022-05-17",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "In late April, Perseverance and Ingenuity arrived at the edge of Jezero Crater’s ancient river…"
+    },
+    {
+      "id": "hubble-discovers-exoplanet-forming-an-extreme-confirms-5000-exoplanets",
+      "title": "Hubble discovers exoplanet unconventionally forming at an extreme distance, NASA confirms 5,000 discovered exoplanets",
+      "url": "https://www.nasaspaceflight.com/2022/04/hubble-discovers-exoplanet-forming-an-extreme-confirms-5000-exoplanets/",
+      "date": "2022-04-26",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "In recent weeks, two teams of researchers released studies identifying the strange characteristics of an exoplanet using the joint NASA and European Space Agency (ESA) Hubble Space Telescope."
+    },
+    {
+      "id": "axiom-1-return-from-iss",
+      "title": "Historic Axiom-1 mission returned from ISS as Crew-4 prepares for launch",
+      "url": "https://www.nasaspaceflight.com/2022/04/axiom-1-return-from-iss/",
+      "date": "2022-04-25",
+      "publication": "NASASpaceflight.com",
+      "topic": "ISS",
+      "summary": "The first all-private astronaut mission to visit the International Space Station (ISS), Axiom-1, has successfully…"
+    },
+    {
+      "id": "march-iss",
+      "title": "Spacewalks, crewed missions, and science: March in orbit aboard the ISS",
+      "url": "https://www.nasaspaceflight.com/2022/04/march-iss/",
+      "date": "2022-04-02",
+      "publication": "NASASpaceflight.com",
+      "topic": "ISS",
+      "summary": "The International Space Station (ISS) and its astronauts had a busy March as teams performed spacewalks, welcomed new crewmembers, said goodbye to those returning to Earth, and prepared for the arrival of the first…"
+    },
+    {
+      "id": "solar-orbiter-close-pass",
+      "title": "Solar Orbiter successfully completes historic close pass of the Sun",
+      "url": "https://www.nasaspaceflight.com/2022/03/solar-orbiter-close-pass/",
+      "date": "2022-03-27",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "On March 26, 2022, the joint European Space Agency (ESA) and NASA Solar Orbiter spacecraft…"
+    },
+    {
+      "id": "james-webb-align-mirror",
+      "title": "James Webb teams successfully align mirror, commissioning continues",
+      "url": "https://www.nasaspaceflight.com/2022/03/james-webb-align-mirror/",
+      "date": "2022-03-21",
+      "publication": "NASASpaceflight.com",
+      "topic": "Northrop Grumman",
+      "summary": "Following a historic launch in December 2021 and an incredible arrival at Lagrange Point 2…"
+    },
+    {
+      "id": "insight-exoplanet-evolution",
+      "title": "New research directly observes atmospheric loss on mini-Neptune exoplanets, provides insight into exoplanet evolution",
+      "url": "https://www.nasaspaceflight.com/2022/02/insight-exoplanet-evolution/",
+      "date": "2022-02-18",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "In two studies recently released by a group of astronomers researching exoplanets, the first direct observations of atmospheric loss on mini-Neptune exoplanets were confirmed."
+    },
+    {
+      "id": "curiosity-carbon-signature",
+      "title": "Curiosity detects potentially biologically-produced carbon signature on Mars",
+      "url": "https://www.nasaspaceflight.com/2022/02/curiosity-carbon-signature/",
+      "date": "2022-02-01",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "NASA’s Curiosity rover, which has been scouring Gale Crater and the slopes of Mount Sharp…"
+    },
+    {
+      "id": "jwst-arrives-at-l2",
+      "title": "Webb arrives in orbit of L2, teams look ahead to five months of commissioning",
+      "url": "https://www.nasaspaceflight.com/2022/01/jwst-arrives-at-l2/",
+      "date": "2022-01-24",
+      "publication": "NASASpaceflight.com",
+      "topic": "Northrop Grumman",
+      "summary": "The joint NASA/ESA/CSA James Webb Space Telescope (JWST) has successfully inserted itself into its orbit…"
+    },
+    {
+      "id": "cheops-rugby-ball-exoplanet",
+      "title": "New research from ESA’s CHEOPS observatory reveals rugby ball shape of strange exoplanet",
+      "url": "https://www.nasaspaceflight.com/2022/01/cheops-rugby-ball-exoplanet/",
+      "date": "2022-01-16",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "Exoplanets all over the universe come in different sizes, compositions, colors, and temperatures. However, they…"
+    },
+    {
+      "id": "mars-look-ahead-2022",
+      "title": "After a year filled with new missions and discoveries, Mars and its robots look ahead to 2022",
+      "url": "https://www.nasaspaceflight.com/2022/01/mars-look-ahead-2022/",
+      "date": "2022-01-02",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "After the successful launch of three new Mars missions in the summer of 2020, Mars…"
+    },
+    {
+      "id": "james-webb-deployment-sequence-underway",
+      "title": "James Webb Space Telescope en route to L2; deployment sequence underway",
+      "url": "https://www.nasaspaceflight.com/2021/12/james-webb-deployment-sequence-underway/",
+      "date": "2021-12-27",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "Following a launch on December 25 atop an Arianespace Ariane 5 rocket, the joint NASA/ESA/CSA…"
+    },
+    {
+      "id": "ariane-5-webb-launch",
+      "title": "NASA, ESA, CSA successfully launch the historic James Webb Space Telescope",
+      "url": "https://www.nasaspaceflight.com/2021/12/ariane-5-webb-launch/",
+      "date": "2021-12-25",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "It is a mission more than 25 years in the making. The revolutionary JWST (James…"
+    },
+    {
+      "id": "nasa-spacex-crs-24-iss",
+      "title": "NASA, SpaceX launch CRS-24 to the International Space Station",
+      "url": "https://www.nasaspaceflight.com/2021/12/nasa-spacex-crs-24-iss/",
+      "date": "2021-12-20",
+      "publication": "NASASpaceflight.com",
+      "topic": "ISS",
+      "summary": "NASA and SpaceX launched the Commercial Resupply Services 24 (CRS-24) mission to the International Space…"
+    },
+    {
+      "id": "ixpe-launch",
+      "title": "NASA, SpaceX launch IXPE x-ray observatory atop Falcon 9",
+      "url": "https://www.nasaspaceflight.com/2021/12/ixpe-launch/",
+      "date": "2021-12-08",
+      "publication": "NASASpaceflight.com",
+      "topic": "SpaceX",
+      "summary": "NASA and SpaceX have launched the revolutionary Imaging X-ray Polarimetry Explorer (IXPE) space observatory from LC-39A at the Kennedy Space Center, Florida, on Thursday morning atop a SpaceX Falcon 9 rocket at 1:00 a.m."
+    },
+    {
+      "id": "iss-november-2021",
+      "title": "Crewed missions, new modules, and orbital debris — the ISS’s busy November",
+      "url": "https://www.nasaspaceflight.com/2021/12/iss-november-2021/",
+      "date": "2021-12-03",
+      "publication": "NASASpaceflight.com",
+      "topic": "ISS",
+      "summary": "November was an eventful month for the International Space Station (ISS) and its crew members.…"
+    },
+    {
+      "id": "commissioning-jwst-1",
+      "title": "Unfolding the universe: the commissioning process of the James Webb Space Telescope",
+      "url": "https://www.nasaspaceflight.com/2021/11/commissioning-jwst-1/",
+      "date": "2021-11-21",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "This December, an Ariane 5 rocket will launch from Kourou, French Guiana carrying the most…"
+    },
+    {
+      "id": "james-webb-mirrors",
+      "title": "The mirror of the James Webb Space Telescope: looking into the past",
+      "url": "https://www.nasaspaceflight.com/2021/11/james-webb-mirrors/",
+      "date": "2021-11-13",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "When the joint NASA/ESA/CSA James Webb Space Telescope launches atop an Ariane 5 rocket this…"
+    },
+    {
+      "id": "crew-2-return-to-earth",
+      "title": "Crew-2 returns to Earth after six-month stay on the ISS",
+      "url": "https://www.nasaspaceflight.com/2021/11/crew-2-return-to-earth/",
+      "date": "2021-11-08",
+      "publication": "NASASpaceflight.com",
+      "topic": "ISS",
+      "summary": "NASA and SpaceX teams has completed the safe return of the Crew-2 mission from the…"
+    },
+    {
+      "id": "juno-science-atmosphere",
+      "title": "New science from Juno provides insight into atmospheric processes on Jupiter",
+      "url": "https://www.nasaspaceflight.com/2021/11/juno-science-atmosphere/",
+      "date": "2021-11-06",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "In a series of newly released papers from a science team on NASA’s Juno mission, new data is helping researchers discover how Jupiter’s atmosphere functions underneath the planet’s thick upper cloud layer."
+    },
+    {
+      "id": "bepicolombo-first-mercury-flyby",
+      "title": "BepiColombo completes first Mercury flyby, science provides insight into planet’s unique environment",
+      "url": "https://www.nasaspaceflight.com/2021/10/bepicolombo-first-mercury-flyby/",
+      "date": "2021-10-24",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "On October 1, 2021, the joint European Space Agency (ESA) and Japan Aerospace Exploration Agency…"
+    },
+    {
+      "id": "nasa-ula-launch-lucy",
+      "title": "NASA, ULA launch historic Lucy mission",
+      "url": "https://www.nasaspaceflight.com/2021/10/nasa-ula-launch-lucy/",
+      "date": "2021-10-15",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "NASA and ULA (United Launch Alliance) launched NASA’s next asteroid exploration mission — Lucy — from Florida early Saturday morning, kickstarting the spacecraft’s 12-year journey through the solar system."
+    },
+    {
+      "id": "solar-conjunction-percy-science",
+      "title": "As Martian spacecraft experience solar conjunction, Perseverance confirms Jezero Crater’s watery past",
+      "url": "https://www.nasaspaceflight.com/2021/10/solar-conjunction-percy-science/",
+      "date": "2021-10-09",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "On October 2, 2021, all actively operating spacecraft at Mars ceased major communication with Earth…"
+    },
+    {
+      "id": "lucy-mission-trajectory",
+      "title": "Lucy in final preparations for launch, Principal Investigator discusses mission’s trajectory",
+      "url": "https://www.nasaspaceflight.com/2021/10/lucy-mission-trajectory/",
+      "date": "2021-10-02",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "After being shipped to Florida in early August, NASA’s most daring asteroid exploration mission yet…"
+    },
+    {
+      "id": "spacex-nasa-crs-23-dragon-return",
+      "title": "CRS-23 Dragon returns home following ISS supply run",
+      "url": "https://www.nasaspaceflight.com/2021/09/spacex-nasa-crs-23-dragon-return/",
+      "date": "2021-09-30",
+      "publication": "NASASpaceflight.com",
+      "topic": "ISS",
+      "summary": "Following a launch in late August and a month-long stay in orbit, SpaceX and NASA…"
+    },
+    {
+      "id": "lucy-mission-science",
+      "title": "Lucy’s Principal Investigator discusses upcoming mission to Jupiter’s Trojans",
+      "url": "https://www.nasaspaceflight.com/2021/09/lucy-mission-science/",
+      "date": "2021-09-25",
+      "publication": "NASASpaceflight.com",
+      "topic": "Uncrewed",
+      "summary": "Of the varying types of celestial objects humans have sent spacecraft to investigate, there remains…"
+    },
+    {
+      "id": "pds70c-circumplanetary-disk",
+      "title": "New research finds first clear detection of circumplanetary disk surrounding an exoplanet",
+      "url": "https://www.nasaspaceflight.com/2021/09/pds70c-circumplanetary-disk/",
+      "date": "2021-09-17",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "In recently published research using the Atacama Large Millimeter/submillimeter Array (ALMA), astronomers announced that they…"
+    },
+    {
+      "id": "mars-surface-water-bubbles",
+      "title": "Analysis of Mars surface samples highlight potential ancient water bubbles",
+      "url": "https://www.nasaspaceflight.com/2021/09/mars-surface-water-bubbles/",
+      "date": "2021-09-11",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "Following an unsuccessful sample collection attempt in early August, NASA’s Perseverance Mars rover has successfully…"
+    },
+    {
+      "id": "why-do-asteroids-fizz",
+      "title": "Phaethon, the solar system’s sodium-fizzing asteroid",
+      "url": "https://www.nasaspaceflight.com/2021/09/why-do-asteroids-fizz/",
+      "date": "2021-09-04",
+      "publication": "NASASpaceflight.com",
+      "topic": "Spaceflight",
+      "summary": "Comets are famous for their expansive, colorful, and stunning tails of gas, ice, rock, and…"
+    },
+    {
+      "id": "bepicolombo-solar-orbiter-collect-data-on-venus-during-historic-double-flyby",
+      "title": "BepiColombo, Solar Orbiter collect data on Venus during historic double flyby",
+      "url": "https://www.nasaspaceflight.com/2021/08/bepicolombo-solar-orbiter-collect-data-on-venus-during-historic-double-flyby/",
+      "date": "2021-08-29",
+      "publication": "NASASpaceflight.com",
+      "topic": "Europe",
+      "summary": "On August 9, 2021, the joint ESA/NASA Solar Orbiter spacecraft performed a flyby of Venus,…"
+    },
+    {
+      "id": "crs-23-launch",
+      "title": "SpaceX Cargo Dragon CRS-23 arrived at the ISS",
+      "url": "https://www.nasaspaceflight.com/2021/08/crs-23-launch/",
+      "date": "2021-08-28",
+      "publication": "NASASpaceflight.com",
+      "topic": "ISS",
+      "summary": "SpaceX and NASA conducted a Sunday’s launch of the CRS-23 (Commercial Resupply Services 23) mission…"
+    },
+    {
+      "id": "exomars-2022-update",
+      "title": "ExoMars 2022 mission in final testing, ESA & Roscosmos prepare for approaching launch",
+      "url": "https://www.nasaspaceflight.com/2021/08/exomars-2022-update/",
+      "date": "2021-08-22",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "The European Space Agency (ESA) and Roscosmos are preparing for the 2022 launch of the…"
+    },
+    {
+      "id": "mars-sample-collection-clay-lakes",
+      "title": "Perseverance’s first sample collection fails, new science points to subsurface Martian clay lakes",
+      "url": "https://www.nasaspaceflight.com/2021/08/mars-sample-collection-clay-lakes/",
+      "date": "2021-08-08",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "NASA’s Perseverance Mars rover recently attempted its first-ever sample collection of the Martian surface on August 6."
+    }
+  ]
+}

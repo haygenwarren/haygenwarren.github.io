@@ -1,0 +1,54 @@
+<dialog
+  #dialog
+  class="viewer"
+  aria-label="Photograph viewer"
+  (close)="closed()"
+  (click)="onBackdrop($event)"
+  (keydown)="onKey($event)"
+>
+  @if (current(); as photo) {
+    <button type="button" class="viewer__close" (click)="close()" autofocus>
+      Close <span aria-hidden="true">✕</span>
+    </button>
+    <figure class="viewer__figure" (click)="onBackdrop($event)">
+      <!-- The frame shrinks to the photo, so the labels sit on its corners. -->
+      <div class="viewer__frame">
+        <div class="viewer__overline">
+          <span class="viewer__count" aria-live="polite"
+            >{{ index() + 1 }} of {{ photos().length }}</span
+          >
+          <span class="viewer__rights">&copy; {{ photo.date.slice(0, 4) }} Haygen Warren</span>
+        </div>
+        <img
+          class="viewer__image"
+          [src]="base + photo.filename"
+          [width]="photo.width"
+          [height]="photo.height"
+          [alt]="photo.alt"
+        />
+      </div>
+      <figcaption class="viewer__caption">
+        <span>{{ photo.film }}</span>
+        <span>{{ photo.camera }}</span>
+        <span>{{ photo.location }}</span>
+        <time [attr.datetime]="photo.date">{{ photo.date | date: 'MMMM y' }}</time>
+      </figcaption>
+    </figure>
+    <button
+      type="button"
+      class="viewer__nav viewer__nav--prev"
+      (click)="step(-1)"
+      aria-label="Previous photograph"
+    >
+      <span aria-hidden="true">←</span>
+    </button>
+    <button
+      type="button"
+      class="viewer__nav viewer__nav--next"
+      (click)="step(1)"
+      aria-label="Next photograph"
+    >
+      <span aria-hidden="true">→</span>
+    </button>
+  }
+</dialog>

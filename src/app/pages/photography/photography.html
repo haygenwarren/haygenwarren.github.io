@@ -2,38 +2,77 @@
   <header class="page-header">
     <span class="page-header__eyebrow">Portfolio</span>
     <h1 class="page-header__title">Photography</h1>
-    <p class="page-header__description">Film photographs.</p>
+    <p class="page-header__description">
+      Film photographs shot on a variety of cameras, in a variety of locations, on a variety of
+      films.
+    </p>
+    <p class="page-header__description">
+      I'm available for commissioned work in the United States.
+      <button type="button" class="connect-pill" (click)="commission.open()">
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <rect x="1.5" y="3.5" width="13" height="9" rx="1.5" />
+          <path d="m2 4.5 6 4.5 6-4.5" />
+        </svg>
+        Let's connect
+      </button>
+    </p>
   </header>
 
   <section class="photo-grid" aria-label="Photographs">
-    @for (photo of photos(); track photo.id) {
+    @for (photo of photos(); track photo.id; let i = $index) {
       <figure class="photo-item">
-        <div class="photo-item__frame">
+        <button
+          type="button"
+          class="photo-item__open"
+          appPhotoLift
+          (click)="viewer.open(i, $event.currentTarget)"
+        >
           <img
             class="photo-item__image"
-            [src]="'assets/photography/' + photo.filename"
-            [alt]="photo.caption || photo.title"
-            loading="lazy"
+            [src]="base + photo.thumbnail"
+            [srcset]="srcset(photo)"
+            sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 400px"
+            [width]="photo.width"
+            [height]="photo.height"
+            [alt]="photo.alt"
+            [attr.loading]="i < 3 ? 'eager' : 'lazy'"
             decoding="async"
           />
-        </div>
+          <span class="sr-only">View larger</span>
+        </button>
         <figcaption class="photo-item__caption">
-          <span class="photo-item__title">{{ photo.title }}</span>
-          <div class="photo-item__meta">
-            <div class="photo-item__meta-left">
-              <span>{{ photo.film }}</span>
-              <span>{{ photo.camera }}</span>
-            </div>
-            <div class="photo-item__meta-right">
-              <span>{{ photo.location }}</span>
-              <span>{{ photoYear(photo.date) }}</span>
-            </div>
-          </div>
+          <span class="photo-item__meta-left">
+            <span>{{ photo.film }}</span>
+            <span>{{ photo.camera }}</span>
+          </span>
+          <span class="photo-item__meta-right">
+            <span>{{ photo.location }}</span>
+            <time [attr.datetime]="photo.date">{{ photo.date | date: 'MMM y' }}</time>
+          </span>
         </figcaption>
       </figure>
-    }
-    @empty {
+    } @empty {
       <p class="placeholder">No photographs yet.</p>
     }
   </section>
+
+  <footer class="photo-rights">
+    <p>&copy; {{ copyrightYears() }} Haygen Warren. All rights reserved.</p>
+    <p>
+      These photographs may not be copied, reproduced, or used in any form without written
+      permission.
+    </p>
+  </footer>
+
+  <app-contact-request
+    #commission
+    eyebrow="Commissions"
+    heading="Interested in commissioning photographs?"
+    description="Leave your email and a few details: what you'd like photographed, where, and when. I'd be happy to hear from you."
+    subject="Photography commission inquiry"
+    placeholder="Hi Haygen, I'm looking for photographs of…"
+    closeLabel="Close commission request"
+  />
+
+  <app-photo-viewer #viewer [photos]="photos()" />
 </div>

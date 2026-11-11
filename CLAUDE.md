@@ -8,6 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm start              # Generate content + serve (http://localhost:4200)
 npm run build          # Generate content + production build
 npm run generate       # Run content generation only (scripts/generate-content.js)
+npm run photos         # Process scans in photography_portfolio_images/ (scripts/process-photos.js)
 npx ng generate component src/app/shared/components/<name> --standalone
 ```
 
@@ -37,8 +38,9 @@ Angular 21 standalone SPA. Content is separated from the Angular application:
 |---|---|---|
 | Experience | `content/experience/experience.json` | — |
 | Education | `content/education/education.json` | — |
-| Photography | `content/photography/photos.json` | `public/assets/photography/` |
+| Photography | Written by `npm run photos` (edit only `alt` by hand) | Scans go in `photography_portfolio_images/` (git-ignored) |
 | Blog post | `content/posts/YYYY-MM-DD-slug.md` | — |
+| Writing (published articles) | `content/writing/articles.json` | — |
 | Site metadata | `content/site/metadata.json` | — |
 
 See `src/app/core/models/` for the TypeScript interfaces each content type must satisfy.
@@ -49,15 +51,17 @@ See `src/app/core/models/` for the TypeScript interfaces each content type must 
 
 `EducationEntry` — `id, institution, degree, field, location, startDate, endDate|null, description, highlights[]`
 
-`Photo` — `id, filename, title, caption, camera, film, location, date, tags[]`
+`Photo` — `id, filename, thumbnail, width, height, alt, camera, film, location, date (YYYY-MM), tags[]`
 
 `BlogPost` — `slug, title, date, summary, tags[], published, content` (content = rendered HTML)
+
+`Article` — `id, title, url, date (YYYY-MM-DD), publication, topic, summary`
 
 `SiteMetadata` — `name, tagline, description, author, email, links{github?,linkedin?,twitter?}`
 
 ## Assets
 
-Static assets served from `public/`. Generated JSON goes to `public/assets/generated/`. Photograph image files go to `public/assets/photography/`.
+Static assets served from `public/`. Generated JSON goes to `public/assets/generated/`. Web copies of photographs (`npm run photos`) go to `public/assets/photography/` and `thumbs/`; never edit them by hand. Photo details are parsed from scan filenames — see the comment at the top of `scripts/process-photos.js`.
 
 ## Build output
 

@@ -1,26 +1,532 @@
 {
   "photos": [
     {
-      "id": "photo-001",
-      "filename": "placeholder.jpg",
-      "title": "Untitled No. 1",
-      "caption": "Placeholder image — replace with actual photograph.",
-      "camera": "Canon AE-1 Program",
+      "id": "p400-greenbank-hasselblad501c-0826",
+      "filename": "p400-greenbank-hasselblad501c-0826.jpg",
+      "thumbnail": "thumbs/p400-greenbank-hasselblad501c-0826.jpg",
+      "width": 2048,
+      "height": 1558,
+      "alt": "The lattice tower of a radio telescope rising above a low brick building in warm evening light.",
+      "camera": "Hasselblad 501C",
       "film": "Kodak Portra 400",
-      "location": "Somewhere",
-      "date": "2024-03",
-      "tags": ["35mm", "color"]
+      "location": "Green Bank, WV",
+      "date": "2026-08",
+      "tags": [
+        "medium format",
+        "color"
+      ]
     },
     {
-      "id": "photo-002",
-      "filename": "placeholder.jpg",
-      "title": "Untitled No. 2",
-      "caption": "Placeholder image — replace with actual photograph.",
-      "camera": "Olympus OM-1",
+      "id": "p400-greenbank-hasselblad501c-0826-1",
+      "filename": "p400-greenbank-hasselblad501c-0826-1.jpg",
+      "thumbnail": "thumbs/p400-greenbank-hasselblad501c-0826-1.jpg",
+      "width": 2048,
+      "height": 1555,
+      "alt": "A distant radio telescope framed by a large shade tree, with golden grass and blue hills behind.",
+      "camera": "Hasselblad 501C",
+      "film": "Kodak Portra 400",
+      "location": "Green Bank, WV",
+      "date": "2026-08",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "p400-greenbank-hasselblad501c-0826-2",
+      "filename": "p400-greenbank-hasselblad501c-0826-2.jpg",
+      "thumbnail": "thumbs/p400-greenbank-hasselblad501c-0826-2.jpg",
+      "width": 1543,
+      "height": 2048,
+      "alt": "A white radio telescope dish seen through tall grass and pine branches.",
+      "camera": "Hasselblad 501C",
+      "film": "Kodak Portra 400",
+      "location": "Green Bank, WV",
+      "date": "2026-08",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "p400-greenbank-hasselblad501c-0826-3",
+      "filename": "p400-greenbank-hasselblad501c-0826-3.jpg",
+      "thumbnail": "thumbs/p400-greenbank-hasselblad501c-0826-3.jpg",
+      "width": 2048,
+      "height": 1551,
+      "alt": "A radio telescope dish on a twisting lattice tower beside a brick building under a blue sky.",
+      "camera": "Hasselblad 501C",
+      "film": "Kodak Portra 400",
+      "location": "Green Bank, WV",
+      "date": "2026-08",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "p400-greenbank-hasselblad501c-0826-4",
+      "filename": "p400-greenbank-hasselblad501c-0826-4.jpg",
+      "thumbnail": "thumbs/p400-greenbank-hasselblad501c-0826-4.jpg",
+      "width": 1539,
+      "height": 2048,
+      "alt": "A radio telescope and a lone tree above a field of rust-colored grass.",
+      "camera": "Hasselblad 501C",
+      "film": "Kodak Portra 400",
+      "location": "Green Bank, WV",
+      "date": "2026-08",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "redscale200-greenbank-hasselblad501c-0826",
+      "filename": "redscale200-greenbank-hasselblad501c-0826.jpg",
+      "thumbnail": "thumbs/redscale200-greenbank-hasselblad501c-0826.jpg",
+      "width": 2048,
+      "height": 1597,
+      "alt": "The silhouetted steel framework of a giant radio telescope dish against a low orange sun.",
+      "camera": "Hasselblad 501C",
+      "film": "Redscale 200",
+      "location": "Green Bank, WV",
+      "date": "2026-08",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "redscale200-greenbank-canonae1program-0826",
+      "filename": "redscale200-greenbank-canonae1program-0826.jpg",
+      "thumbnail": "thumbs/redscale200-greenbank-canonae1program-0826.jpg",
+      "width": 1267,
+      "height": 2048,
+      "alt": "A radio telescope dish beneath a tree, with the sun flaring through the branches in deep orange tones.",
+      "camera": "Canon AE-1 Program",
+      "film": "Redscale 200",
+      "location": "Green Bank, WV",
+      "date": "2026-08",
+      "tags": [
+        "35mm",
+        "color"
+      ]
+    },
+    {
+      "id": "redscale200-greenbank-canonae1program-0826-1",
+      "filename": "redscale200-greenbank-canonae1program-0826-1.jpg",
+      "thumbnail": "thumbs/redscale200-greenbank-canonae1program-0826-1.jpg",
+      "width": 1361,
+      "height": 2048,
+      "alt": "A radio telescope on a lattice tower above a low building, washed in red and orange.",
+      "camera": "Canon AE-1 Program",
+      "film": "Redscale 200",
+      "location": "Green Bank, WV",
+      "date": "2026-08",
+      "tags": [
+        "35mm",
+        "color"
+      ]
+    },
+    {
+      "id": "redscale200-greenbank-canonae1program-0826-2",
+      "filename": "redscale200-greenbank-canonae1program-0826-2.jpg",
+      "thumbnail": "thumbs/redscale200-greenbank-canonae1program-0826-2.jpg",
+      "width": 2048,
+      "height": 1362,
+      "alt": "The framework of a radio telescope dish rising behind a low building in orange light.",
+      "camera": "Canon AE-1 Program",
+      "film": "Redscale 200",
+      "location": "Green Bank, WV",
+      "date": "2026-08",
+      "tags": [
+        "35mm",
+        "color"
+      ]
+    },
+    {
+      "id": "rolleiir-greenbank-hasselblad501c-0826",
+      "filename": "rolleiir-greenbank-hasselblad501c-0826.jpg",
+      "thumbnail": "thumbs/rolleiir-greenbank-hasselblad501c-0826.jpg",
+      "width": 2048,
+      "height": 1550,
+      "alt": "An infrared view of a radio telescope dish beside a tree whose leaves glow white.",
+      "camera": "Hasselblad 501C",
+      "film": "Rollei Infrared 400",
+      "location": "Green Bank, WV",
+      "date": "2026-08",
+      "tags": [
+        "medium format",
+        "infrared"
+      ]
+    },
+    {
+      "id": "rolleiir-greenbank-hasselblad501c-0826-1",
+      "filename": "rolleiir-greenbank-hasselblad501c-0826-1.jpg",
+      "thumbnail": "thumbs/rolleiir-greenbank-hasselblad501c-0826-1.jpg",
+      "width": 2048,
+      "height": 1509,
+      "alt": "An infrared view of a radio telescope next to a large tree with glowing white foliage.",
+      "camera": "Hasselblad 501C",
+      "film": "Rollei Infrared 400",
+      "location": "Green Bank, WV",
+      "date": "2026-08",
+      "tags": [
+        "medium format",
+        "infrared"
+      ]
+    },
+    {
+      "id": "cinestill800t-greebankwv-hasselblad501c-august2026-2",
+      "filename": "cinestill800t-greebankwv-hasselblad501c-august2026-2.jpg",
+      "thumbnail": "thumbs/cinestill800t-greebankwv-hasselblad501c-august2026-2.jpg",
+      "width": 2048,
+      "height": 1596,
+      "alt": "Radio telescope dishes and a guyed tower silhouetted in pink morning fog.",
+      "camera": "Hasselblad 501C",
+      "film": "CineStill 800T",
+      "location": "Green Bank, WV",
+      "date": "2026-08",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "hp5-washingtondc-hasselblad501c-july2026",
+      "filename": "hp5-washingtondc-hasselblad501c-july2026.jpg",
+      "thumbnail": "thumbs/hp5-washingtondc-hasselblad501c-july2026.jpg",
+      "width": 2048,
+      "height": 1551,
+      "alt": "A curving stone staircase beside a dark sculpture of a torso on a pedestal.",
+      "camera": "Hasselblad 501C",
       "film": "Ilford HP5 Plus",
-      "location": "Somewhere",
-      "date": "2024-05",
-      "tags": ["35mm", "black and white"]
+      "location": "Washington, D.C.",
+      "date": "2026-07",
+      "tags": [
+        "medium format",
+        "black and white"
+      ]
+    },
+    {
+      "id": "cinestill800t-washingtondc-hasselblad501c-july2026",
+      "filename": "cinestill800t-washingtondc-hasselblad501c-july2026.jpg",
+      "thumbnail": "thumbs/cinestill800t-washingtondc-hasselblad501c-july2026.jpg",
+      "width": 2048,
+      "height": 1553,
+      "alt": "A space shuttle on display in a museum hangar, with a spacesuit figure suspended overhead and red lights glowing.",
+      "camera": "Hasselblad 501C",
+      "film": "CineStill 800T",
+      "location": "Washington, D.C.",
+      "date": "2026-07",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "p400-greenbank-hasselblad501c-0126",
+      "filename": "p400-greenbank-hasselblad501c-0126.jpg",
+      "thumbnail": "thumbs/p400-greenbank-hasselblad501c-0126.jpg",
+      "width": 2048,
+      "height": 1541,
+      "alt": "The Green Bank Telescope beyond a winter field of golden grass, with a few people walking toward it.",
+      "camera": "Hasselblad 501C",
+      "film": "Kodak Portra 400",
+      "location": "Green Bank, WV",
+      "date": "2026-01",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "p400-greenbank-hasselblad501c-0126-1",
+      "filename": "p400-greenbank-hasselblad501c-0126-1.jpg",
+      "thumbnail": "thumbs/p400-greenbank-hasselblad501c-0126-1.jpg",
+      "width": 2048,
+      "height": 1606,
+      "alt": "The Green Bank Telescope across a field of red-gold grass, with mountains under a partly cloudy sky.",
+      "camera": "Hasselblad 501C",
+      "film": "Kodak Portra 400",
+      "location": "Green Bank, WV",
+      "date": "2026-01",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "cinestill800t-greebankwv-hasselblad501c-january2026",
+      "filename": "cinestill800t-greebankwv-hasselblad501c-january2026.jpg",
+      "thumbnail": "thumbs/cinestill800t-greebankwv-hasselblad501c-january2026.jpg",
+      "width": 2048,
+      "height": 1553,
+      "alt": "A close view of a radio telescope’s white mount and curved elevation gear against a pale sky.",
+      "camera": "Hasselblad 501C",
+      "film": "CineStill 800T",
+      "location": "Green Bank, WV",
+      "date": "2026-01",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "cinestill800t-greebankwv-hasselblad501c-january2026-2",
+      "filename": "cinestill800t-greebankwv-hasselblad501c-january2026-2.jpg",
+      "thumbnail": "thumbs/cinestill800t-greebankwv-hasselblad501c-january2026-2.jpg",
+      "width": 2048,
+      "height": 1542,
+      "alt": "Looking up at the intricate steel lattice behind a giant radio telescope dish.",
+      "camera": "Hasselblad 501C",
+      "film": "CineStill 800T",
+      "location": "Green Bank, WV",
+      "date": "2026-01",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "tmax400-fancygap-hasselblad501c-1225",
+      "filename": "tmax400-fancygap-hasselblad501c-1225.jpg",
+      "thumbnail": "thumbs/tmax400-fancygap-hasselblad501c-1225.jpg",
+      "width": 2048,
+      "height": 1550,
+      "alt": "A tractor crossing a rolling field below a wooded ridge, in black and white.",
+      "camera": "Hasselblad 501C",
+      "film": "Kodak T-Max 400",
+      "location": "Fancy Gap, VA",
+      "date": "2025-12",
+      "tags": [
+        "medium format",
+        "black and white"
+      ]
+    },
+    {
+      "id": "tmax400-fancygap-hasselblad501c-1225-1",
+      "filename": "tmax400-fancygap-hasselblad501c-1225-1.jpg",
+      "thumbnail": "thumbs/tmax400-fancygap-hasselblad501c-1225-1.jpg",
+      "width": 2048,
+      "height": 1547,
+      "alt": "A small weathered wooden shed in a foggy winter forest, in black and white.",
+      "camera": "Hasselblad 501C",
+      "film": "Kodak T-Max 400",
+      "location": "Fancy Gap, VA",
+      "date": "2025-12",
+      "tags": [
+        "medium format",
+        "black and white"
+      ]
+    },
+    {
+      "id": "p400-greenbank-canonae1program-0825",
+      "filename": "p400-greenbank-canonae1program-0825.jpg",
+      "thumbnail": "thumbs/p400-greenbank-canonae1program-0825.jpg",
+      "width": 1355,
+      "height": 2048,
+      "alt": "A radio telescope dish beyond a freshly mown field under a blue sky with clouds.",
+      "camera": "Canon AE-1 Program",
+      "film": "Kodak Portra 400",
+      "location": "Green Bank, WV",
+      "date": "2025-08",
+      "tags": [
+        "35mm",
+        "color"
+      ]
+    },
+    {
+      "id": "cinestill800t-greebankwv-canonae1program-august2025",
+      "filename": "cinestill800t-greebankwv-canonae1program-august2025.jpg",
+      "thumbnail": "thumbs/cinestill800t-greebankwv-canonae1program-august2025.jpg",
+      "width": 2048,
+      "height": 1353,
+      "alt": "The Green Bank Telescope rising above treetops against a blue sky.",
+      "camera": "Canon AE-1 Program",
+      "film": "CineStill 800T",
+      "location": "Green Bank, WV",
+      "date": "2025-08",
+      "tags": [
+        "35mm",
+        "color"
+      ]
+    },
+    {
+      "id": "cinestill800t-greebankwv-canonae1program-august2025-1",
+      "filename": "cinestill800t-greebankwv-canonae1program-august2025-1.jpg",
+      "thumbnail": "thumbs/cinestill800t-greebankwv-canonae1program-august2025-1.jpg",
+      "width": 1361,
+      "height": 2048,
+      "alt": "A vintage observatory control room with old monitors, switch panels and bundles of cable.",
+      "camera": "Canon AE-1 Program",
+      "film": "CineStill 800T",
+      "location": "Green Bank, WV",
+      "date": "2025-08",
+      "tags": [
+        "35mm",
+        "color"
+      ]
+    },
+    {
+      "id": "gold200-losangeles-canonae1program-may2025",
+      "filename": "gold200-losangeles-canonae1program-may2025.jpg",
+      "thumbnail": "thumbs/gold200-losangeles-canonae1program-may2025.jpg",
+      "width": 1365,
+      "height": 2048,
+      "alt": "A white house with a red tile roof and a plant-filled patio, with a blimp in the sky above.",
+      "camera": "Canon AE-1 Program",
+      "film": "Kodak Gold 200",
+      "location": "Los Angeles, CA",
+      "date": "2025-05",
+      "tags": [
+        "35mm",
+        "color"
+      ]
+    },
+    {
+      "id": "gold200-losangeles-canonae1program-may2025-1",
+      "filename": "gold200-losangeles-canonae1program-may2025-1.jpg",
+      "thumbnail": "thumbs/gold200-losangeles-canonae1program-may2025-1.jpg",
+      "width": 1364,
+      "height": 2048,
+      "alt": "A vintage two-tone truck parked beside white houses in bright sun.",
+      "camera": "Canon AE-1 Program",
+      "film": "Kodak Gold 200",
+      "location": "Los Angeles, CA",
+      "date": "2025-05",
+      "tags": [
+        "35mm",
+        "color"
+      ]
+    },
+    {
+      "id": "hp5-losangeles-canonae1program-may2025",
+      "filename": "hp5-losangeles-canonae1program-may2025.jpg",
+      "thumbnail": "thumbs/hp5-losangeles-canonae1program-may2025.jpg",
+      "width": 1358,
+      "height": 2048,
+      "alt": "The sun low over the ocean, with a wooden fence and people sitting on a bluff, in black and white.",
+      "camera": "Canon AE-1 Program",
+      "film": "Ilford HP5 Plus",
+      "location": "Los Angeles, CA",
+      "date": "2025-05",
+      "tags": [
+        "35mm",
+        "black and white"
+      ]
+    },
+    {
+      "id": "hp5-losangeles-canonae1program-may2025-1",
+      "filename": "hp5-losangeles-canonae1program-may2025-1.jpg",
+      "thumbnail": "thumbs/hp5-losangeles-canonae1program-may2025-1.jpg",
+      "width": 1356,
+      "height": 2048,
+      "alt": "A lighthouse on a coastal bluff above the ocean, framed by palm trees, in black and white.",
+      "camera": "Canon AE-1 Program",
+      "film": "Ilford HP5 Plus",
+      "location": "Los Angeles, CA",
+      "date": "2025-05",
+      "tags": [
+        "35mm",
+        "black and white"
+      ]
+    },
+    {
+      "id": "phoenix200-faisonnc-canonae1program-0124",
+      "filename": "phoenix200-faisonnc-canonae1program-0124.jpg",
+      "thumbnail": "thumbs/phoenix200-faisonnc-canonae1program-0124.jpg",
+      "width": 1354,
+      "height": 2048,
+      "alt": "Warm light through a door window falling on a wall with dried flowers and a framed sign.",
+      "camera": "Canon AE-1 Program",
+      "film": "Harman Phoenix 200",
+      "location": "Faison, NC",
+      "date": "2024-01",
+      "tags": [
+        "35mm",
+        "color"
+      ]
+    },
+    {
+      "id": "p400-peaislandnc-pentax67ii-1223",
+      "filename": "p400-peaislandnc-pentax67ii-1223.jpg",
+      "thumbnail": "thumbs/p400-peaislandnc-pentax67ii-1223.jpg",
+      "width": 2048,
+      "height": 1579,
+      "alt": "A dark building silhouetted on the dunes against a vivid purple and orange sunset.",
+      "camera": "Pentax 67II",
+      "film": "Kodak Portra 400",
+      "location": "Pea Island, NC",
+      "date": "2023-12",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "p400-peaislandnc-pentax67ii-1223-1",
+      "filename": "p400-peaislandnc-pentax67ii-1223-1.jpg",
+      "thumbnail": "thumbs/p400-peaislandnc-pentax67ii-1223-1.jpg",
+      "width": 2048,
+      "height": 1597,
+      "alt": "A historic coastal station with a lookout tower silhouetted against a purple and orange sunset.",
+      "camera": "Pentax 67II",
+      "film": "Kodak Portra 400",
+      "location": "Pea Island, NC",
+      "date": "2023-12",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "cinestillbwxx-outerbanksnc-pentax67ii-dec2023",
+      "filename": "cinestillbwxx-outerbanksnc-pentax67ii-dec2023.jpg",
+      "thumbnail": "thumbs/cinestillbwxx-outerbanksnc-pentax67ii-dec2023.jpg",
+      "width": 1612,
+      "height": 2048,
+      "alt": "Bodie Island Lighthouse reflected in still marsh water, in black and white.",
+      "camera": "Pentax 67II",
+      "film": "CineStill BwXX",
+      "location": "Outer Banks, NC",
+      "date": "2023-12",
+      "tags": [
+        "medium format",
+        "black and white"
+      ]
+    },
+    {
+      "id": "cinestill50d-faisonnc-hasselblad501c-june2023",
+      "filename": "cinestill50d-faisonnc-hasselblad501c-june2023.jpg",
+      "thumbnail": "thumbs/cinestill50d-faisonnc-hasselblad501c-june2023.jpg",
+      "width": 1991,
+      "height": 2048,
+      "alt": "The front of an old white flatbed truck parked in the grass.",
+      "camera": "Hasselblad 501C",
+      "film": "CineStill 50D",
+      "location": "Faison, NC",
+      "date": "2023-06",
+      "tags": [
+        "medium format",
+        "color"
+      ]
+    },
+    {
+      "id": "gold200-durhamnc-canonae1program-may2023",
+      "filename": "gold200-durhamnc-canonae1program-may2023.jpg",
+      "thumbnail": "thumbs/gold200-durhamnc-canonae1program-may2023.jpg",
+      "width": 1314,
+      "height": 2048,
+      "alt": "A vaulted Gothic stone arcade glowing in warm light.",
+      "camera": "Canon AE-1 Program",
+      "film": "Kodak Gold 200",
+      "location": "Durham, NC",
+      "date": "2023-05",
+      "tags": [
+        "35mm",
+        "color"
+      ]
     }
   ]
 }

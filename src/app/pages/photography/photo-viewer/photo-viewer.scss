@@ -1,0 +1,163 @@
+// No long-press "Save Image" on iOS, no selection highlight, no dragging in
+// Safari. The context menu is blocked by PhotographyComponent.protectPhoto().
+.viewer__image {
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.viewer {
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: var(--space-4) var(--space-6);
+  border: 0;
+  background: #04060ef2;
+  color: var(--color-text);
+
+  &[open] {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-areas:
+      '. . close'
+      'prev figure next';
+    align-items: center;
+    gap: var(--space-2) var(--space-4);
+    animation: viewer-arrive var(--duration-base) ease-out;
+  }
+
+  &::backdrop {
+    background: transparent;
+  }
+
+  &__close {
+    grid-area: close;
+    justify-self: end;
+  }
+
+  &__figure {
+    grid-area: figure;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    min-height: 0;
+    margin: 0;
+  }
+
+  // Sized by the photo (a flex item shrinks to its content), never wider than
+  // the space available.
+  &__frame {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    max-width: 100%;
+    min-height: 0;
+  }
+
+  // Counter on the photo's top-left corner, copyright on its top-right.
+  &__overline {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-4);
+    font-size: var(--text-xs);
+    white-space: nowrap;
+  }
+
+  &__image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100dvh - 11rem);
+    object-fit: contain;
+    background: var(--color-surface-alt);
+  }
+
+  &__caption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-1) var(--space-5);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    text-align: center;
+  }
+
+  &__count,
+  &__rights {
+    font-family: var(--font-mono);
+    color: var(--color-text-muted);
+  }
+
+  &__nav--prev {
+    grid-area: prev;
+  }
+  &__nav--next {
+    grid-area: next;
+  }
+
+  &__close,
+  &__nav {
+    min-width: 44px;
+    min-height: 44px;
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    background: #0d1220cc;
+    color: var(--color-text);
+    font: var(--text-sm) var(--font-sans);
+    cursor: pointer;
+
+    &:hover {
+      background: var(--color-surface-alt);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 2px;
+    }
+  }
+
+  // Narrow screens: arrows move under the photograph.
+  @media (max-width: 640px) {
+    padding: var(--space-3);
+
+    &[open] {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      grid-template-areas:
+        '. close'
+        'figure figure'
+        'prev next';
+    }
+
+    &__nav--prev {
+      justify-self: start;
+    }
+    &__nav--next {
+      justify-self: end;
+    }
+
+    &__image {
+      max-height: calc(100dvh - 15rem);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &[open] {
+      animation: none;
+    }
+  }
+}
+
+@keyframes viewer-arrive {
+  from {
+    opacity: 0;
+  }
+}

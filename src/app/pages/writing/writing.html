@@ -1,0 +1,57 @@
+<div class="page container">
+  <header class="page-header">
+    <span class="page-header__eyebrow">Spaceflight journalism</span>
+    <h1 class="page-header__title">Writing</h1>
+    <p class="page-header__description">
+      Launches, missions, and the science behind them, reported for
+      <a [href]="authorPage" target="_blank" rel="noopener noreferrer"
+        >NASASpaceflight.com<span class="sr-only"> (opens in a new tab)</span></a
+      >.
+    </p>
+  </header>
+
+  <section aria-label="Articles">
+    <ul class="article-grid" role="list">
+      @for (article of shown(); track article.id) {
+        <li class="article-card">
+          <p class="article-card__meta">
+            <time [attr.datetime]="article.date">{{ article.date | date: 'MMM d, y' }}</time>
+            @if (article.topic) {
+              <span class="article-card__topic">{{ article.topic }}</span>
+            }
+          </p>
+          <h2 class="article-card__title">
+            <!-- The title link is stretched over the whole card. -->
+            <a [href]="article.url" target="_blank" rel="noopener noreferrer"
+              >{{ article.title }}<span class="sr-only"> (opens in a new tab)</span></a
+            >
+          </h2>
+          @if (article.summary) {
+            <p class="article-card__summary">{{ article.summary }}</p>
+          }
+          <p class="article-card__source" aria-hidden="true">
+            {{ article.publication }} <span class="article-card__arrow">↗</span>
+          </p>
+        </li>
+      } @empty {
+        <li class="placeholder">{{ articles() ? 'No articles yet.' : 'Loading…' }}</li>
+      }
+    </ul>
+
+    @if (remaining() > 0) {
+      <div class="article-more">
+        <button type="button" (click)="showMore()">
+          Show {{ nextBatch() }} more <span aria-hidden="true">↓</span>
+        </button>
+        <span class="article-more__count">{{ remaining() }} more articles</span>
+      </div>
+    } @else if (shown().length) {
+      <p class="article-more">
+        <a [href]="authorPage" target="_blank" rel="noopener noreferrer"
+          >Everything on NASASpaceflight.com <span aria-hidden="true">↗</span
+          ><span class="sr-only"> (opens in a new tab)</span></a
+        >
+      </p>
+    }
+  </section>
+</div>
