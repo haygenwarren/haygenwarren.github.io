@@ -1,169 +1,107 @@
-// ─── Color: olive theme (default) ────────────────────────────────────────────
-// The two brand colors trade places between themes: olive page with a sand
-// nav bar by default, sand page with an olive nav bar when
-// <html data-theme="light">.
-
+// Space palette shared by the observatory and its reading pages.
 :root {
-  --olive: #465027;
-  --sand:  #e4d6b4;
-  --cream: #f7f2e4;
-  --ink:   #262a12;   // Near-black olive for text on sand
-
   color-scheme: dark;
-
-  // Backgrounds
-  --color-bg:           var(--olive);
-  --color-surface:      #515a32;   // Lifted surface
-  --color-surface-alt:  #5b633e;   // Recessed surface
-
-  // Text
-  --color-text:          var(--cream);
-  --color-text-secondary: #dbd8c6;
-  --color-text-muted:    #c0c0aa;
-
-  // Borders & dividers
-  --color-border:        #5f6741;
-  --color-border-strong: #787d5c;
-
-  // Accent — sand
-  --color-accent:        var(--sand);
-  --color-accent-hover:  #efe6d2;
-
-  // Interactive
-  --color-link:          var(--sand);
-  --color-link-hover:    #efe6d2;
-  --color-focus:         var(--sand);
-
-  // State / utility
-  --color-error:         #f5b8a6;
-  --color-selection:     #757851;
-
-  // Nav bar — sand, matching the section header labels, with dark text
-  --color-nav-bg:          var(--sand);
-  --color-nav-border:      #beb494;
-  --color-nav-text:        var(--ink);
-  --color-nav-text-muted:  #58583d;
-}
-
-// ─── Color: light theme ──────────────────────────────────────────────────────
-
-:root[data-theme='light'] {
-  color-scheme: light;
-
-  // Backgrounds
-  --color-bg:           var(--sand);
-  --color-surface:      #ede4ce;   // Lifted surface
-  --color-surface-alt:  #d1c5a4;   // Recessed surface
-
-  // Text
-  --color-text:          var(--ink);
-  --color-text-secondary: #42432a;
-  --color-text-muted:    #5f5e43;
-
-  // Borders & dividers
-  --color-border:        #c2b797;
-  --color-border-strong: #a39c7d;
-
-  // Accent — olive
-  --color-accent:        var(--olive);
-  --color-accent-hover:  var(--ink);
-
-  // Interactive
-  --color-link:          var(--olive);
-  --color-link-hover:    var(--ink);
-  --color-focus:         var(--olive);
-
-  // State / utility
-  --color-error:         #8f2a1a;
-  --color-selection:     #b8b08d;
-
-  // Nav bar — olive with cream text
-  --color-nav-bg:          var(--olive);
-  --color-nav-border:      #343c1d;
-  --color-nav-text:        var(--cream);
-  --color-nav-text-muted:  #c8c7b2;
+  --color-bg: #090d18;
+  --color-surface: #111827;
+  --color-surface-alt: #182136;
+  --color-text: #e0e6f2;
+  --color-text-secondary: #afbdd3;
+  --color-text-muted: #95a4be;
+  --color-border: #263249;
+  --color-border-strong: #455671;
+  --color-accent: #b4c7e9;
+  --color-accent-hover: #dce8fc;
+  --color-link: #b4c7e9;
+  --color-link-hover: #edf2fd;
+  --color-focus: #d2c2ed;
+  --color-error: #efacac;
+  --color-selection: #3b4565;
+  --color-nav-bg: #0c111e;
+  --color-nav-border: #263249;
+  --color-nav-text: #dce4f3;
+  --color-nav-text-muted: #9dacc5;
 }
 
 :root {
   // ─── Typography ──────────────────────────────────────────────────────────
 
   // Families
-  --font-sans:  'DM Sans', system-ui, -apple-system, sans-serif;
-  --font-mono:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 
   // Type scale
-  --text-2xs:  0.6875rem;  // 11px — fine print
-  --text-xs:   0.75rem;    // 12px — labels
-  --text-sm:   0.8125rem;  // 13px — captions, metadata
-  --text-base: 1rem;       // 16px — body default
-  --text-md:   1.0625rem;  // 17px — comfortable reading
-  --text-lg:   1.25rem;    // 20px — large UI text
-  --text-xl:   1.5rem;     // 24px — small heading
-  --text-title: 1.75rem;   // 28px — entry title
-  --text-2xl:  2rem;       // 32px — heading
-  --text-3xl:  2.625rem;   // 42px — display heading
-  --text-4xl:  3.25rem;    // 52px — major display
+  --text-2xs: 0.6875rem; // 11px — fine print
+  --text-xs: 0.75rem; // 12px — labels
+  --text-sm: 0.8125rem; // 13px — captions, metadata
+  --text-base: 1rem; // 16px — body default
+  --text-md: 1.0625rem; // 17px — comfortable reading
+  --text-lg: 1.25rem; // 20px — large UI text
+  --text-xl: 1.5rem; // 24px — small heading
+  --text-title: 1.75rem; // 28px — entry title
+  --text-2xl: 2rem; // 32px — heading
+  --text-3xl: 2.625rem; // 42px — display heading
+  --text-4xl: 3.25rem; // 52px — major display
 
   // Leading
-  --leading-tight:  1.15;
-  --leading-snug:   1.3;
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
   --leading-normal: 1.6;
   --leading-relaxed: 1.75;
 
   // Tracking
-  --tracking-tight:  -0.025em;
-  --tracking-normal:  0em;
-  --tracking-wide:    0.04em;
-  --tracking-wider:   0.08em;
-  --tracking-widest:  0.12em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.08em;
+  --tracking-widest: 0.12em;
 
   // ─── Spacing ─────────────────────────────────────────────────────────────
 
-  --space-px:  1px;
+  --space-px: 1px;
   --space-0-5: 0.125rem;
-  --space-1:   0.25rem;
-  --space-2:   0.5rem;
-  --space-3:   0.75rem;
-  --space-4:   1rem;
-  --space-5:   1.25rem;
-  --space-6:   1.5rem;
-  --space-8:   2rem;
-  --space-10:  2.5rem;
-  --space-12:  3rem;
-  --space-16:  4rem;
-  --space-20:  5rem;
-  --space-24:  6rem;
-  --space-32:  8rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
 
   // ─── Layout widths ───────────────────────────────────────────────────────
 
-  --width-content:  76rem;
-  --width-reading:  70ch;
-  --width-narrow:   52ch;
-  --width-wide:     92rem;
+  --width-content: 76rem;
+  --width-reading: 70ch;
+  --width-narrow: 52ch;
+  --width-wide: 92rem;
 
   --gutter: clamp(1.25rem, 5vw, 3rem);
 
   // ─── Shell ───────────────────────────────────────────────────────────────
 
-  --nav-height:     3.25rem;
+  --nav-height: 3.25rem;
   --footer-padding: var(--space-10);
 
   // ─── Motion ──────────────────────────────────────────────────────────────
 
-  --duration-fast:    120ms;
-  --duration-base:    200ms;
-  --duration-slow:    300ms;
-  --ease-out:         cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out:      cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 300ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
 
   // ─── Borders ─────────────────────────────────────────────────────────────
 
-  --radius-sm:  2px;
-  --radius-md:  4px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
 
   // ─── Deprecated aliases ───────────────────────────────────────────────────
-  --container-max:      var(--width-content);
-  --container-padding:  var(--gutter);
-  --font-family:        var(--font-sans);
+  --container-max: var(--width-content);
+  --container-padding: var(--gutter);
+  --font-family: var(--font-sans);
 }

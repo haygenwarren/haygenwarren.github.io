@@ -1,11 +1,11 @@
 <div class="page container">
   <header class="page-header">
     <span class="page-header__eyebrow">Portfolio</span>
-    <h1 class="page-header__title">Experience</h1>
-    <p class="page-header__description">Research, engineering, and professional work.</p>
+    <h1 class="page-header__title">{{ title }}</h1>
+    <p class="page-header__description">{{ description }}</p>
   </header>
 
-  <section class="timeline" aria-label="Experience entries">
+  <section class="timeline" [attr.aria-label]="title + ' entries'">
     @for (entry of entries(); track entry.id) {
       <article class="timeline-entry">
         <header class="timeline-entry__header">
@@ -14,8 +14,12 @@
             <p class="timeline-entry__role">{{ entry.role }}</p>
           </div>
           <div class="timeline-entry__meta">
-            <span class="timeline-entry__dates">{{ entry.startDate }} – {{ entry.endDate ?? 'Present' }}</span>
-            <span class="timeline-entry__location">{{ entry.location }}</span>
+            <span class="timeline-entry__dates"
+              >{{ entry.startDate }} – {{ entry.endDate ?? 'Present' }}</span
+            >
+            @if (entry.location) {
+              <span class="timeline-entry__location">{{ entry.location }}</span>
+            }
           </div>
         </header>
         <p class="timeline-entry__description">{{ entry.description }}</p>
@@ -36,8 +40,7 @@
           </div>
         }
       </article>
-    }
-    @empty {
+    } @empty {
       <p class="placeholder">Loading&hellip;</p>
     }
   </section>

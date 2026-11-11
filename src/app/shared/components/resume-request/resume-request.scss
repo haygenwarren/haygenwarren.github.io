@@ -1,0 +1,101 @@
+.resume-dialog {
+  width: min(100% - 2rem, 30rem);
+  max-height: calc(100svh - 2rem);
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  color: var(--color-text);
+  background: #101626;
+  border: 1px solid #37435c;
+  border-radius: 12px;
+  box-shadow: 0 24px 100px #0009;
+  &[open] {
+    animation: dialog-arrive 240ms ease-out;
+  }
+  &::backdrop {
+    background: #030610bb;
+    backdrop-filter: blur(7px);
+  }
+  h2 {
+    font-size: 1.8rem;
+    max-width: 19ch;
+    margin: 0.75rem 0 1rem;
+  }
+  p {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+  }
+  form {
+    margin-top: 1.5rem;
+  }
+  label {
+    display: block;
+    font-size: 0.8rem;
+    margin: 1rem 0 0.5rem;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #3b465d;
+    border-radius: 4px;
+    background: #090e1b;
+    color: var(--color-text);
+    font: inherit;
+    font-size: 0.9rem;
+    &::placeholder {
+      color: #8995ad;
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  .email-note {
+    margin: 0.9rem 0 1.4rem;
+    font-size: 0.75rem;
+  }
+  .draft-status {
+    margin-top: 1rem;
+    color: #b9cdaa;
+    font-size: 0.8rem;
+  }
+}
+.dialog-close {
+  position: absolute;
+  right: 0.7rem;
+  top: 0.5rem;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: #bfc8db;
+  font: 1.8rem var(--font-sans);
+}
+.dialog-eyebrow {
+  color: #a9b8d7;
+  font: 0.65rem var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+.request-button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid #afc0e1;
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  color: #0d1423;
+  background: #cfdaee;
+  font: 0.85rem var(--font-sans);
+  &:hover {
+    background: #e6edfa;
+  }
+}
+@keyframes dialog-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

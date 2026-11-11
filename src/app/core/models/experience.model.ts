@@ -1,5 +1,6 @@
 export interface ExperienceEntry {
   id: string;
+  category: 'research' | 'work';
   organization: string;
   role: string;
   location: string;

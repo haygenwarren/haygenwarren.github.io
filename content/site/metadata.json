@@ -1,10 +1,13 @@
 {
   "name": "Haygen Warren",
-  "tagline": "Physics & Astrophysics",
-  "description": "Personal portfolio of Haygen Warren — physics student, researcher, and film photographer.",
+  "tagline": "Astronomy, engineering & science communication",
+  "description": "Haygen Warren — UNC–Chapel Hill physics student, astronomy researcher, engineering intern, spaceflight journalist, and film photographer.",
   "author": "Haygen Warren",
   "email": "haygenwarren@gmail.com",
   "links": {
-    "github": "https://github.com/haygenwarren"
+    "github": "https://github.com/haygenwarren",
+    "linkedin": "https://www.linkedin.com/in/haygenwarren/",
+    "instagram": "https://www.instagram.com/haygen.jpg/",
+    "x": "https://x.com/haygenwarren"
   }
 }

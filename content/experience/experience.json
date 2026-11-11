@@ -1,45 +1,100 @@
 {
   "entries": [
     {
-      "id": "research-assistant",
-      "organization": "University Physics Department",
+      "id": "skynet-global-observatory",
+      "category": "research",
+      "organization": "Skynet Global Observatory",
       "role": "Undergraduate Research Assistant",
-      "location": "City, State",
-      "startDate": "Sep 2023",
+      "location": "",
+      "startDate": "Dec 2025",
       "endDate": null,
-      "description": "Conducting observational astrophysics research under faculty supervision, with a focus on photometric variability of stellar objects. Developed Python pipelines for automated data reduction and source extraction from ground-based telescope observations.",
+      "description": "I build Python tools that turn telescope observations into science-ready data. My work at Skynet spans automated optical image processing, time-series photometry, and stellar-cluster analysis.",
       "highlights": [
-        "Reduced and analyzed multi-band photometric data from ground-based telescope observations",
-        "Developed Python pipelines for automated data reduction and source extraction",
-        "Contributed to ongoing characterization of variable stellar populations"
+        "Developing an optical data-processing pipeline that automates the processing of robotic telescope observations.",
+        "Implemented and tested workflows for astrometric solving, photometric calibration, source detection, image rendering, and analysis using FITS data and telescope metadata.",
+        "Developing astronomical data tools that combine automated processing, visualization, and scientific analysis.",
+        "Supported by an $8,000 NASA-funded North Carolina Space Grant Undergraduate Scholarship, awarded in June 2026; presented the research project at two conferences."
       ],
-      "tags": ["astrophysics", "Python", "data reduction", "observational astronomy"]
+      "tags": ["Python", "FITS", "astrometry", "photometry", "data visualization"]
     },
     {
-      "id": "engineering-intern",
-      "organization": "Instrumentation Laboratory",
-      "role": "Engineering Intern",
-      "location": "City, State",
-      "startDate": "May 2023",
-      "endDate": "Aug 2023",
-      "description": "Supported development and testing of optical sensor hardware for scientific instruments. Designed analog signal conditioning circuits and wrote firmware for embedded sensor readout in C.",
+      "id": "radio-astronomy-research",
+      "category": "research",
+      "organization": "Educational Research in Radio Astronomy",
+      "role": "Instructor and Student Researcher",
+      "location": "Green Bank Observatory",
+      "startDate": "Aug 2025",
+      "endDate": "Aug 2026",
+      "description": "I used radio telescope observations to study pulsars and the rotation of Andromeda, then helped students investigate the structure of our own galaxy. The work combined observing, research instruction, and telescope instrumentation.",
       "highlights": [
-        "Designed and tested analog signal conditioning circuits",
-        "Wrote firmware for embedded sensor readout in C",
-        "Documented test procedures and calibration results"
+        "Conducted research using Green Bank Observatory’s 20-meter and 40-foot telescopes.",
+        "Instructed students through a Galactic-structure research project using Milky Way radio observations.",
+        "Designed a 3D-printed enclosure for a radio telescope’s voltage test system in Autodesk Fusion."
       ],
-      "tags": ["instrumentation", "electronics", "embedded systems", "C"]
+      "tags": ["radio astronomy", "pulsars", "Galactic structure", "teaching", "Autodesk Fusion"]
     },
     {
-      "id": "placeholder-position",
-      "organization": "Organization Name",
-      "role": "Role Title",
-      "location": "City, State",
-      "startDate": "Sep 2022",
-      "endDate": "May 2023",
-      "description": "Placeholder description for a third position. Replace with a two-sentence summary of responsibilities and key contributions.",
-      "highlights": [],
-      "tags": []
+      "id": "nasa-lspace",
+      "category": "research",
+      "organization": "NASA L’SPACE Program",
+      "role": "Project Manager and Scientist",
+      "location": "",
+      "startDate": "May 2024",
+      "endDate": "Aug 2025",
+      "description": "I worked on mission planning and technology proposals through NASA’s L’SPACE Program. As a project manager and scientist, I led a lunar rover mission concept and contributed to a proposal for astronaut health-monitoring technology.",
+      "highlights": [
+        "Led an interdisciplinary team developing a NASA Discovery-class lunar rover mission concept, coordinating science goals, instruments, rover design, and budgeting.",
+        "Coordinated mission concept, system requirements, mission definition, and preliminary design review documentation; the final preliminary design review exceeded 220 pages.",
+        "Collaborated on a 12-person team developing a technical proposal for a novel astronaut health-monitoring technology.",
+        "Served as a secondary proposal reviewer, scoring submissions against a solicitation rubric and providing feedback to teams."
+      ],
+      "tags": ["mission design", "project management", "science planning", "technical proposals"]
+    },
+    {
+      "id": "goshen-engineering",
+      "category": "work",
+      "organization": "Goshen Engineering Inc.",
+      "role": "Intern",
+      "location": "",
+      "startDate": "May 2025",
+      "endDate": null,
+      "description": "At Goshen Engineering, I work on manufacturing processes, mechanical design, and automation projects. I also support the company’s implementation of an ISO 9001 quality management system.",
+      "highlights": [
+        "Developing controlled documentation for design, manufacturing, administrative, and quality processes.",
+        "Improved steel part production by researching thermal properties and calculating powder-coat oven temperatures and bake-time ranges.",
+        "Designed a custom stack-rack system in Autodesk Fusion to improve part organization, storage capacity, and material handling.",
+        "Collaborated with automation engineers on a robot cell for a CNC ironworker and an automated machining system, evaluating end effectors and components with vendors."
+      ],
+      "tags": [
+        "manufacturing",
+        "Autodesk Fusion",
+        "automation",
+        "mechanical design",
+        "quality management"
+      ]
+    },
+    {
+      "id": "nasaspaceflight",
+      "category": "work",
+      "organization": "NASASpaceflight",
+      "role": "News Director, Writer, and Commentator",
+      "location": "",
+      "startDate": "Apr 2021",
+      "endDate": null,
+      "description": "I lead news coverage at NASASpaceflight, working with writers and editors to report on astrophysics and spaceflight. Alongside writing and editing, I interview scientists and mission teams and provide live launch commentary.",
+      "highlights": [
+        "Managing a team of more than 20 writers and editors, coordinating editorial planning, regular meetings, and team membership.",
+        "Authored more than 100 articles and edited and oversaw publication of multiple articles per week.",
+        "Provided on-site launch coverage in Florida, including interviews with mission teams, press conferences, and live commentary.",
+        "Hosted major launch broadcasts, including the James Webb Space Telescope and Artemis I, each exceeding 1.3 million views."
+      ],
+      "tags": [
+        "science communication",
+        "spaceflight",
+        "journalism",
+        "editorial leadership",
+        "live commentary"
+      ]
     }
   ]
 }

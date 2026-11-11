@@ -1,128 +1,49 @@
-<div class="home">
-
-  <!-- ─── Intro ─────────────────────────────────────────────────────────── -->
-  <section class="home-intro container">
-    <div class="home-intro__inner">
-      <div class="home-intro__photo-wrap">
-        <img class="home-intro__photo" src="assets/headshot.jpg" alt="Haygen Warren" />
-      </div>
-      <div class="home-intro__text">
-        <h1 class="home-intro__name">Haygen Warren</h1>
-        <p class="home-intro__bio">
-          Physics student and researcher focused on observational astronomy,
-          telescope instrumentation, and scientific computing.
-          Also an engineer and film photographer.
-        </p>
-      </div>
+<div class="observatory" [class.is-still]="still()">
+  <app-deep-field />
+  <div class="field-vignette" aria-hidden="true"></div>
+  <header class="home-masthead">
+    <a class="home-wordmark" routerLink="/" aria-label="Haygen Warren, home"
+      ><span class="pixel-mark" aria-hidden="true">✦</span> Haygen Warren</a
+    >
+    <button
+      class="motion-control"
+      type="button"
+      (click)="toggleMotion()"
+      [disabled]="arrival.reducedMotion()"
+      [attr.aria-pressed]="still()"
+      [attr.aria-label]="still() ? 'Resume orbital motion' : 'Pause orbital motion'"
+    >
+      <span aria-hidden="true">{{ still() ? '▷' : 'Ⅱ' }}</span>
+      {{ arrival.reducedMotion() ? 'Reduced motion' : paused() ? 'Motion paused' : 'Pause motion' }}
+    </button>
+  </header>
+  <section class="universe" aria-labelledby="home-title">
+    <div class="universe-intro">
+      <span class="small-label">A small corner of the universe</span>
+      <p>Physics, photographs &amp; everything in between.</p>
     </div>
+    <app-orbital-navigation [paused]="paused()" />
   </section>
-
-  <!-- ─── Research & Work ───────────────────────────────────────────────── -->
-  <section class="home-section container">
-    <a class="home-section__label" routerLink="/experience">Research &amp; Work</a>
-    <hr class="home-section__rule" />
-
-    @for (entry of experience(); track entry.id; let last = $last) {
-      <div class="home-entry">
-        <div class="home-entry__header">
-          <div class="home-entry__meta">
-            <p class="home-entry__org">{{ entry.organization }}</p>
-            <p class="home-entry__role">{{ entry.role }}</p>
-          </div>
-          <p class="home-entry__dates">{{ formatDates(entry.startDate, entry.endDate) }}</p>
-        </div>
-        <p class="home-entry__desc">{{ entry.description }}</p>
-      </div>
-      @if (!last) { <hr class="home-section__divider" /> }
-    }
-  </section>
-
-  <!-- ─── Education ─────────────────────────────────────────────────────── -->
-  <section class="home-section container">
-    <a class="home-section__label" routerLink="/education">Education</a>
-    <hr class="home-section__rule" />
-
-    @for (entry of education(); track entry.id; let last = $last) {
-      <div class="home-entry">
-        <div class="home-entry__header">
-          <div class="home-entry__meta">
-            <p class="home-entry__org">{{ entry.institution }}</p>
-            <p class="home-entry__role">{{ entry.degree }}, {{ entry.field }}</p>
-          </div>
-          <p class="home-entry__dates">{{ formatDates(entry.startDate, entry.endDate) }}</p>
-        </div>
-        @if (entry.courses?.length) {
-          <div class="home-entry__detail">
-            <span class="home-entry__detail-label">Relevant Courses</span>
-            <span class="home-entry__detail-value">{{ entry.courses!.join(' · ') }}</span>
-          </div>
-        }
-        @if (entry.honors?.length) {
-          <div class="home-entry__detail">
-            <span class="home-entry__detail-label">Awards &amp; Honors</span>
-            <span class="home-entry__detail-value">{{ entry.honors!.join(' · ') }}</span>
-          </div>
-        }
-      </div>
-      @if (!last) { <hr class="home-section__divider" /> }
-    }
-  </section>
-
-  <!-- ─── Photography ───────────────────────────────────────────────────── -->
-  <section class="home-section">
-    <div class="container">
-      <div class="home-section__heading">
-        <a class="home-section__label" routerLink="/photography">Photography</a>
-        @if (canScroll()) {
-          <div class="home-carousel__controls">
-            <button class="home-carousel__btn" type="button" (click)="prevPhoto()" aria-label="Previous photo">&#8249;</button>
-            <button class="home-carousel__btn" type="button" (click)="nextPhoto()" aria-label="Next photo">&#8250;</button>
-          </div>
-        }
-      </div>
-      <hr class="home-section__rule" />
+  <footer class="home-footer">
+    <nav class="personal-links" aria-label="About and social profiles">
+      <a class="about-link" routerLink="/about"
+        >A little about me <span aria-hidden="true">↗</span></a
+      >
+      <span class="link-divider" aria-hidden="true"></span>
+      @for (link of socialLinks; track link.label) {
+        <a [href]="link.href" target="_blank" rel="noopener noreferrer"
+          >{{ link.label }}<span class="sr-only"> (opens in a new tab)</span></a
+        >
+      }
+      <button type="button" (click)="resume.open()">Résumé / CV</button>
+      <a href="mailto:haygenwarren@gmail.com">Email <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="home-colophon">
+      <span>Always looking a little closer.</span>
+      <button type="button" (click)="arrival.playNext()" [disabled]="arrival.reducedMotion()">
+        <span aria-hidden="true">↻</span> Replay arrival
+      </button>
     </div>
-
-    @if (photos().length) {
-      <ul class="home-carousel" #track role="list" aria-label="Photographs">
-        @for (photo of photos(); track photo.id) {
-          <li class="home-carousel__slide">
-            <img
-              class="home-carousel__img"
-              [src]="'assets/photography/' + photo.filename"
-              [alt]="photo.title"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="home-carousel__meta">
-              <div class="home-carousel__meta-left">
-                <span>{{ photo.film }}</span>
-                <span>{{ photo.camera }}</span>
-              </div>
-              <div class="home-carousel__meta-right">
-                <span>{{ photo.location }}</span>
-                <span>{{ photoYear(photo.date) }}</span>
-              </div>
-            </div>
-          </li>
-        }
-      </ul>
-    }
-  </section>
-
-  <!-- ─── Technical Skills ─────────────────────────────────────────────── -->
-  <section class="home-section container">
-    <p class="home-section__label home-section__label--static">Technical Skills</p>
-    <hr class="home-section__rule" />
-
-    <div class="home-skill"><p class="home-skill__category">Programming</p><p class="home-skill__items">Python · C · Bash</p></div>
-    <hr class="home-section__divider" />
-    <div class="home-skill"><p class="home-skill__category">Scientific Computing</p><p class="home-skill__items">NumPy · Astropy · Matplotlib · SciPy</p></div>
-    <hr class="home-section__divider" />
-    <div class="home-skill"><p class="home-skill__category">Instrumentation</p><p class="home-skill__items">Analog signal conditioning · Embedded systems · Sensor calibration</p></div>
-    <hr class="home-section__divider" />
-    <div class="home-skill"><p class="home-skill__category">Tools</p><p class="home-skill__items">Git · Linux · LaTeX</p></div>
-
-  </section>
-
+  </footer>
+  <app-resume-request #resume />
 </div>

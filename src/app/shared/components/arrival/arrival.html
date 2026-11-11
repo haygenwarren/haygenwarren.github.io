@@ -1,0 +1,15 @@
+@if (arrival.active(); as scene) {
+  <div class="arrival" role="dialog" aria-modal="true" aria-labelledby="arrival-title">
+    <h2 id="arrival-title" class="sr-only">{{ scene.title }}</h2>
+    <canvas #canvas aria-hidden="true"></canvas>
+    <div class="arrival-top" [class.is-leaving]="leaving()">
+      <span
+        >Haygen Warren <span class="arrival-separator">/</span> Arrival {{ sceneNumber() }} of
+        04</span
+      >
+      <button #skip type="button" (click)="arrival.dismiss()">
+        Skip intro <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+  </div>
+}

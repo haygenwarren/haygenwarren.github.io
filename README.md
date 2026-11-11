@@ -4,6 +4,12 @@ Personal portfolio for Haygen Warren — physics student, researcher, and film p
 
 Built with Angular 21, TypeScript, SCSS, and a file-based content workflow.
 
+The homepage is a personal observatory: six destinations orbit a central portrait over a pixel-art deep field. The detail pages retain their reading layouts in a shared dark palette. Graphics are drawn locally with canvas and SVG; fonts use the system sans family.
+
+On the first visit to Home in a page session, one of four short arrivals plays: radio telescope, film camera, rocket launch, or colliding neutron stars. The sequence advances on each full visit and can be replayed from the homepage. Visitors can skip it or press Escape. Reduced-motion preferences skip arrivals and stop the background and orbital motion; the manual pause preference is saved locally. Orbits also pause while visitors hover or focus the navigation.
+
+Résumé / CV opens a native dialog with email and message fields. Submitting opens a prefilled email draft to Haygen; the visitor sends it in their own email app. The site does not send email or store requests.
+
 ---
 
 ## Architecture
@@ -54,7 +60,8 @@ src/
 | Path | Component |
 |---|---|
 | `/` | Home |
-| `/experience` | Work & Research Experience |
+| `/experience` | Work Experience |
+| `/research` | Research |
 | `/education` | Education |
 | `/photography` | Film Photography |
 | `/blog` | Blog index |
@@ -86,6 +93,7 @@ Edit `content/experience/experience.json`. Each entry follows the `ExperienceEnt
 ```json
 {
   "id": "unique-id",
+  "category": "work",
   "organization": "Organization Name",
   "role": "Role Title",
   "location": "City, State",
@@ -97,7 +105,7 @@ Edit `content/experience/experience.json`. Each entry follows the `ExperienceEnt
 }
 ```
 
-Set `endDate` to `null` for a current position.
+Set `endDate` to `null` for a current position. Use `category: "research"` for entries on the Research page and `category: "work"` for Work.
 
 ### Education
 
@@ -140,4 +148,4 @@ Angular services (`ExperienceService`, `BlogService`, etc.) fetch these JSON fil
 
 ## Deployment
 
-Pushing to `main` will deploy automatically via GitHub Pages. For SPA routing to work with GitHub Pages, a `404.html` redirect or a hash-based routing strategy may be needed — configure this when setting up the Pages deployment.
+Pushing to `main` deploys automatically via GitHub Pages. The deployment workflow copies `index.html` to `404.html` so direct links can load Angular routes.

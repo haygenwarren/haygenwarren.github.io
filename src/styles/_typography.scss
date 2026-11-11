@@ -1,5 +1,5 @@
 // ─── Heading scale ──────────────────────────────────────────────────────────
-// Headings use DM Sans — established in _base.scss heading reset.
+// Headings use the system sans family established in _base.scss.
 
 h1 { font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl)); }
 h2 { font-size: clamp(var(--text-xl),  3vw, var(--text-2xl)); }
@@ -7,7 +7,7 @@ h3 { font-size: var(--text-lg); }
 h4 { font-size: var(--text-base); font-weight: 500; letter-spacing: 0; }
 
 // ─── Navigation, labels, small UI ───────────────────────────────────────────
-// These use DM Sans (var(--font-sans)) explicitly — the default body font.
+// These use var(--font-sans) explicitly — the default body font.
 
 .label {
   font-family: var(--font-sans);
