@@ -1,4 +1,4 @@
-import { Component, inject, signal, OnInit } from '@angular/core';
+import { Component, inject, signal, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ExperienceService } from '../../core/services/experience.service';
 import { ExperienceEntry } from '../../core/models/experience.model';
@@ -6,6 +6,7 @@ import { ExperienceEntry } from '../../core/models/experience.model';
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './experience.scss',
 })
 export class ExperienceComponent implements OnInit {

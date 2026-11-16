@@ -1,4 +1,11 @@
-import { Component, ElementRef, input, signal, viewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  input,
+  signal,
+  viewChild,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
 let nextId = 0;
 
@@ -10,6 +17,7 @@ let nextId = 0;
 @Component({
   selector: 'app-contact-request',
   templateUrl: './contact-request.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact-request.scss',
 })
 export class ContactRequestComponent {

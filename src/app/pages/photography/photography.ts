@@ -1,4 +1,4 @@
-import { Component, HostListener, computed, inject } from '@angular/core';
+import { Component, HostListener, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
@@ -12,6 +12,7 @@ import { PhotoLiftDirective } from './photo-lift';
   selector: 'app-photography',
   imports: [DatePipe, ContactRequestComponent, PhotoViewerComponent, PhotoLiftDirective],
   templateUrl: './photography.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './photography.scss',
 })
 export class PhotographyComponent {

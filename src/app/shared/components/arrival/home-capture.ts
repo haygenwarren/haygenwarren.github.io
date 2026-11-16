@@ -6,7 +6,6 @@ const TEXT_SELECTORS = [
   '.portrait-hub > p',
   '.satellite-label',
   '.orbit-caption p',
-  '.about-link',
   '.personal-links a',
   '.personal-links button',
   '.replay',
@@ -100,15 +99,20 @@ export function captureHome(width: number, height: number): HTMLCanvasElement | 
     c.stroke();
     const svg = bubble.querySelector('svg');
     if (!svg) continue;
+    // Pixel icons are a grid of 1×1 rects (12×12, or 15×15 for Mission Atlas);
+    // most use the bubble's colour, multi-colour ones carry their own fill.
     const sr = svg.getBoundingClientRect();
-    c.fillStyle = style.color;
-    for (const pixel of svg.querySelectorAll('rect'))
+    const grid = svg.viewBox.baseVal.width || 12;
+    for (const pixel of svg.querySelectorAll('rect')) {
+      const fill = pixel.getAttribute('fill');
+      c.fillStyle = !fill || fill === 'currentColor' ? style.color : fill;
       c.fillRect(
-        sr.x + (Number(pixel.getAttribute('x')) * sr.width) / 12,
-        sr.y + (Number(pixel.getAttribute('y')) * sr.height) / 12,
-        sr.width / 12,
-        sr.height / 12,
+        sr.x + (Number(pixel.getAttribute('x')) * sr.width) / grid,
+        sr.y + (Number(pixel.getAttribute('y')) * sr.height) / grid,
+        sr.width / grid,
+        sr.height / grid,
       );
+    }
   }
 
   // Measure each text node where it actually rendered.

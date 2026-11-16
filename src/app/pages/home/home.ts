@@ -1,4 +1,11 @@
-import { Component, afterNextRender, computed, inject, signal } from '@angular/core';
+import {
+  Component,
+  afterNextRender,
+  computed,
+  inject,
+  signal,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ArrivalService } from '../../core/services/arrival.service';
 import { DeepFieldComponent } from '../../shared/components/deep-field/deep-field';
@@ -9,6 +16,7 @@ import { ContactRequestComponent } from '../../shared/components/contact-request
   selector: 'app-home',
   imports: [RouterLink, DeepFieldComponent, OrbitalNavigationComponent, ContactRequestComponent],
   templateUrl: './home.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './home.scss',
 })
 export class HomeComponent {

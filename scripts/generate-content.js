@@ -45,12 +45,15 @@ const writing = readJson(path.join(CONTENT_DIR, 'writing', 'articles.json'));
 writing.articles.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 writeJson('writing.json', writing);
 
-// Blog posts — parse Markdown with front matter and render to HTML
+// Blog posts — parse Markdown with front matter and render to HTML.
+// The folder may not exist (git doesn't keep empty folders), meaning no posts.
 const postsDir = path.join(CONTENT_DIR, 'posts');
-const mdFiles = fs
-  .readdirSync(postsDir)
-  .filter(f => f.endsWith('.md'))
-  .sort();
+const mdFiles = fs.existsSync(postsDir)
+  ? fs
+      .readdirSync(postsDir)
+      .filter(f => f.endsWith('.md'))
+      .sort()
+  : [];
 
 const posts = mdFiles.map(filename => {
   const slug = path.basename(filename, '.md');

@@ -1,4 +1,12 @@
-import { Component, ElementRef, computed, input, signal, viewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  computed,
+  input,
+  signal,
+  viewChild,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { Photo } from '../../../core/models/photo.model';
 import { PHOTO_ASSETS } from '../../../core/services/photography.service';
@@ -8,6 +16,7 @@ import { PHOTO_ASSETS } from '../../../core/services/photography.service';
   selector: 'app-photo-viewer',
   imports: [DatePipe],
   templateUrl: './photo-viewer.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './photo-viewer.scss',
 })
 export class PhotoViewerComponent {

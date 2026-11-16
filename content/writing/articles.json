@@ -1,6 +1,69 @@
 {
   "articles": [
     {
+      "id": "tgo-volcanic-activity",
+      "title": "Trace Gas Orbiter discovers potential evidence of volcanic activity on Mars via atmospheric observations",
+      "url": "https://www.nasaspaceflight.com/2026/11/tgo-volcanic-activity/",
+      "date": "2026-11-04",
+      "publication": "NASASpaceflight.com",
+      "topic": "Mars",
+      "summary": "Using data from the joint European and Russian ExoMars Trace Gas Orbiter at Mars, an international team of scientists has discovered new evidence of volcanic activity on the red planet’s surface."
+    },
+    {
+      "id": "jwst-hubble-images-1026",
+      "title": "Webb and Hubble observe stellar nurseries, galaxies, and gravitational lensing in new images",
+      "url": "https://www.nasaspaceflight.com/2026/10/jwst-hubble-images-1026/",
+      "date": "2026-10-11",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Teams using the James Webb Space Telescope and the Hubble Space Telescope — both jointly operated by NASA and the European Space Agency, with the Canadian Space Agency also participating in Webb — have recently…"
+    },
+    {
+      "id": "smile-uvi-sxi-commissioning",
+      "title": "ESA, CAS release first images from SMILE; officially begin science operations",
+      "url": "https://www.nasaspaceflight.com/2026/10/smile-uvi-sxi-commissioning/",
+      "date": "2026-10-04",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Following its launch in May and a multi-month commissioning period, the joint European Space Agency and Chinese Academy of Sciences Solar Wind Magnetosphere Ionosphere Link Explorer (SMILE) mission has officially…"
+    },
+    {
+      "id": "lro-mcgetchin-crater",
+      "title": "LRO discovers large new lunar crater, finds interesting thermal emission phenomenon",
+      "url": "https://www.nasaspaceflight.com/2026/09/lro-mcgetchin-crater/",
+      "date": "2026-09-20",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "Using NASA’s Lunar Reconnaissance Orbiter, a team of scientists has discovered the largest, newly formed crater ever found in the solar system."
+    },
+    {
+      "id": "roman-commissioning-update",
+      "title": "Roman telescope deploys solar array and communication systems, powers on Coronagraph Instrument",
+      "url": "https://www.nasaspaceflight.com/2026/09/roman-commissioning-update/",
+      "date": "2026-09-10",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "NASA’s Nancy Grace Roman Space Telescope successfully launched on Sunday, Aug. 30, atop a SpaceX Falcon Heavy rocket from the Kennedy Space Center in Florida."
+    },
+    {
+      "id": "roman-telescope-launch",
+      "title": "NASA, SpaceX set to launch the Nancy Grace Roman Space Telescope from Florida on Sunday",
+      "url": "https://www.nasaspaceflight.com/2026/08/roman-telescope-launch/",
+      "date": "2026-08-29",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "NASA and SpaceX are set for the launch of NASA’s next great space observatory — the Nancy Grace Roman Space Telescope."
+    },
+    {
+      "id": "roman-update-082326",
+      "title": "NASA’s Roman telescope nears launch, reaches final integration and rehearsal milestones",
+      "url": "https://www.nasaspaceflight.com/2026/08/roman-update-082326/",
+      "date": "2026-08-23",
+      "publication": "NASASpaceflight.com",
+      "topic": "Science",
+      "summary": "With a scheduled launch date of Aug. 30, NASA’s Nancy Grace Roman Space Telescope is quickly approaching launch."
+    },
+    {
       "id": "juno-io-subsurface-temps",
       "title": "Juno reveals surprising subsurface tempertures at Io, remarkably smooth surface",
       "url": "https://www.nasaspaceflight.com/2026/07/juno-io-subsurface-temps/",

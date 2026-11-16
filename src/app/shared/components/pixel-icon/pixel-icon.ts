@@ -1,6 +1,7 @@
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, input, ChangeDetectionStrategy } from '@angular/core';
 
-export type PixelIconName = 'telescope' | 'camera' | 'book' | 'work' | 'pen' | 'home' | 'news';
+export type PixelIconName =
+  'telescope' | 'camera' | 'book' | 'work' | 'pen' | 'home' | 'news' | 'mission-atlas';
 const PATTERNS: Record<PixelIconName, string[]> = {
   telescope: [
     '000000001100',
@@ -101,23 +102,59 @@ const PATTERNS: Record<PixelIconName, string[]> = {
     '001111111000',
     '000000000000',
   ],
+  // The Mission Atlas emblem, hand-pixelled from its brand kit: ring, Earth's
+  // horizon and land, the solid orbit with the active mission (lavender), and
+  // the dashed orbit ending at a second mission. 15×15, so it renders at a
+  // whole 2× (or 4×) scale in a 30px icon slot.
+  'mission-atlas': [
+    '000002222200000',
+    '000225555522000',
+    '002555555555200',
+    '025555222244520',
+    '025552555544220',
+    '255525555555552',
+    '255233555555552',
+    '252555533555552',
+    '252555555535552',
+    '252555555552552',
+    '022552222255520',
+    '022227777722220',
+    '002666777777200',
+    '000226677722000',
+    '000002222200000',
+  ],
 };
+
+/** Colours for multi-colour patterns, keyed by digit. '1' is the bubble's own
+ * colour; the rest are the Mission Atlas brand palette. */
+const FILLS: Record<string, string> = {
+  '1': 'currentColor',
+  '2': '#efe8d6', // Parchment: ring, horizon, solid orbit, missions
+  '3': '#968dd3', // Orbit Violet: dashed orbit
+  '4': '#c4bcf1', // Signal Lavender: active mission
+  '5': '#191c3c', // Indigo Sky: emblem disc
+  '6': '#55529f', // Land Violet
+  '7': '#2a2c5f', // Earth Indigo: oceans
+};
+
 @Component({
   selector: 'app-pixel-icon',
-  template: `<svg viewBox="0 0 12 12" aria-hidden="true" shape-rendering="crispEdges">
+  template: `<svg [attr.viewBox]="viewBox()" aria-hidden="true" shape-rendering="crispEdges">
     @for (pixel of pixels(); track $index) {
-      <rect [attr.x]="pixel.x" [attr.y]="pixel.y" width="1" height="1" fill="currentColor" />
+      <rect [attr.x]="pixel.x" [attr.y]="pixel.y" width="1" height="1" [attr.fill]="pixel.fill" />
     }
   </svg>`,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     ':host { display: block; width: 30px; height: 30px; } svg { width: 100%; height: 100%; }',
   ],
 })
 export class PixelIconComponent {
   name = input.required<PixelIconName>();
+  viewBox = computed(() => `0 0 ${PATTERNS[this.name()].length} ${PATTERNS[this.name()].length}`);
   pixels = computed(() =>
     PATTERNS[this.name()].flatMap((row, y) =>
-      Array.from(row).flatMap((value, x) => (value === '1' ? [{ x, y }] : [])),
+      Array.from(row).flatMap((value, x) => (FILLS[value] ? [{ x, y, fill: FILLS[value] }] : [])),
     ),
   );
 }

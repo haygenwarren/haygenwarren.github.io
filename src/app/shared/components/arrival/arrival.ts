@@ -7,12 +7,18 @@ import {
   inject,
   signal,
   viewChild,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { ARRIVALS, ArrivalService } from '../../../core/services/arrival.service';
 import { ArrivalRenderer } from './arrival-renderer';
 import { clamp } from './pixel-painter';
 
-@Component({ selector: 'app-arrival', templateUrl: './arrival.html', styleUrl: './arrival.scss' })
+@Component({
+  selector: 'app-arrival',
+  templateUrl: './arrival.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
+  styleUrl: './arrival.scss',
+})
 export class ArrivalComponent {
   arrival = inject(ArrivalService);
   private zone = inject(NgZone);

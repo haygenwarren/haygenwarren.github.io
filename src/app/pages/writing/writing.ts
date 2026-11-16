@@ -1,4 +1,4 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { WritingService } from '../../core/services/writing.service';
@@ -9,6 +9,7 @@ const PAGE_SIZE = 12;
   selector: 'app-writing',
   imports: [DatePipe],
   templateUrl: './writing.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './writing.scss',
 })
 export class WritingComponent {

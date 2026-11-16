@@ -53,6 +53,31 @@
 .name-dot {
   color: #c5b3d7;
 }
+// The portrait links to About. Its layer ignores the pointer (so satellites
+// passing behind stay clickable); the link opts back in.
+.portrait-link {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  border-radius: 50%;
+  pointer-events: auto;
+  .portrait-frame {
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  &:hover .portrait-frame,
+  &:focus-visible .portrait-frame {
+    border-color: #b9c6e0aa;
+    box-shadow:
+      0 0 0 6px #8b9bb71a,
+      0 0 75px #8b83ae33;
+  }
+  &:focus-visible {
+    border-radius: 50%;
+    outline-offset: 4px;
+  }
+}
 .portrait-frame {
   position: relative;
   width: var(--portrait-size);

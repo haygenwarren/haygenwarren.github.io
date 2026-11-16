@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 interface FooterLink {
   label: string;
@@ -10,6 +10,7 @@ interface FooterLink {
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './footer.scss',
 })
 export class FooterComponent {

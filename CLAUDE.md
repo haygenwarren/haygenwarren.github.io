@@ -14,7 +14,7 @@ npx ng generate component src/app/shared/components/<name> --standalone
 
 ## Architecture
 
-Angular 21 standalone SPA. Content is separated from the Angular application:
+Angular 22 standalone SPA. Content is separated from the Angular application:
 
 - **Source content** lives in `content/` (JSON + Markdown)
 - **`scripts/generate-content.js`** reads `content/` and writes processed JSON to `public/assets/generated/`
@@ -25,10 +25,11 @@ Angular 21 standalone SPA. Content is separated from the Angular application:
 
 ## Key conventions
 
-- Angular components use the `.ts / .html / .scss` naming pattern (no `.component.` infix — Angular 21 default)
+- Angular components use the `.ts / .html / .scss` naming pattern (no `.component.` infix — Angular 21+ default)
 - All page routes are lazy-loaded via `loadComponent` in `src/app/app.routes.ts`
 - Services are `providedIn: 'root'` and injected with `inject()`
 - Signals (`signal()`, `signal.set()`, `signal.update()`) are preferred over plain class properties for mutable state
+- Components declare `changeDetection: ChangeDetectionStrategy.Eager` (added by the Angular 22 migration to keep pre-v22 behaviour); keep it on new components unless they are written for OnPush
 - Global SCSS lives in `src/styles/` (partials imported via `src/styles.scss`)
 - CSS custom properties (defined in `src/styles/_variables.scss`) carry the design tokens — avoid hardcoded values in component SCSS
 
@@ -62,6 +63,8 @@ See `src/app/core/models/` for the TypeScript interfaces each content type must 
 ## Assets
 
 Static assets served from `public/`. Generated JSON goes to `public/assets/generated/`. Web copies of photographs (`npm run photos`) go to `public/assets/photography/` and `thumbs/`; never edit them by hand. Photo details are parsed from scan filenames — see the comment at the top of `scripts/process-photos.js`.
+
+The site icon is a 16×16 pixel spiral galaxy: `public/favicon.svg` (the source grid, one rect per pixel run), `public/favicon.ico` (16/32/48 px) and `public/apple-touch-icon.png` (180 px on the page background), linked from `src/index.html`.
 
 ## Build output
 

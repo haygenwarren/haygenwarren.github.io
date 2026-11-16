@@ -1,4 +1,4 @@
-import { Component, inject, signal, OnInit } from '@angular/core';
+import { Component, inject, signal, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { BlogService } from '../../../core/services/blog.service';
@@ -8,6 +8,7 @@ import { BlogPost } from '../../../core/models/blog-post.model';
   selector: 'app-blog-post',
   imports: [RouterLink, DatePipe],
   templateUrl: './blog-post.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './blog-post.scss',
 })
 export class BlogPostComponent implements OnInit {
@@ -18,7 +19,7 @@ export class BlogPostComponent implements OnInit {
 
   ngOnInit(): void {
     const slug = this.route.snapshot.paramMap.get('slug') ?? '';
-    this.blogService.getPost(slug).subscribe(post => {
+    this.blogService.getPost(slug).subscribe((post) => {
       if (post) {
         this.post.set(post);
       } else {

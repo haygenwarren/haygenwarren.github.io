@@ -9,7 +9,9 @@ import {
   signal,
   viewChild,
   viewChildren,
+  ChangeDetectionStrategy,
 } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ArrivalService } from '../../../core/services/arrival.service';
 import { PixelIconComponent, PixelIconName } from '../pixel-icon/pixel-icon';
@@ -23,15 +25,19 @@ const ORBIT_PERIOD = 120_000;
 
 interface Destination {
   label: string;
+  /** A route on this site, or a full URL when `external` is set. */
   path: string;
+  /** Opens another site in a new tab instead of navigating within this one. */
+  external?: boolean;
   icon: PixelIconName;
   color: string;
   note: string;
 }
 @Component({
   selector: 'app-orbital-navigation',
-  imports: [RouterLink, PixelIconComponent],
+  imports: [RouterLink, NgTemplateOutlet, PixelIconComponent],
   templateUrl: './orbital-navigation.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './orbital-navigation.scss',
 })
 export class OrbitalNavigationComponent {
@@ -41,6 +47,8 @@ export class OrbitalNavigationComponent {
   private satellites = viewChildren<ElementRef<HTMLElement>>('satellite');
   paused = input(false);
   hovered = signal<Destination | null>(null);
+  /** The portrait (link to About) is pointed at or focused. */
+  aboutHint = signal(false);
   interacting = signal(false);
   focused = signal(false);
   still = computed(() => this.paused() || this.arrival.reducedMotion());
@@ -84,6 +92,15 @@ export class OrbitalNavigationComponent {
       icon: 'news',
       color: '#9dd3cf',
       note: 'Spaceflight reporting for NASASpaceflight.com.',
+    },
+    {
+      label: 'Mission Atlas',
+      path: 'https://mission-atlas.net',
+      external: true,
+      icon: 'mission-atlas',
+      color: '#efe8d6', // the emblem's parchment ring
+
+      note: 'A live map of where 100 space missions are now.',
     },
     {
       label: 'Blog',

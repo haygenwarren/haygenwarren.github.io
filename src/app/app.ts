@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter, map } from 'rxjs';
@@ -23,6 +23,7 @@ import { ArrivalService } from './core/services/arrival.service';
     </div>
     <app-arrival />
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host,

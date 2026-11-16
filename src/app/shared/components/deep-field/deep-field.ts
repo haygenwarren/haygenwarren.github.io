@@ -1,8 +1,15 @@
-import { Component, ElementRef, afterNextRender, viewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  afterNextRender,
+  viewChild,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
 @Component({
   selector: 'app-deep-field',
   template: '<canvas #field aria-hidden="true"></canvas>',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [
     `
       :host {

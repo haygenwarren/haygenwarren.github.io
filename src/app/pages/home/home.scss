@@ -84,28 +84,16 @@
 .home-footer {
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 1rem clamp(1.25rem, 4vw, 3.5rem) 1.2rem;
 }
-.about-link {
-  color: #d6deef;
-  font-size: 0.78rem;
-  text-decoration: none;
-  &:hover {
-    color: #f1f5fd;
-  }
-}
 // Bottom row: social profiles and résumé on the left, replay on the right.
+// (The About page is reached from the portrait in the orbit.)
 .home-colophon {
-  align-self: stretch;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem 2rem;
   border-top: 1px solid #8fa1c21a;
-  margin-top: 1.25rem;
   padding-top: 1rem;
 }
 .personal-links {

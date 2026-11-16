@@ -7,49 +7,85 @@
       <path d="M390 270h20M400 260v20" />
     </svg>
     <div class="portrait-hub">
-      <div class="portrait-frame">
-        <span class="portrait-spark spark-one" aria-hidden="true"></span>
-        <span class="portrait-spark spark-two" aria-hidden="true"></span>
-        <div class="portrait-crop">
-          <img
-            src="assets/headshot.jpg"
-            alt="Haygen Warren"
-            width="600"
-            height="800"
-            fetchpriority="high"
-          />
+      <!-- The portrait is the way to the About page. -->
+      <a
+        class="portrait-link"
+        routerLink="/about"
+        aria-label="A little about me"
+        (pointerenter)="aboutHint.set(true)"
+        (pointerleave)="aboutHint.set(false)"
+        (focus)="aboutHint.set(true)"
+        (blur)="aboutHint.set(false)"
+      >
+        <div class="portrait-frame">
+          <span class="portrait-spark spark-one" aria-hidden="true"></span>
+          <span class="portrait-spark spark-two" aria-hidden="true"></span>
+          <div class="portrait-crop">
+            <img
+              src="assets/headshot.jpg"
+              alt="Haygen Warren"
+              width="600"
+              height="800"
+              fetchpriority="high"
+            />
+          </div>
         </div>
-      </div>
+      </a>
       <h1 tabindex="-1" id="home-title">
         Haygen Warren<span class="name-dot" aria-hidden="true">.</span>
       </h1>
       <p>Student. Photographer. Writer.</p>
     </div>
     @for (destination of destinations; track destination.path; let i = $index) {
-      <a
-        #satellite
-        class="satellite"
-        [routerLink]="destination.path"
-        [style.left.%]="initialX(i)"
-        [style.top.%]="initialY(i)"
-        [style.--planet-color]="destination.color"
-        [attr.aria-current]="destination.path === '/' ? 'page' : null"
-        (pointerenter)="hold(destination)"
-        (pointerleave)="release()"
-        (focus)="hold(destination, true)"
-        (blur)="release(true)"
-      >
-        <span class="satellite-bubble"><app-pixel-icon [name]="destination.icon" /></span>
-        <span class="satellite-label"
-          >{{ destination.label }}<span class="destination-arrow" aria-hidden="true">↗</span></span
+      @if (destination.external) {
+        <a
+          #satellite
+          class="satellite"
+          [href]="destination.path"
+          target="_blank"
+          rel="noopener noreferrer"
+          [style.left.%]="initialX(i)"
+          [style.top.%]="initialY(i)"
+          [style.--planet-color]="destination.color"
+          (pointerenter)="hold(destination)"
+          (pointerleave)="release()"
+          (focus)="hold(destination, true)"
+          (blur)="release(true)"
         >
-      </a>
+          <ng-container *ngTemplateOutlet="satelliteContent; context: { $implicit: destination }" />
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      } @else {
+        <a
+          #satellite
+          class="satellite"
+          [routerLink]="destination.path"
+          [style.left.%]="initialX(i)"
+          [style.top.%]="initialY(i)"
+          [style.--planet-color]="destination.color"
+          [attr.aria-current]="destination.path === '/' ? 'page' : null"
+          (pointerenter)="hold(destination)"
+          (pointerleave)="release()"
+          (focus)="hold(destination, true)"
+          (blur)="release(true)"
+        >
+          <ng-container *ngTemplateOutlet="satelliteContent; context: { $implicit: destination }" />
+        </a>
+      }
     }
+    <ng-template #satelliteContent let-destination>
+      <span class="satellite-bubble"><app-pixel-icon [name]="destination.icon" /></span>
+      <span class="satellite-label"
+        >{{ destination.label }}<span class="destination-arrow" aria-hidden="true">↗</span></span
+      >
+    </ng-template>
   </div>
 </nav>
 <div class="orbit-caption" aria-live="polite">
   @if (hovered(); as destination) {
     <p class="destination-note">{{ destination.note }}</p>
+  } @else if (aboutHint()) {
+    <p class="destination-note">A little about me.</p>
   } @else {
     <p>
       Pick an orbit. See where it takes you.<span class="caption-star" aria-hidden="true">✧</span>

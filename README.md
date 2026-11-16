@@ -2,9 +2,9 @@
 
 Personal portfolio for Haygen Warren — physics student, researcher, and film photographer.
 
-Built with Angular 21, TypeScript, SCSS, and a file-based content workflow.
+Built with Angular 22, TypeScript, SCSS, and a file-based content workflow.
 
-The homepage is a personal observatory: seven destinations slowly orbit a stationary central portrait over a pixel-art deep field. The detail pages retain their reading layouts in a shared dark palette. Graphics are drawn locally with canvas and SVG; fonts use the system sans family.
+The homepage is a personal observatory: eight destinations (seven pages and the Mission Atlas project) slowly orbit a stationary central portrait over a pixel-art deep field. The detail pages retain their reading layouts in a shared dark palette. Graphics are drawn locally with canvas and SVG; fonts use the system sans family.
 
 On the first visit to Home in a page session, one of four short arrivals plays: radio telescope, film camera, rocket launch, or colliding neutron stars. The sequence advances on each full visit and can be replayed from the homepage. Visitors can skip it or press Escape. Reduced-motion preferences skip arrivals and stop the background and orbital motion; the manual pause preference is saved locally. The orbit also pauses while a visitor points at or keyboard-focuses a destination, so it is easy to click.
 
