@@ -59,25 +59,18 @@ export class OrbitalNavigationComponent {
 
   destinations: Destination[] = [
     {
+      label: 'Home',
+      path: '/',
+      icon: 'home',
+      color: '#c8c5a4',
+      note: 'You are here. Make yourself at home.',
+    },
+    {
       label: 'Research',
       path: '/research',
       icon: 'telescope',
       color: '#b8abe8',
       note: 'From radio observations to optical data tools.',
-    },
-    {
-      label: 'Photography',
-      path: '/photography',
-      icon: 'camera',
-      color: '#e1b88f',
-      note: 'A slower way to look at the world.',
-    },
-    {
-      label: 'Education',
-      path: '/education',
-      icon: 'book',
-      color: '#a6c9b2',
-      note: 'Physics and astrophysics at UNC–Chapel Hill.',
     },
     {
       label: 'Work',
@@ -87,6 +80,13 @@ export class OrbitalNavigationComponent {
       note: 'Engineering projects and spaceflight journalism.',
     },
     {
+      label: 'Education',
+      path: '/education',
+      icon: 'book',
+      color: '#a6c9b2',
+      note: 'Physics and astrophysics at UNC–Chapel Hill.',
+    },
+    {
       label: 'Writing',
       path: '/writing',
       icon: 'news',
@@ -94,13 +94,11 @@ export class OrbitalNavigationComponent {
       note: 'Spaceflight reporting for NASASpaceflight.com.',
     },
     {
-      label: 'Mission Atlas',
-      path: 'https://mission-atlas.net',
-      external: true,
-      icon: 'mission-atlas',
-      color: '#efe8d6', // the emblem's parchment ring
-
-      note: 'A live map of where 100 space missions are now.',
+      label: 'Photography',
+      path: '/photography',
+      icon: 'camera',
+      color: '#e1b88f',
+      note: 'A slower way to look at the world.',
     },
     {
       label: 'Blog',
@@ -110,11 +108,12 @@ export class OrbitalNavigationComponent {
       note: 'Thoughts on science, craft, and observation.',
     },
     {
-      label: 'Home',
-      path: '/',
-      icon: 'home',
-      color: '#c8c5a4',
-      note: 'You are here. Make yourself at home.',
+      label: 'Mission Atlas',
+      path: 'https://mission-atlas.net',
+      external: true,
+      icon: 'mission-atlas',
+      color: '#efe8d6', // the emblem's parchment ring
+      note: 'A live map of where 100 space missions are now.',
     },
   ];
   constructor() {
@@ -158,7 +157,10 @@ export class OrbitalNavigationComponent {
       });
     });
   }
-  /** Evenly spaced starting angles, with the second destination at the top. */
+  /**
+   * Evenly spaced starting angles, with the second destination (Research) at
+   * the top, so reading clockwise from Home follows the header's page order.
+   */
   private angle(index: number): number {
     return -Math.PI / 2 + ((index - 1) * Math.PI * 2) / this.destinations.length;
   }
