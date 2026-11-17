@@ -12,6 +12,15 @@ export interface EducationEntry {
   honors?: string[];
 }
 
+export interface EducationAward {
+  id: string;
+  name: string;
+  startDate: string;
+  endDate: string | null;
+  description: string;
+}
+
 export interface EducationData {
   entries: EducationEntry[];
+  awards?: EducationAward[];
 }

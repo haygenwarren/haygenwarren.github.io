@@ -1,4 +1,5 @@
 import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
+import { DOCUMENT, ViewportScroller } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter, map } from 'rxjs';
@@ -44,6 +45,14 @@ import { ArrivalService } from './core/services/arrival.service';
   ],
 })
 export class App {
+  constructor() {
+    const document = inject(DOCUMENT);
+    inject(ViewportScroller).setOffset(() => [
+      0,
+      document.querySelector('app-header header')?.getBoundingClientRect().height ?? 0,
+    ]);
+  }
+
   arrival = inject(ArrivalService);
   private router = inject(Router);
   private url = toSignal(

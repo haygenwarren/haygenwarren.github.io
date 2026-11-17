@@ -8,19 +8,32 @@
       "location": "Chapel Hill, NC",
       "startDate": "Aug 2023",
       "endDate": "May 2027 (expected)",
-      "description": "I am studying physics with a focus on astrophysics at UNC–Chapel Hill. My coursework brings together numerical methods, electromagnetism, mechanics, and astronomy.",
+      "description": "I am studying physics with a focus on astrophysics at UNC–Chapel Hill, with an expected graduation in May 2027. My coursework connects numerical methods and fundamental physics with astronomical observations and analysis.",
       "highlights": [],
       "courses": [
         "Numerical Techniques",
         "Electricity and Magnetism",
+        "Thermal Physics",
         "Astrophysics",
         "Classical Mechanics",
         "Differential Equations"
-      ],
-      "honors": [
-        "Honors Carolina",
-        "North Carolina Space Grant Undergraduate Scholarship ($8,000; June 2026–Present)"
       ]
+    }
+  ],
+  "awards": [
+    {
+      "id": "nc-space-grant",
+      "name": "North Carolina Space Grant Undergraduate Scholarship",
+      "startDate": "Jun 2026",
+      "endDate": null,
+      "description": "Awarded a competitive $8,000 NASA-funded undergraduate research scholarship supporting the development of Skynet’s optical data-processing pipeline and astronomical analysis tools."
+    },
+    {
+      "id": "honors-carolina",
+      "name": "Honors Carolina",
+      "startDate": "Aug 2023",
+      "endDate": null,
+      "description": "Selected for UNC–Chapel Hill’s undergraduate honors program, which admits approximately 10% of each incoming class."
     }
   ]
 }

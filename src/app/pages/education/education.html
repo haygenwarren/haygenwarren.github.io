@@ -2,50 +2,76 @@
   <header class="page-header">
     <span class="page-header__eyebrow">Portfolio</span>
     <h1 class="page-header__title">Education</h1>
-    <p class="page-header__description">Academic background and training.</p>
+    <p class="page-header__description">
+      Physics at UNC–Chapel Hill, research support, and academic honors.
+    </p>
   </header>
 
-  <section class="timeline" aria-label="Education entries">
-    @for (entry of entries(); track entry.id) {
-      <article class="timeline-entry">
-        <header class="timeline-entry__header">
-          <div class="timeline-entry__heading">
-            <h2 class="timeline-entry__org">{{ entry.institution }}</h2>
-            <p class="timeline-entry__role">{{ entry.degree }}, {{ entry.field }}</p>
-          </div>
-          <div class="timeline-entry__meta">
-            <span class="timeline-entry__dates">{{ entry.startDate }} – {{ entry.endDate ?? 'Present' }}</span>
-            <span class="timeline-entry__location">{{ entry.location }}</span>
-          </div>
-        </header>
-        <p class="timeline-entry__description">{{ entry.description }}</p>
-        @if (entry.courses?.length) {
-          <div class="timeline-entry__detail">
-            <span class="timeline-entry__detail-label">Relevant Courses</span>
-            <span class="timeline-entry__detail-value">{{ entry.courses!.join(' · ') }}</span>
-          </div>
-        }
-        @if (entry.honors?.length) {
-          <div class="timeline-entry__detail">
-            <span class="timeline-entry__detail-label">Awards &amp; Honors</span>
-            <span class="timeline-entry__detail-value">{{ entry.honors!.join(' · ') }}</span>
-          </div>
-        }
-        <!-- Highlights repeat courses and honors, so only show them on their own -->
-        @if (!entry.courses?.length && !entry.honors?.length && entry.highlights.length) {
-          <div class="timeline-entry__detail">
-            <span class="timeline-entry__detail-label">Highlights</span>
-            <ul class="timeline-entry__detail-value timeline-entry__highlights">
-              @for (h of entry.highlights; track h) {
-                <li>{{ h }}</li>
-              }
-            </ul>
-          </div>
-        }
-      </article>
-    }
-    @empty {
-      <p class="placeholder">Loading&hellip;</p>
-    }
+  <section class="content-section" aria-labelledby="academic-background">
+    <h2 class="content-section__title" id="academic-background">Academic background</h2>
+    <div class="timeline">
+      @for (entry of entries(); track entry.id) {
+        <article class="timeline-entry">
+          <header class="timeline-entry__header">
+            <div class="timeline-entry__heading">
+              <h3 class="timeline-entry__org">{{ entry.institution }}</h3>
+              <p class="timeline-entry__role">{{ entry.degree }}, {{ entry.field }}</p>
+            </div>
+            <div class="timeline-entry__meta">
+              <span class="timeline-entry__dates">
+                {{ entry.startDate }} – {{ entry.endDate ?? 'Present' }}
+              </span>
+              <span class="timeline-entry__location">{{ entry.location }}</span>
+            </div>
+          </header>
+          <p class="timeline-entry__description">{{ entry.description }}</p>
+          @if (entry.courses?.length) {
+            <div class="timeline-entry__detail">
+              <span class="timeline-entry__detail-label">Relevant Courses</span>
+              <span class="timeline-entry__detail-value">{{ entry.courses!.join(' · ') }}</span>
+            </div>
+          }
+          @if (entry.honors?.length) {
+            <div class="timeline-entry__detail">
+              <span class="timeline-entry__detail-label">Awards &amp; Honors</span>
+              <span class="timeline-entry__detail-value">{{ entry.honors!.join(' · ') }}</span>
+            </div>
+          }
+          @if (entry.highlights.length) {
+            <div class="timeline-entry__detail">
+              <span class="timeline-entry__detail-label">Highlights</span>
+              <ul class="timeline-entry__detail-value timeline-entry__highlights">
+                @for (highlight of entry.highlights; track highlight) {
+                  <li>{{ highlight }}</li>
+                }
+              </ul>
+            </div>
+          }
+        </article>
+      } @empty {
+        <p class="placeholder">Loading&hellip;</p>
+      }
+    </div>
   </section>
+
+  @if (awards().length) {
+    <section class="content-section" aria-labelledby="awards">
+      <h2 class="content-section__title" id="awards">Scholarships &amp; honors</h2>
+      <div class="timeline">
+        @for (award of awards(); track award.id) {
+          <article class="timeline-entry">
+            <header class="timeline-entry__header">
+              <h3 class="timeline-entry__org">{{ award.name }}</h3>
+              <div class="timeline-entry__meta">
+                <span class="timeline-entry__dates">
+                  {{ award.startDate }} – {{ award.endDate ?? 'Present' }}
+                </span>
+              </div>
+            </header>
+            <p class="timeline-entry__description">{{ award.description }}</p>
+          </article>
+        }
+      </div>
+    </section>
+  }
 </div>

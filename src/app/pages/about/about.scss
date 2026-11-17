@@ -1,1 +1,29 @@
-// Inherits prose styles from global SCSS
+.about-content {
+  margin-bottom: var(--space-16);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-8) var(--space-12);
+  margin: 0;
+
+  @media (max-width: 560px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.skills-group {
+  dt {
+    margin-bottom: var(--space-2);
+    color: var(--color-text);
+    font-size: var(--text-base);
+  }
+
+  dd {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+  }
+}

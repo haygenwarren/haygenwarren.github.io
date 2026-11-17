@@ -62,7 +62,7 @@ src/
 | Path | Component |
 |---|---|
 | `/` | Home |
-| `/experience` | Work Experience |
+| `/experience` | Work & Projects |
 | `/research` | Research |
 | `/education` | Education |
 | `/photography` | Film Photography |
@@ -109,11 +109,18 @@ Edit `content/experience/experience.json`. Each entry follows the `ExperienceEnt
 }
 ```
 
-Set `endDate` to `null` for a current position. Use `category: "research"` for entries on the Research page and `category: "work"` for Work.
+Set `endDate` to `null` for a current position. Use the same start and end date for a single-month experience. Entries appear in their source order within each section:
+
+- `category: "research"` — Research experience on `/research`
+- `category: "teaching"` — Teaching & mentorship on `/research`
+- `category: "work"` — Professional experience on `/experience`
+- `category: "project"` — Technical projects & professional development on `/experience`
+
+An optional `url` adds an external project link. The top-level `presentations` array supplies the conference presentations on Research, with `id`, `title`, `conference`, `format`, `date`, and `location` fields.
 
 ### Education
 
-Edit `content/education/education.json`. Each entry follows the `EducationEntry` interface.
+Edit `content/education/education.json`. Each entry follows the `EducationEntry` interface. The optional top-level `awards` array supplies Scholarships & honors, with `id`, `name`, `startDate`, `endDate`, and `description` fields.
 
 ### Photography
 

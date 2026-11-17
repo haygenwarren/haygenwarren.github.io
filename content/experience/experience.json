@@ -8,47 +8,82 @@
       "location": "",
       "startDate": "Dec 2025",
       "endDate": null,
-      "description": "I build Python tools that turn telescope observations into science-ready data. My work at Skynet spans automated optical image processing, time-series photometry, and stellar-cluster analysis.",
+      "description": "I build tools that turn telescope observations into science-ready data for the next-generation Skynet Global Observatory (Skynet GO). Working with Dr. Daniel Reichart, I develop automated optical image-processing workflows and user-facing astronomical analysis tools.",
       "highlights": [
-        "Developing an optical data-processing pipeline that automates the processing of robotic telescope observations.",
-        "Implemented and tested workflows for astrometric solving, photometric calibration, source detection, image rendering, and analysis using FITS data and telescope metadata.",
-        "Developing astronomical data tools that combine automated processing, visualization, and scientific analysis.",
-        "Supported by an $8,000 NASA-funded North Carolina Space Grant Undergraduate Scholarship, awarded in June 2026; presented the research project at two conferences."
+        "Developed an optical data-processing pipeline that automates calibration and initial analysis of robotic telescope observations.",
+        "Integrated Python-based FITS workflows into Skynet GO’s backend, including World Coordinate System (WCS) correction, source detection, and photometric calibration using telescope metadata, image headers, and reference catalogs such as APASS.",
+        "Developed and extensively tested custom algorithms and debugging procedures to identify processing errors and improve the accuracy and reliability of automated calibration.",
+        "Upgrading and integrating 12 Astromancer analysis tools into Skynet GO, migrating the frontend from Angular 16 to React and adding backend storage and account integration for saved analyses.",
+        "Contributing to a unified Skynet Workbench that brings together Afterglow’s image-analysis capabilities and Astromancer’s data-analysis tools."
       ],
-      "tags": ["Python", "FITS", "astrometry", "photometry", "data visualization"]
+      "tags": ["Python", "FITS", "WCS astrometry", "photometry", "React", "scientific software"]
     },
     {
       "id": "radio-astronomy-research",
       "category": "research",
       "organization": "Educational Research in Radio Astronomy",
-      "role": "Instructor and Student Researcher",
+      "role": "Student Researcher",
       "location": "Green Bank Observatory",
       "startDate": "Aug 2025",
-      "endDate": "Aug 2026",
-      "description": "I used radio telescope observations to study pulsars and the rotation of Andromeda, then helped students investigate the structure of our own galaxy. The work combined observing, research instruction, and telescope instrumentation.",
+      "endDate": "Aug 2025",
+      "description": "I collected and analyzed radio observations at Green Bank Observatory using the 20-meter and 40-foot telescopes. My projects explored the rotation of Andromeda, pulsar signals, and telescope instrumentation.",
       "highlights": [
-        "Conducted research using Green Bank Observatory’s 20-meter and 40-foot telescopes.",
-        "Instructed students through a Galactic-structure research project using Milky Way radio observations.",
-        "Designed a 3D-printed enclosure for a radio telescope’s voltage test system in Autodesk Fusion."
+        "Measured Andromeda’s rotation and produced color-coded visualizations of its rotational motion.",
+        "Detected up to 10 pulsars and used period folding to generate pulse profiles, with audio sonification to represent their radio emissions.",
+        "Designed and 3D-printed an enclosure for the 40-foot telescope’s voltage-testing system in Autodesk Fusion, contributing to an instrumentation upgrade."
       ],
-      "tags": ["radio astronomy", "pulsars", "Galactic structure", "teaching", "Autodesk Fusion"]
+      "tags": ["radio astronomy", "pulsars", "period folding", "sonification", "Autodesk Fusion"]
     },
     {
-      "id": "nasa-lspace",
+      "id": "ncssm-pulsar-research",
       "category": "research",
-      "organization": "NASA L’SPACE Program",
-      "role": "Project Manager and Scientist",
+      "organization": "NCSSM Research Experience in Physics",
+      "role": "Project Lead",
       "location": "",
-      "startDate": "May 2024",
-      "endDate": "Aug 2025",
-      "description": "I worked on mission planning and technology proposals through NASA’s L’SPACE Program. As a project manager and scientist, I led a lunar rover mission concept and contributed to a proposal for astronaut health-monitoring technology.",
+      "startDate": "Jan 2023",
+      "endDate": "Jan 2023",
+      "description": "I designed and led a month-long project, “Investigating the Effects of Distance on Pulsar Timing and Gravitational Wave Detection,” exploring pulsar distance, pulsar timing arrays, and low-frequency gravitational-wave detection.",
       "highlights": [
-        "Led an interdisciplinary team developing a NASA Discovery-class lunar rover mission concept, coordinating science goals, instruments, rover design, and budgeting.",
-        "Coordinated mission concept, system requirements, mission definition, and preliminary design review documentation; the final preliminary design review exceeded 220 pages.",
-        "Collaborated on a 12-person team developing a technical proposal for a novel astronaut health-monitoring technology.",
-        "Served as a secondary proposal reviewer, scoring submissions against a solicitation rubric and providing feedback to teams."
+        "Analyzed North American Nanohertz Observatory for Gravitational Waves (NANOGrav) datasets, comparing timing residuals from six pulsars: three relatively nearby and three distant.",
+        "Used Python, Anaconda, Jupyter Notebook, and the PINT pulsar-timing package to process observations, generate timing residuals, and visualize comparisons."
       ],
-      "tags": ["mission design", "project management", "science planning", "technical proposals"]
+      "tags": ["Python", "NANOGrav", "PINT", "pulsar timing", "gravitational waves"]
+    },
+    {
+      "id": "radio-astronomy-instructor",
+      "category": "teaching",
+      "organization": "Educational Research in Radio Astronomy",
+      "role": "Instructor",
+      "location": "Green Bank Observatory",
+      "startDate": "Aug 2026",
+      "endDate": "Aug 2026",
+      "description": "I returned to Green Bank Observatory as an instructor, helping students operate the 20-meter and 40-foot radio telescopes and work through two observational research projects.",
+      "highlights": [
+        "Supervised observational data collection and analysis, guiding students through multi-frequency radio observations and trigonometric methods to investigate the Milky Way’s structure and curvature.",
+        "Helped students observe a partial solar eclipse and develop Python algorithms to rapidly process and interpret the radio observations."
+      ],
+      "tags": [
+        "teaching",
+        "radio astronomy",
+        "Galactic structure",
+        "Python",
+        "observational methods"
+      ]
+    },
+    {
+      "id": "astr110-teaching-assistant",
+      "category": "teaching",
+      "organization": "ASTR 110: Astrophotography",
+      "role": "Undergraduate Teaching Assistant",
+      "location": "UNC–Chapel Hill",
+      "startDate": "Jan 2026",
+      "endDate": "May 2026",
+      "description": "I helped undergraduate students learn astrophotography, astronomical observing, and data analysis using the Skynet Robotic Telescope Network.",
+      "highlights": [
+        "Guided students through observations and analysis with Afterglow and Astromancer, answering technical questions and explaining scientific concepts during class.",
+        "Evaluated weekly assignments and provided feedback on students’ work."
+      ],
+      "tags": ["teaching", "astrophotography", "Skynet", "Afterglow", "Astromancer"]
     },
     {
       "id": "goshen-engineering",
@@ -63,14 +98,17 @@
         "Developing controlled documentation for design, manufacturing, administrative, and quality processes.",
         "Improved steel part production by researching thermal properties and calculating powder-coat oven temperatures and bake-time ranges.",
         "Designed a custom stack-rack system in Autodesk Fusion to improve part organization, storage capacity, and material handling.",
-        "Collaborated with automation engineers on a robot cell for a CNC ironworker and an automated machining system, evaluating end effectors and components with vendors."
+        "Collaborated with automation engineers on a robot cell for a CNC ironworker and an automated machining system, evaluating end effectors and components with vendors.",
+        "Developing an internal part-cost estimating application with Python, Autodesk APIs, and web technologies to automate manufacturing cost estimates and streamline customer quotes."
       ],
       "tags": [
         "manufacturing",
         "Autodesk Fusion",
         "automation",
         "mechanical design",
-        "quality management"
+        "quality management",
+        "Python",
+        "Autodesk APIs"
       ]
     },
     {
@@ -83,9 +121,10 @@
       "endDate": null,
       "description": "I lead news coverage at NASASpaceflight, working with writers and editors to report on astrophysics and spaceflight. Alongside writing and editing, I interview scientists and mission teams and provide live launch commentary.",
       "highlights": [
-        "Managing a team of more than 20 writers and editors, coordinating editorial planning, regular meetings, and team membership.",
-        "Authored more than 100 articles and edited and oversaw publication of multiple articles per week.",
-        "Provided on-site launch coverage in Florida, including interviews with mission teams, press conferences, and live commentary.",
+        "Managing more than 20 writers and editors, overseeing editorial planning, assignments, publication schedules, regular meetings, hiring practices, and personnel decisions.",
+        "Authored more than 180 articles on astrophysics, astronomy, and spaceflight, explaining subjects such as orbital mechanics, telescope technology, and rocket propulsion for a broad audience.",
+        "Edited and published more than 150 articles, reviewing factual accuracy, grammar, and formatting while maintaining editorial standards.",
+        "Provided on-site launch coverage of the Psyche and Nancy Grace Roman Space Telescope missions in Florida, interviewing mission teams, participating in press conferences, and providing live commentary.",
         "Hosted major launch broadcasts, including the James Webb Space Telescope and Artemis I, each exceeding 1.3 million views."
       ],
       "tags": [
@@ -95,6 +134,89 @@
         "editorial leadership",
         "live commentary"
       ]
+    },
+    {
+      "id": "mission-atlas",
+      "category": "project",
+      "organization": "Mission Atlas",
+      "role": "Developer",
+      "location": "",
+      "startDate": "Apr 2026",
+      "endDate": null,
+      "url": "https://mission-atlas.net",
+      "description": "I independently developed and deployed an interactive web application documenting more than 100 space missions and 125 spacecraft. Mission Atlas combines a searchable mission archive with a true-scale solar system map and interactive data visualizations.",
+      "highlights": [
+        "Built the application with Next.js, React, TypeScript, Prisma, and PostgreSQL.",
+        "Used Keplerian orbital mechanics and Hermite interpolation to visualize spacecraft trajectories, including animated mission replays for 57 missions.",
+        "Created automated import pipelines for NASA/JPL Horizons ephemerides and GCAT spacecraft catalog data, providing daily trajectory updates.",
+        "Built customizable filters, charts, and shareable views for exploring historical and ongoing missions, with GitHub and Vercel CI/CD workflows for linting, type checking, and database migrations."
+      ],
+      "tags": ["Next.js", "React", "TypeScript", "PostgreSQL", "Prisma", "orbital mechanics"]
+    },
+    {
+      "id": "nasa-lspace-npwee",
+      "category": "project",
+      "organization": "NASA L’SPACE NPWEE Program",
+      "role": "Scientist · NASA Proposal Writing and Evaluation Experience",
+      "location": "",
+      "startDate": "May 2025",
+      "endDate": "Aug 2025",
+      "description": "I worked with a 12-person interdisciplinary team to develop a competitive $10,000 technical proposal for a new astronaut health-monitoring technology.",
+      "highlights": [
+        "Researched minimally invasive wearable health-monitoring technologies and evaluated existing approaches to inform the proposed system’s design.",
+        "Served as a secondary reviewer on a technical proposal review panel, checking submissions against solicitation requirements, scoring them with standardized rubrics, and providing feedback to proposal teams."
+      ],
+      "tags": ["technical proposals", "technology research", "proposal review", "astronaut health"]
+    },
+    {
+      "id": "nasa-lspace-mca",
+      "category": "project",
+      "organization": "NASA L’SPACE MCA Program",
+      "role": "Project Manager · Mission Concept Academy",
+      "location": "",
+      "startDate": "May 2024",
+      "endDate": "Aug 2024",
+      "description": "I led an interdisciplinary team of more than 10 students, engineers, and scientists through the conceptual design of a NASA Discovery-class lunar rover mission.",
+      "highlights": [
+        "Coordinated scientific objectives, instrument selection, rover structural design, mission requirements, and budgeting.",
+        "Directed the Mission Concept Review, System Requirements Review, Mission Definition Review, and Preliminary Design Review documentation; the final PDR exceeded 220 pages.",
+        "Coordinated regular technical meetings and collaborated with NASA scientists, engineers, and program personnel throughout the mission-design process."
+      ],
+      "tags": ["mission design", "project management", "science planning", "systems engineering"]
+    },
+    {
+      "id": "ncssm-rocketry",
+      "category": "project",
+      "organization": "NCSSM Rocketry",
+      "role": "High-Powered Rocketry Team Captain",
+      "location": "",
+      "startDate": "Aug 2021",
+      "endDate": "May 2023",
+      "description": "I led and contributed to three high-powered rocket projects at the North Carolina School of Science and Mathematics, working with student team members and engineering mentors from design through construction.",
+      "highlights": [
+        "Helped develop BRRDS, the first NCSSM rocket to exceed Mach 1; Phoenix, designed to deploy a controllable UAV at apogee; and OneStone, NCSSM’s first two-stage high-powered rocket.",
+        "Coordinated weekly meetings, documented technical discussions, and tracked progress toward design objectives.",
+        "Wrote grant proposals and technical documentation to secure funding for rocket development, team travel, and public outreach."
+      ],
+      "tags": ["high-powered rocketry", "engineering design", "team leadership", "grant writing"]
+    }
+  ],
+  "presentations": [
+    {
+      "id": "sncurcs-2026",
+      "title": "Designing User-Focused Data Tools for the Next-Generation Skynet Robotic Telescope Network",
+      "conference": "State of North Carolina Undergraduate Research & Creativity Symposium",
+      "format": "Oral presentation",
+      "date": "Nov 2026",
+      "location": "Charlotte, NC"
+    },
+    {
+      "id": "nc-astronomers-meeting-2026",
+      "title": "Designing User-Focused Data Tools for the Next-Generation Skynet Robotic Telescope Network",
+      "conference": "North Carolina Astronomer’s Meeting",
+      "format": "Oral presentation",
+      "date": "Oct 2026",
+      "location": "Greensboro, NC"
     }
   ]
 }
