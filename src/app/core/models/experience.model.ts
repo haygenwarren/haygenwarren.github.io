@@ -1,3 +1,5 @@
+import { ResourceLink } from './resource.model';
+
 export interface ExperienceEntry {
   id: string;
   category: 'research' | 'work' | 'project' | 'teaching';
@@ -10,6 +12,8 @@ export interface ExperienceEntry {
   description: string;
   highlights: string[];
   tags: string[];
+  /** Slides or posters, added from content/resources/ at build time. */
+  files?: ResourceLink[];
 }
 
 export interface ConferencePresentation {
@@ -19,6 +23,8 @@ export interface ConferencePresentation {
   format: string;
   date: string;
   location: string;
+  /** Slides or posters, added from content/resources/ at build time. */
+  files?: ResourceLink[];
 }
 
 export interface ExperienceData {

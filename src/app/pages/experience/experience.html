@@ -1,102 +1,96 @@
-<div class="page container">
-  <header class="page-header">
-    <span class="page-header__eyebrow">Portfolio</span>
-    <h1 class="page-header__title">{{ title }}</h1>
-    <p class="page-header__description">{{ description }}</p>
-  </header>
+<app-page-banner [page]="page" [heading]="title" />
 
-  @if (data()) {
-    <nav class="section-nav" aria-label="On this page">
-      @for (section of sections(); track section.id) {
-        <a routerLink="." [fragment]="section.id">{{ section.title }}</a>
-      }
-      @if (presentations().length) {
-        <a routerLink="." fragment="presentations">Conference presentations</a>
-      }
-    </nav>
-  }
+<div class="page page--after-banner container">
+  @if (tabs().length) {
+    <app-pill-tabs #pills [tabs]="tabs()" [label]="title + ' sections'" />
 
-  @for (section of sections(); track section.id) {
-    <section class="content-section" [attr.aria-labelledby]="section.id">
-      <h2 class="content-section__title" [id]="section.id">{{ section.title }}</h2>
-      <div class="timeline">
-        @for (entry of section.entries; track entry.id) {
-          <article class="timeline-entry">
-            <header class="timeline-entry__header">
-              <div class="timeline-entry__heading">
-                <h3 class="timeline-entry__org">{{ entry.organization }}</h3>
-                <p class="timeline-entry__role">{{ entry.role }}</p>
+    @for (tab of tabs(); track tab.id) {
+      <!-- Closed panels use hidden="until-found": still findable with ⌘F, which opens them. -->
+      <section
+        role="tabpanel"
+        [id]="'panel-' + tab.id"
+        [attr.aria-labelledby]="'tab-' + tab.id"
+        [attr.hidden]="tab.id === pills.current() ? null : 'until-found'"
+        (beforematch)="pills.select(tab.id)"
+      >
+        <!-- The selected pill is the visible title; this keeps the heading outline for screen readers. -->
+        <h2 class="sr-only">{{ tab.label }}</h2>
+
+        @for (entry of tab.entries; track entry.id) {
+          <article class="entry">
+            <header class="entry__header">
+              <div>
+                <h3 class="entry__title">{{ entry.organization }}</h3>
+                <p class="entry__role">{{ entry.role }}</p>
               </div>
-              <div class="timeline-entry__meta">
-                <span class="timeline-entry__dates">
-                  {{ entry.startDate }}
-                  @if (entry.endDate !== entry.startDate) {
-                    – {{ entry.endDate ?? 'Present' }}
-                  }
-                </span>
+              <p class="entry__meta">
+                <span>{{ dates(entry) }}</span>
                 @if (entry.location) {
-                  <span class="timeline-entry__location">{{ entry.location }}</span>
+                  <span>{{ entry.location }}</span>
                 }
-              </div>
+              </p>
             </header>
-            <p class="timeline-entry__description">{{ entry.description }}</p>
+            <p class="entry__description">{{ entry.description }}</p>
+            @if (entry.tags.length) {
+              <ul class="chips" aria-label="Tools and topics">
+                @for (tag of entry.tags; track tag) {
+                  <li class="chip">{{ tag }}</li>
+                }
+              </ul>
+            }
+            @if (entry.url || entry.files?.length) {
+              <p class="entry__links">
+                @if (entry.url) {
+                  <a [href]="entry.url" target="_blank" rel="noopener noreferrer"
+                    >Visit {{ entry.organization }} <span aria-hidden="true">↗</span
+                    ><span class="sr-only"> (opens in a new tab)</span></a
+                  >
+                }
+                @for (file of entry.files ?? []; track file.href) {
+                  <a [href]="file.href" target="_blank" rel="noopener"
+                    >{{ file.label }} (PDF) <span aria-hidden="true">↗</span
+                    ><span class="sr-only"> (opens in a new tab)</span></a
+                  >
+                }
+              </p>
+            }
             @if (entry.highlights.length) {
-              <div class="timeline-entry__detail">
-                <span class="timeline-entry__detail-label">Highlights</span>
-                <ul class="timeline-entry__detail-value timeline-entry__highlights">
+              <details class="entry__highlights">
+                <summary>{{ entry.highlights.length }} highlights</summary>
+                <ul>
                   @for (highlight of entry.highlights; track highlight) {
                     <li>{{ highlight }}</li>
                   }
                 </ul>
-              </div>
-            }
-            @if (entry.tags.length) {
-              <div class="timeline-entry__detail">
-                <span class="timeline-entry__detail-label">Tools &amp; topics</span>
-                <span class="timeline-entry__detail-value">{{ entry.tags.join(' · ') }}</span>
-              </div>
-            }
-            @if (entry.url) {
-              <div class="timeline-entry__detail">
-                <span class="timeline-entry__detail-label">Explore</span>
-                <a
-                  class="timeline-entry__detail-value"
-                  [href]="entry.url"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Visit {{ entry.organization }} <span aria-hidden="true">↗</span
-                  ><span class="sr-only"> (opens in a new tab)</span></a
-                >
-              </div>
+              </details>
             }
           </article>
         }
-      </div>
-    </section>
-  } @empty {
-    <p class="placeholder">Loading&hellip;</p>
-  }
 
-  @if (presentations().length) {
-    <section class="content-section" aria-labelledby="presentations">
-      <h2 class="content-section__title" id="presentations">Conference presentations</h2>
-      <div class="timeline">
-        @for (presentation of presentations(); track presentation.id) {
-          <article class="timeline-entry">
-            <header class="timeline-entry__header">
-              <div class="timeline-entry__heading">
-                <h3 class="timeline-entry__org">{{ presentation.conference }}</h3>
-                <p class="timeline-entry__role">{{ presentation.format }}</p>
-              </div>
-              <div class="timeline-entry__meta">
-                <span class="timeline-entry__dates">{{ presentation.date }}</span>
-                <span class="timeline-entry__location">{{ presentation.location }}</span>
-              </div>
-            </header>
-            <p class="timeline-entry__description">{{ presentation.title }}</p>
-          </article>
+        @if (tab.presentations.length) {
+          <ol class="dated-list">
+            @for (talk of tab.presentations; track talk.id) {
+              <li class="dated-row">
+                <p class="dated-row__date">{{ talk.date }}</p>
+                <div>
+                  <h3 class="dated-row__title">{{ talk.title }}</h3>
+                  <p class="dated-row__detail">
+                    {{ talk.format }} · {{ talk.conference }} · {{ talk.location }}
+                  </p>
+                  @for (file of talk.files ?? []; track file.href) {
+                    <a class="dated-row__link" [href]="file.href" target="_blank" rel="noopener"
+                      >{{ file.label }} (PDF) <span aria-hidden="true">↗</span
+                      ><span class="sr-only"> (opens in a new tab)</span></a
+                    >
+                  }
+                </div>
+              </li>
+            }
+          </ol>
         }
-      </div>
-    </section>
+      </section>
+    }
+  } @else {
+    <p class="placeholder">Loading&hellip;</p>
   }
 </div>

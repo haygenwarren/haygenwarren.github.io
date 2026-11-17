@@ -1,0 +1,34 @@
+{
+  "research": { "photo": "p400-greenbank-hasselblad501c-0126-1", "focus": "50% 39%" },
+  "work": {
+    "image": "p400-mtwilson0124-3.jpg",
+    "alt": "Radio and television transmission towers on Mount Wilson against a clear blue sky, beside a pine tree.",
+    "focus": "50% 30%"
+  },
+  "writing": {
+    "image": "c800t-washingtondc0726-9.jpg",
+    "alt": "Space Shuttle Discovery on display in a museum hangar, with visitors walking beneath its nose.",
+    "focus": "50% 28%"
+  },
+  "education": {
+    "image": "hp51.jpg",
+    "alt": "A long school hallway lined with tall arched windows, in black and white.",
+    "focus": "50% 75%"
+  },
+  "photography": {
+    "image": "cali-trip.jpg",
+    "alt": "Haygen raising a medium-format camera to his eye in the desert, with a Joshua tree behind him.",
+    "focus": "50% 55%"
+  },
+  "blog": {
+    "image": "rolleiir-greenbank0826-3.jpg",
+    "alt": "Infrared black-and-white photograph of a radio telescope at Green Bank Observatory beside a tree with glowing white leaves.",
+    "focus": "50% 8%"
+  },
+  "about": {
+    "image": "140ft-photo.jpg",
+    "alt": "Haygen in a blue hard hat on the platform of the 140-foot telescope at Green Bank Observatory.",
+    "flip": true,
+    "focus": "50% 47%"
+  }
+}

@@ -18,6 +18,24 @@
         "Classical Mechanics",
         "Differential Equations"
       ]
+    },
+    {
+      "id": "ncssm",
+      "institution": "North Carolina School of Science and Mathematics",
+      "degree": "High school diploma",
+      "location": "Durham, NC",
+      "startDate": "Aug 2021",
+      "endDate": "May 2023",
+      "description": "I completed my last two years of high school at NCSSM, a public residential high school focused on science, technology, engineering, and mathematics. There I captained the high-powered rocketry team and completed my first astrophysics research project, on pulsar timing and gravitational-wave detection.",
+      "highlights": [],
+      "courses": [
+        "Astrophysics",
+        "Elements of Satellite Design",
+        "Research Experience in Physics",
+        "Waves, Sound, and Optics",
+        "Astronomy",
+        "Precalculus"
+      ]
     }
   ],
   "awards": [

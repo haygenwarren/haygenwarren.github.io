@@ -1,0 +1,18 @@
+{
+  "resources": [
+    {
+      "file": "skynet-data-tools-slides-2026.pdf",
+      "title": "Developing User-Focused Data Tools for the Next-Generation Skynet Robotic Telescope Network",
+      "kind": "Slides",
+      "date": "2026-10",
+      "related": ["nc-astronomers-meeting-2026", "sncurcs-2026"]
+    },
+    {
+      "file": "pulsar-timing-poster-2023.pdf",
+      "title": "Investigating the Effects of Distance on Pulsar Timing and Gravitational Wave Detection",
+      "kind": "Poster",
+      "date": "2023-01",
+      "related": ["ncssm-pulsar-research"]
+    }
+  ]
+}

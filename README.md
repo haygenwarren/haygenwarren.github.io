@@ -8,6 +8,8 @@ The homepage is a personal observatory: eight destinations (seven pages and the 
 
 On the first visit to Home in a page session, one of four short arrivals plays: radio telescope, film camera, rocket launch, or colliding neutron stars. The sequence advances on each full visit and can be replayed from the homepage. Visitors can skip it or press Escape. Reduced-motion preferences skip arrivals and stop the background and orbital motion; the manual pause preference is saved locally. The orbit also pauses while a visitor points at or keyboard-focuses a destination, so it is easy to click.
 
+Research, Work and Education are split into sections by pill tabs (`shared/components/pill-tabs`). The open tab is kept in the URL fragment, so `/research#talks` or `/education#awards` links straight to it.
+
 Résumé / CV on the homepage and "Let's connect" on the Photography page (commission enquiries) open the same native dialog (`shared/components/contact-request`) with email and message fields. Submitting opens a prefilled email draft to Haygen; the visitor sends it in their own email app. The site does not send email or store requests.
 
 ---
@@ -22,7 +24,8 @@ content/          Source content (checked into git)
   education/      education.json
   photography/    photos.json  (written by `npm run photos`)
   posts/          *.md  (Markdown with YAML front matter)
-  site/           metadata.json
+  resources/      PDFs (slides, posters), resources.json, and previews/ of each first page
+  site/           metadata.json, banners.json  (photo at the top of each page)
   writing/        articles.json  (published articles shown on /writing)
 
 scripts/
@@ -32,6 +35,7 @@ public/
   assets/
     generated/    Output JSON (regenerated on every build — do not edit directly)
     photography/  Web copies of photographs, plus thumbs/ for the grid
+    banners/      Web copies of banner-only photos (written by `npm run photos`)
 
 src/
   app/
@@ -130,6 +134,49 @@ Name each scan `<film>_<location>_<camera>_<date>[_<n>].jpg`, for example `P400_
 
 The only field to edit by hand is `alt`, the description read by screen readers; re-running the script keeps it. Deleting a scan and re-running removes its web copies and entry.
 
+### Page banners
+
+Each page except Home opens with a full-width photo banner behind the page title. `content/site/banners.json` picks the photo for each page:
+
+```json
+"work": {
+  "image": "p400-mtwilson0124-3.jpg",
+  "alt": "Radio and television transmission towers on Mount Wilson …",
+  "focus": "50% 22%"
+}
+```
+
+- **To use a new photo:** put the scan in `photography_portfolio_images/banners/` (git-ignored, so large scans are fine) and run `npm run photos`. It writes web copies to `public/assets/banners/` (plus a phone-sized one in `small/`) with a lowercase, hyphenated name: `P400_MtWilson0124_3.jpg` → `p400-mtwilson0124-3.jpg`. Put that name in `"image"` and describe the photo in `"alt"` for screen readers. Commit the web copies. Removing a scan and re-running removes its web copies.
+- **To use a photo from the gallery** instead, replace `"image"` and `"alt"` with `"photo"` and its id: its filename in `public/assets/photography/` without `.jpg` (the Research banner does this).
+- **`focus`** chooses which part of the photo stays in view, since the banner is much wider than most photos and crops the top and bottom: horizontal then vertical, from `0%` (left/top) to `100%` (right/bottom). Lower the second number to show more of the top of the photo, raise it to show more of the bottom. It defaults to `50% 50%`, the centre.
+- **`"flip": true`** mirrors the photo left to right, for example to move a subject away from the title in the bottom-left corner (the About banner does this).
+
+The page keys are `research`, `work`, `writing`, `education`, `photography`, `blog` and `about`. A misspelled name stops `npm start` / `npm run build` with a message naming the page. Check a banner at a few window widths, since its shape changes with the window.
+
+### Resources (slides and posters)
+
+The Resources section at the bottom of the About page lists PDFs. To add one:
+
+1. Put the PDF in `content/resources/`. Its filename is what visitors get when they download it, so make it descriptive (`skynet-data-tools-slides-2026.pdf`).
+2. Add an entry to `content/resources/resources.json`:
+
+   ```json
+   {
+     "file": "skynet-data-tools-slides-2026.pdf",
+     "title": "Developing User-Focused Data Tools for the Next-Generation Skynet Robotic Telescope Network",
+     "kind": "Slides",
+     "date": "2026-10",
+     "related": ["nc-astronomers-meeting-2026", "sncurcs-2026"]
+   }
+   ```
+
+   - `kind` is the label on the card and the link, such as `Slides` or `Poster`.
+   - `date` is the year and month, `YYYY-MM`; the newest is listed first.
+   - `related` (optional) lists ids of talks (`presentations`) or entries in `content/experience/experience.json`. Each one gets a "Slides (PDF)" or "Poster (PDF)" link on the Research or Work page, and their conference or organization names become the "where" line on the card. To write that line yourself instead, add `"events": ["…"]`.
+3. Run `npm start`. It makes a picture of the PDF's first page for the card in `content/resources/previews/`. Commit the PDF, the preview, and `resources.json`. If the PDF changes later, the preview is remade automatically.
+
+Previews need Poppler's `pdftoppm` (`brew install poppler`). Without it the card shows a blank preview and the build prints a note.
+
 ### Writing
 
 Edit `content/writing/articles.json` to list a published article on the Writing page. Each entry follows the `Article` interface; articles are sorted newest first during generation, so new entries can go anywhere in the list:
@@ -171,8 +218,10 @@ Set `published: false` to draft a post without it appearing on the site.
 `scripts/generate-content.js` runs automatically before `ng serve` and `ng build`. It:
 
 1. Reads structured JSON files from `content/` and passes them through to `public/assets/generated/`
-2. Sorts `content/writing/articles.json` newest first and writes `public/assets/generated/writing.json`
-3. Reads each `.md` file in `content/posts/`, parses YAML front matter with `gray-matter`, renders the Markdown body to HTML with `marked`, and writes `public/assets/generated/posts.json`
+2. Resolves each page banner in `content/site/banners.json` to image paths and alt text, and writes `public/assets/generated/banners.json`
+3. Copies each PDF listed in `content/resources/resources.json` to `public/assets/generated/resources/` with a first-page preview (made with `pdftoppm` when missing or out of date), writes `resources.json`, and adds the PDF links to the entries and talks in `experience.json`
+4. Sorts `content/writing/articles.json` newest first and writes `public/assets/generated/writing.json`
+5. Reads each `.md` file in `content/posts/`, parses YAML front matter with `gray-matter`, renders the Markdown body to HTML with `marked`, and writes `public/assets/generated/posts.json`
 
 Angular services (`ExperienceService`, `BlogService`, etc.) fetch these JSON files via `HttpClient` and expose them to page components via RxJS Observables.
 

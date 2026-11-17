@@ -5,12 +5,19 @@ import { map } from 'rxjs';
 import { PHOTO_ASSETS, PhotographyService } from '../../core/services/photography.service';
 import { Photo } from '../../core/models/photo.model';
 import { ContactRequestComponent } from '../../shared/components/contact-request/contact-request';
+import { PageBannerComponent } from '../../shared/components/page-banner/page-banner';
 import { PhotoViewerComponent } from './photo-viewer/photo-viewer';
 import { PhotoLiftDirective } from './photo-lift';
 
 @Component({
   selector: 'app-photography',
-  imports: [DatePipe, ContactRequestComponent, PhotoViewerComponent, PhotoLiftDirective],
+  imports: [
+    DatePipe,
+    ContactRequestComponent,
+    PageBannerComponent,
+    PhotoViewerComponent,
+    PhotoLiftDirective,
+  ],
   templateUrl: './photography.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './photography.scss',

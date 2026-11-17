@@ -43,6 +43,8 @@ Angular 22 standalone SPA. Content is separated from the Angular application:
 | Blog post | `content/posts/YYYY-MM-DD-slug.md` | — |
 | Writing (published articles) | `content/writing/articles.json` | — |
 | Site metadata | `content/site/metadata.json` | — |
+| Resources (About page PDFs) | `content/resources/resources.json` (`file, title, kind, date YYYY-MM, related[]?, events[]?`) | PDFs in `content/resources/`; first-page previews written to `content/resources/previews/` by the generator (needs `pdftoppm`); commit them |
+| Page banners | `content/site/banners.json` (`photo`: gallery photo id, or `image` + `alt`; `focus`: CSS object-position; `flip`: mirror) | Banner-only scans go in `photography_portfolio_images/banners/`, then `npm run photos` (writes `public/assets/banners/` + `small/`) |
 
 See `src/app/core/models/` for the TypeScript interfaces each content type must satisfy.
 
@@ -58,11 +60,15 @@ See `src/app/core/models/` for the TypeScript interfaces each content type must 
 
 `Article` — `id, title, url, date (YYYY-MM-DD), publication, topic, summary`
 
+`PageBanner` (generated) — `src, srcset?, alt, focus, flip`; keyed by page (`research, work, writing, education, photography, blog, about`)
+
+`Resource` (generated) — `title, kind, date, events[], href, preview|null, size`. `related` ids in resources.json add `files: ResourceLink[]` (`label, href`) to those `ExperienceEntry`s and `ConferencePresentation`s.
+
 `SiteMetadata` — `name, tagline, description, author, email, links{github?,linkedin?,twitter?}`
 
 ## Assets
 
-Static assets served from `public/`. Generated JSON goes to `public/assets/generated/`. Web copies of photographs (`npm run photos`) go to `public/assets/photography/` and `thumbs/`; never edit them by hand. Photo details are parsed from scan filenames — see the comment at the top of `scripts/process-photos.js`.
+Static assets served from `public/`. Generated JSON goes to `public/assets/generated/`. Web copies of photographs (`npm run photos`) go to `public/assets/photography/` and `thumbs/`, banner-only photos to `public/assets/banners/` and `small/`; never edit them by hand. Photo details are parsed from scan filenames — see the comment at the top of `scripts/process-photos.js`.
 
 The site icon is a 16×16 pixel spiral galaxy: `public/favicon.svg` (the source grid, one rect per pixel run), `public/favicon.ico` (16/32/48 px) and `public/apple-touch-icon.png` (180 px on the page background), linked from `src/index.html`.
 

@@ -1,13 +1,14 @@
 import { Component, computed, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { PageBannerComponent } from '../../shared/components/page-banner/page-banner';
 import { WritingService } from '../../core/services/writing.service';
 
 const PAGE_SIZE = 12;
 
 @Component({
   selector: 'app-writing',
-  imports: [DatePipe],
+  imports: [DatePipe, PageBannerComponent],
   templateUrl: './writing.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './writing.scss',

@@ -1,0 +1,20 @@
+<div class="page-banner" [class.is-loaded]="loaded()">
+  @if (banner(); as photo) {
+    <img
+      class="page-banner__image"
+      [class.is-flipped]="photo.flip"
+      [src]="photo.src"
+      [attr.srcset]="photo.srcset ?? null"
+      sizes="100vw"
+      [alt]="photo.alt"
+      [style.object-position]="photo.focus"
+      fetchpriority="high"
+      decoding="async"
+      (load)="loaded.set(true)"
+    />
+  }
+  <canvas #dither class="page-banner__dither" aria-hidden="true"></canvas>
+  <div class="page-banner__inner container">
+    <h1 class="page-banner__title">{{ heading() }}</h1>
+  </div>
+</div>

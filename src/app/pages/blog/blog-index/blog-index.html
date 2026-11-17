@@ -1,10 +1,6 @@
-<div class="page container">
-  <header class="page-header">
-    <span class="page-header__eyebrow">Writing</span>
-    <h1 class="page-header__title">Blog</h1>
-    <p class="page-header__description">Notes on science, craft, and observation.</p>
-  </header>
+<app-page-banner page="blog" heading="Blog" />
 
+<div class="page page--after-banner container">
   <section class="post-list" aria-label="Blog posts">
     @for (post of posts(); track post.slug) {
       <article class="post-card">
@@ -12,15 +8,16 @@
           <h2 class="post-card__title">
             <a class="post-card__link" [routerLink]="['/blog', post.slug]">{{ post.title }}</a>
           </h2>
-          <time class="post-card__date" [attr.datetime]="post.date">{{ post.date | date: 'MMM d, y' }}</time>
+          <time class="post-card__date" [attr.datetime]="post.date">{{
+            post.date | date: 'MMM d, y'
+          }}</time>
         </header>
         <p class="post-card__summary">{{ post.summary }}</p>
         @if (post.tags.length) {
           <p class="post-card__tags">{{ post.tags.join(' · ') }}</p>
         }
       </article>
-    }
-    @empty {
+    } @empty {
       <p class="placeholder">No posts yet.</p>
     }
   </section>

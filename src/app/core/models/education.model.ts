@@ -2,7 +2,8 @@ export interface EducationEntry {
   id: string;
   institution: string;
   degree: string;
-  field: string;
+  /** Omitted for a diploma, e.g. high school. */
+  field?: string;
   location: string;
   startDate: string;
   endDate: string | null;

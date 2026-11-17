@@ -1,77 +1,91 @@
-<div class="page container">
-  <header class="page-header">
-    <span class="page-header__eyebrow">Portfolio</span>
-    <h1 class="page-header__title">Education</h1>
-    <p class="page-header__description">
-      Physics at UNC–Chapel Hill, research support, and academic honors.
-    </p>
-  </header>
+<app-page-banner page="education" heading="Education" />
 
-  <section class="content-section" aria-labelledby="academic-background">
-    <h2 class="content-section__title" id="academic-background">Academic background</h2>
-    <div class="timeline">
-      @for (entry of entries(); track entry.id) {
-        <article class="timeline-entry">
-          <header class="timeline-entry__header">
-            <div class="timeline-entry__heading">
-              <h3 class="timeline-entry__org">{{ entry.institution }}</h3>
-              <p class="timeline-entry__role">{{ entry.degree }}, {{ entry.field }}</p>
-            </div>
-            <div class="timeline-entry__meta">
-              <span class="timeline-entry__dates">
-                {{ entry.startDate }} – {{ entry.endDate ?? 'Present' }}
-              </span>
-              <span class="timeline-entry__location">{{ entry.location }}</span>
-            </div>
-          </header>
-          <p class="timeline-entry__description">{{ entry.description }}</p>
-          @if (entry.courses?.length) {
-            <div class="timeline-entry__detail">
-              <span class="timeline-entry__detail-label">Relevant Courses</span>
-              <span class="timeline-entry__detail-value">{{ entry.courses!.join(' · ') }}</span>
-            </div>
-          }
-          @if (entry.honors?.length) {
-            <div class="timeline-entry__detail">
-              <span class="timeline-entry__detail-label">Awards &amp; Honors</span>
-              <span class="timeline-entry__detail-value">{{ entry.honors!.join(' · ') }}</span>
-            </div>
-          }
-          @if (entry.highlights.length) {
-            <div class="timeline-entry__detail">
-              <span class="timeline-entry__detail-label">Highlights</span>
-              <ul class="timeline-entry__detail-value timeline-entry__highlights">
-                @for (highlight of entry.highlights; track highlight) {
-                  <li>{{ highlight }}</li>
+<div class="page page--after-banner container">
+  @if (tabs().length) {
+    <app-pill-tabs #pills [tabs]="tabs()" label="Education sections" />
+
+    <!-- Closed panels use hidden="until-found": still findable with ⌘F, which opens them. -->
+    @if (entries().length) {
+      <section
+        role="tabpanel"
+        id="panel-background"
+        aria-labelledby="tab-background"
+        [attr.hidden]="pills.current() === 'background' ? null : 'until-found'"
+        (beforematch)="pills.select('background')"
+      >
+        <!-- The selected pill is the visible title; this keeps the heading outline for screen readers. -->
+        <h2 class="sr-only">Academic background</h2>
+        @for (entry of entries(); track entry.id) {
+          <article class="entry">
+            <header class="entry__header">
+              <div>
+                <h3 class="entry__title">{{ entry.institution }}</h3>
+                <p class="entry__role">
+                  {{ entry.degree }}{{ entry.field ? ', ' + entry.field : '' }}
+                </p>
+              </div>
+              <p class="entry__meta">
+                <span>{{ entry.startDate }} – {{ entry.endDate ?? 'Present' }}</span>
+                <span>{{ entry.location }}</span>
+              </p>
+            </header>
+            <p class="entry__description">{{ entry.description }}</p>
+            @if (entry.courses?.length) {
+              <p class="entry__label" [id]="entry.id + '-courses'">Relevant courses</p>
+              <ul class="chips" [attr.aria-labelledby]="entry.id + '-courses'">
+                @for (course of entry.courses; track course) {
+                  <li class="chip">{{ course }}</li>
                 }
               </ul>
-            </div>
-          }
-        </article>
-      } @empty {
-        <p class="placeholder">Loading&hellip;</p>
-      }
-    </div>
-  </section>
-
-  @if (awards().length) {
-    <section class="content-section" aria-labelledby="awards">
-      <h2 class="content-section__title" id="awards">Scholarships &amp; honors</h2>
-      <div class="timeline">
-        @for (award of awards(); track award.id) {
-          <article class="timeline-entry">
-            <header class="timeline-entry__header">
-              <h3 class="timeline-entry__org">{{ award.name }}</h3>
-              <div class="timeline-entry__meta">
-                <span class="timeline-entry__dates">
-                  {{ award.startDate }} – {{ award.endDate ?? 'Present' }}
-                </span>
-              </div>
-            </header>
-            <p class="timeline-entry__description">{{ award.description }}</p>
+            }
+            @if (entry.honors?.length) {
+              <p class="entry__label" [id]="entry.id + '-honors'">Awards &amp; honors</p>
+              <ul class="chips" [attr.aria-labelledby]="entry.id + '-honors'">
+                @for (honor of entry.honors; track honor) {
+                  <li class="chip">{{ honor }}</li>
+                }
+              </ul>
+            }
+            @if (entry.highlights.length) {
+              <details class="entry__highlights">
+                <summary>{{ entry.highlights.length }} highlights</summary>
+                <ul>
+                  @for (highlight of entry.highlights; track highlight) {
+                    <li>{{ highlight }}</li>
+                  }
+                </ul>
+              </details>
+            }
           </article>
         }
-      </div>
-    </section>
+      </section>
+    }
+
+    @if (awards().length) {
+      <section
+        role="tabpanel"
+        id="panel-awards"
+        aria-labelledby="tab-awards"
+        [attr.hidden]="pills.current() === 'awards' ? null : 'until-found'"
+        (beforematch)="pills.select('awards')"
+      >
+        <h2 class="sr-only">Scholarships &amp; awards</h2>
+        <ul class="dated-list">
+          @for (award of awards(); track award.id) {
+            <li class="dated-row">
+              <p class="dated-row__date">
+                {{ award.startDate }}{{ award.endDate ? ' – ' + award.endDate : '' }}
+              </p>
+              <div>
+                <h3 class="dated-row__title">{{ award.name }}</h3>
+                <p class="dated-row__detail">{{ award.description }}</p>
+              </div>
+            </li>
+          }
+        </ul>
+      </section>
+    }
+  } @else {
+    <p class="placeholder">Loading&hellip;</p>
   }
 </div>

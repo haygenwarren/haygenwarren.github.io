@@ -1,12 +1,13 @@
 import { Component, inject, signal, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { PageBannerComponent } from '../../../shared/components/page-banner/page-banner';
 import { BlogService } from '../../../core/services/blog.service';
 import { BlogPost } from '../../../core/models/blog-post.model';
 
 @Component({
   selector: 'app-blog-index',
-  imports: [RouterLink, DatePipe],
+  imports: [RouterLink, DatePipe, PageBannerComponent],
   templateUrl: './blog-index.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './blog-index.scss',

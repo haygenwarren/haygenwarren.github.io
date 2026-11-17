@@ -18,6 +18,13 @@
  *
  * Re-running is cheap: unchanged scans are skipped, and hand-written `alt`
  * text in photos.json is kept.
+ *
+ * Page-banner photos that aren't part of the gallery go in
+ * photography_portfolio_images/banners/ (any filename). They get web copies in
+ * public/assets/banners/ (lowercase, spaces and underscores become hyphens,
+ * e.g. 140ft_photo.jpg → 140ft-photo.jpg, plus a phone-sized small/ copy) and
+ * no gallery entry; point a page at one from content/site/banners.json.
+ * Removing a banner original and re-running removes its web copies.
  */
 
 const fs = require('fs');
@@ -29,6 +36,9 @@ const SOURCE_DIR = path.join(ROOT, 'photography_portfolio_images');
 const OUTPUT_DIR = path.join(ROOT, 'public', 'assets', 'photography');
 const THUMB_DIR = path.join(OUTPUT_DIR, 'thumbs');
 const CONTENT_FILE = path.join(ROOT, 'content', 'photography', 'photos.json');
+const BANNER_SOURCE_DIR = path.join(SOURCE_DIR, 'banners');
+const BANNER_DIR = path.join(ROOT, 'public', 'assets', 'banners');
+const BANNER_SMALL_DIR = path.join(BANNER_DIR, 'small');
 
 const LARGE_EDGE = 2048; // longest edge of the full-size view
 const THUMB_WIDTH = 800; // grid image width (about 2× a grid column)
@@ -194,6 +204,40 @@ async function main() {
   photos.sort((a, b) => b.date.localeCompare(a.date));
   fs.writeFileSync(CONTENT_FILE, JSON.stringify({ photos }, null, 2) + '\n', 'utf-8');
   console.log(`\nWrote ${path.relative(ROOT, CONTENT_FILE)} (${photos.length} photographs).`);
+
+  await processBanners();
+}
+
+/**
+ * Web copies of banner-only photos (not in the gallery): 2048px wide for large
+ * screens, 800px wide for phones. Banners span the window, so width is what counts.
+ */
+async function processBanners() {
+  if (!fs.existsSync(BANNER_SOURCE_DIR)) return;
+  const files = fs.readdirSync(BANNER_SOURCE_DIR).filter((f) => /\.jpe?g$/i.test(f));
+  fs.mkdirSync(BANNER_SMALL_DIR, { recursive: true });
+  console.log(`\nProcessing ${files.length} banner photo(s)...`);
+  const made = new Set();
+  for (const file of files) {
+    const name =
+      path
+        .basename(file, path.extname(file))
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '') + '.jpg';
+    const source = path.join(BANNER_SOURCE_DIR, file);
+    await render(source, path.join(BANNER_DIR, name), { width: LARGE_EDGE }, 82);
+    await render(source, path.join(BANNER_SMALL_DIR, name), { width: THUMB_WIDTH }, 78);
+    made.add(name);
+    console.log(`  ✓ ${file} → public/assets/banners/${name}`);
+  }
+  // Web copies whose original is gone.
+  for (const dir of [BANNER_DIR, BANNER_SMALL_DIR]) {
+    for (const file of fs.readdirSync(dir).filter((f) => f.endsWith('.jpg') && !made.has(f))) {
+      fs.rmSync(path.join(dir, file));
+      console.log(`  − removed ${path.relative(ROOT, path.join(dir, file))}`);
+    }
+  }
 }
 
 main().catch((error) => {

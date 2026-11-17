@@ -1,9 +1,6 @@
-<div class="page container">
-  <header class="page-header">
-    <span class="page-header__eyebrow">A little about me</span>
-    <h1 class="page-header__title">About</h1>
-  </header>
+<app-page-banner page="about" heading="About" />
 
+<div class="page page--after-banner container">
   <div class="about-content prose">
     <p>
       I’m Haygen Warren, a physics student at the University of North Carolina at Chapel Hill. I’m
@@ -31,7 +28,9 @@
   </div>
 
   <section class="content-section" aria-labelledby="technical-skills">
-    <h2 class="content-section__title" id="technical-skills">Tools &amp; skills</h2>
+    <div class="section-head">
+      <h2 id="technical-skills">Tools &amp; skills</h2>
+    </div>
     <dl class="skills-grid">
       <div class="skills-group">
         <dt>Programming &amp; software</dt>
@@ -66,4 +65,38 @@
       </div>
     </dl>
   </section>
+
+  @if (resources().length) {
+    <section class="content-section" aria-labelledby="resources">
+      <div class="section-head">
+        <h2 id="resources">Resources</h2>
+        <p>Slides and posters from my presentations</p>
+      </div>
+      <ul class="resource-grid">
+        @for (item of resources(); track item.href) {
+          <li class="resource">
+            <div class="resource__preview">
+              @if (item.preview) {
+                <img [src]="item.preview" alt="" loading="lazy" decoding="async" />
+              }
+            </div>
+            <p class="resource__meta">
+              {{ item.kind }} ·
+              <time [attr.datetime]="item.date">{{ item.date | date: 'MMM y' }}</time>
+            </p>
+            <h3 class="resource__title">
+              <a [href]="item.href" target="_blank" rel="noopener"
+                >{{ item.title
+                }}<span class="sr-only"> ({{ item.kind }}, PDF, opens in a new tab)</span></a
+              >
+            </h3>
+            @if (item.events.length) {
+              <p class="resource__events">{{ item.events.join(' · ') }}</p>
+            }
+            <p class="resource__file" aria-hidden="true">PDF · {{ item.size }} ↗</p>
+          </li>
+        }
+      </ul>
+    </section>
+  }
 </div>

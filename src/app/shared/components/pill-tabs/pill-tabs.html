@@ -1,0 +1,15 @@
+@for (tab of tabs(); track tab.id; let i = $index) {
+  <button
+    type="button"
+    role="tab"
+    class="pill-tab"
+    [id]="'tab-' + tab.id"
+    [attr.aria-selected]="tab.id === current()"
+    [attr.aria-controls]="'panel-' + tab.id"
+    [tabIndex]="tab.id === current() ? 0 : -1"
+    (click)="select(tab.id)"
+    (keydown)="onKey($event, i)"
+  >
+    {{ tab.label }}<span class="pill-tab__count" aria-hidden="true">{{ tab.count }}</span>
+  </button>
+}
