@@ -229,4 +229,8 @@ Angular services (`ExperienceService`, `BlogService`, etc.) fetch these JSON fil
 
 ## Deployment
 
-Pushing to `main` deploys automatically via GitHub Pages. The deployment workflow copies `index.html` to `404.html` so direct links can load Angular routes.
+Pushing to `main` deploys automatically via GitHub Pages. The deployment workflow copies `index.html` to `404.html` so direct links can load Angular routes, and to `research.html`, `about.html` and so on, so each page's address returns a normal response rather than the 404 fallback. When adding a route, add it to that list in `.github/workflows/deploy.yml`.
+
+### Link previews
+
+When the site's link is shared (LinkedIn, iMessage, Slack, Discord, X), the preview card is `public/og-image.jpg` (1200 × 630) with the title and description from the `og:` tags in `src/index.html`. Every page shares this card, since link crawlers don't run the app. To change the picture, replace the image at the same path and size. Services cache previews, so after deploying a new one, refresh it with LinkedIn's Post Inspector (linkedin.com/post-inspector) if an old card still shows.

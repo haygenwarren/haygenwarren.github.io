@@ -36,6 +36,16 @@ jobs:
       - name: Copy index.html to 404.html for SPA routing
         run: cp dist/portfolio/browser/index.html dist/portfolio/browser/404.html
 
+      # GitHub Pages serves /research from research.html with a normal 200
+      # response. Without these copies each page arrives through 404.html, and
+      # link previews and search engines can treat it as missing.
+      # Keep the list in step with the routes in src/app/app.routes.ts.
+      - name: Give each page its own HTML file
+        run: |
+          for page in research experience writing education photography blog about; do
+            cp dist/portfolio/browser/index.html "dist/portfolio/browser/$page.html"
+          done
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
